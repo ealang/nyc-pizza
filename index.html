@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>NYC Spots</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+  html, body { height: 100%; margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  #map { height: 100%; }
+
+  .control-panel {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.25);
+    padding: 10px 14px;
+    line-height: 1.9;
+    font-size: 15px;
+    user-select: none;
+  }
+  .control-panel h1 {
+    font-size: 15px;
+    margin: 0 0 4px 0;
+  }
+  .control-panel label {
+    display: block;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .control-panel input { margin-right: 6px; }
+  .count { color: #888; font-size: 12px; }
+
+  .locate-btn {
+    background: #fff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    width: 44px;
+    height: 44px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  .locate-btn.active { background: #d0e7ff; }
+
+  .popup-name { font-weight: 700; font-size: 15px; margin-bottom: 2px; }
+  .popup-cat { font-size: 12px; color: #666; margin-bottom: 4px; }
+  .popup-notes { font-size: 13px; margin-bottom: 6px; }
+  .popup-links a { font-size: 13px; margin-right: 10px; }
+
+  .you-dot {
+    width: 16px; height: 16px;
+    background: #1a73e8;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgba(26,115,232,0.9);
+  }
+</style>
+</head>
+<body>
+<div id="map"></div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+// ============================================================
+// PLACES DATA — add new spots here.
+// category must match an entry in CATEGORIES below.
+// ============================================================
+const CATEGORIES = {
+  chocolate: { label: "Chocolate", emoji: "🍫", color: "#7b4a12" },
+  pizza:     { label: "Pizza",     emoji: "🍕", color: "#d62828" },
+};
+
+const PLACES = [
+  // --- Chocolate ---
+  { name: "Jacques Torres Chocolate", category: "chocolate", lat: 40.7148, lng: -74.0091,
+    address: "327 Lafayette St (also Hudson St)", notes: "Famous wicked hot chocolate." },
+  { name: "La Maison du Chocolat", category: "chocolate", lat: 40.7644, lng: -73.9722,
+    address: "1018 Madison Ave", notes: "Paris institution, Upper East Side." },
+  { name: "Li-Lac Chocolates", category: "chocolate", lat: 40.7338, lng: -74.0027,
+    address: "75 Greenwich Ave", notes: "Manhattan's oldest chocolate house (1923)." },
+  { name: "Stick With Me Sweets", category: "chocolate", lat: 40.7223, lng: -73.9957,
+    address: "202A Mott St", notes: "Jewel-box bonbons, Nolita." },
+  { name: "Kee's Chocolates", category: "chocolate", lat: 40.7246, lng: -74.0033,
+    address: "315 W 39th St / SoHo", notes: "Handmade daily, creme brulee truffle." },
+
+  // --- Pizza ---
+  { name: "Joe's Pizza", category: "pizza", lat: 40.7305, lng: -74.0021,
+    address: "7 Carmine St", notes: "The classic NY slice since 1975." },
+  { name: "Prince Street Pizza", category: "pizza", lat: 40.7229, lng: -73.9944,
+    address: "27 Prince St", notes: "Spicy spring pepperoni squares." },
+  { name: "John's of Bleecker Street", category: "pizza", lat: 40.7315, lng: -74.0036,
+    address: "278 Bleecker St", notes: "Coal-fired whole pies, no slices." },
+  { name: "Scarr's Pizza", category: "pizza", lat: 40.7150, lng: -73.9916,
+    address: "35 Orchard St", notes: "House-milled flour, LES favorite." },
+  { name: "Una Pizza Napoletana", category: "pizza", lat: 40.7162, lng: -73.9861,
+    address: "175 Orchard St", notes: "Top-ranked Neapolitan." },
+];
+
+// ============================================================
+// MAP SETUP
+// ============================================================
+const map = L.map("map", { zoomControl: false }).setView([40.7266, -73.9962], 13);
+L.control.zoom({ position: "bottomright" }).addTo(map);
+
+L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
+  maxZoom: 20,
+}).addTo(map);
+
+// Colored pin icon per category
+function makeIcon(cat) {
+  const c = CATEGORIES[cat];
+  return L.divIcon({
+    className: "",
+    html: `<div style="font-size:26px; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.4));">${c.emoji}</div>`,
+    iconSize: [26, 26],
+    iconAnchor: [13, 24],
+    popupAnchor: [0, -22],
+  });
+}
+
+// Layer group per category
+const layers = {};
+for (const cat of Object.keys(CATEGORIES)) layers[cat] = L.layerGroup().addTo(map);
+
+for (const p of PLACES) {
+  const gmaps = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(p.name + " " + p.address + " New York NY")}`;
+  const popup = `
+    <div class="popup-name">${p.name}</div>
+    <div class="popup-cat">${CATEGORIES[p.category].emoji} ${CATEGORIES[p.category].label} · ${p.address}</div>
+    <div class="popup-notes">${p.notes || ""}</div>
+    <div class="popup-links"><a href="${gmaps}" target="_blank" rel="noopener">Directions ↗</a></div>`;
+  L.marker([p.lat, p.lng], { icon: makeIcon(p.category) }).bindPopup(popup).addTo(layers[p.category]);
+}
+
+// ============================================================
+// CATEGORY TOGGLE CONTROL (top-left)
+// ============================================================
+const panel = L.control({ position: "topleft" });
+panel.onAdd = function () {
+  const div = L.DomUtil.create("div", "control-panel");
+  const counts = {};
+  for (const p of PLACES) counts[p.category] = (counts[p.category] || 0) + 1;
+  let html = "<h1>NYC Spots</h1>";
+  for (const [cat, c] of Object.entries(CATEGORIES)) {
+    html += `<label><input type="checkbox" data-cat="${cat}" checked>${c.emoji} ${c.label} <span class="count">(${counts[cat] || 0})</span></label>`;
+  }
+  div.innerHTML = html;
+  L.DomEvent.disableClickPropagation(div);
+  div.querySelectorAll("input").forEach(cb => {
+    cb.addEventListener("change", e => {
+      const cat = e.target.dataset.cat;
+      if (e.target.checked) map.addLayer(layers[cat]);
+      else map.removeLayer(layers[cat]);
+    });
+  });
+  return div;
+};
+panel.addTo(map);
+
+// ============================================================
+// LIVE LOCATION (bottom-right button)
+// ============================================================
+let youMarker = null, youCircle = null, watching = false, watchId = null, followed = false;
+
+const locateCtl = L.control({ position: "bottomright" });
+locateCtl.onAdd = function () {
+  const btn = L.DomUtil.create("button", "locate-btn");
+  btn.innerHTML = "📍";
+  btn.title = "Show my location";
+  L.DomEvent.disableClickPropagation(btn);
+  btn.addEventListener("click", () => {
+    if (!watching) startWatch(btn);
+    else stopWatch(btn);
+  });
+  return btn;
+};
+locateCtl.addTo(map);
+
+function startWatch(btn) {
+  if (!navigator.geolocation) { alert("Geolocation not supported on this device/browser."); return; }
+  watching = true; followed = false;
+  btn.classList.add("active");
+  watchId = navigator.geolocation.watchPosition(pos => {
+    const ll = [pos.coords.latitude, pos.coords.longitude];
+    if (!youMarker) {
+      youMarker = L.marker(ll, {
+        icon: L.divIcon({ className: "", html: '<div class="you-dot"></div>', iconSize: [16, 16], iconAnchor: [8, 8] }),
+        zIndexOffset: 1000,
+      }).addTo(map);
+      youCircle = L.circle(ll, { radius: pos.coords.accuracy, color: "#1a73e8", weight: 1, fillOpacity: 0.08 }).addTo(map);
+    } else {
+      youMarker.setLatLng(ll);
+      youCircle.setLatLng(ll).setRadius(pos.coords.accuracy);
+    }
+    if (!followed) { map.setView(ll, Math.max(map.getZoom(), 15)); followed = true; }
+  }, err => {
+    alert("Couldn't get location: " + err.message + "\n(Note: live location requires HTTPS.)");
+    stopWatch(btn);
+  }, { enableHighAccuracy: true, maximumAge: 5000 });
+}
+
+function stopWatch(btn) {
+  watching = false;
+  btn.classList.remove("active");
+  if (watchId !== null) navigator.geolocation.clearWatch(watchId);
+  if (youMarker) { map.removeLayer(youMarker); youMarker = null; }
+  if (youCircle) { map.removeLayer(youCircle); youCircle = null; }
+}
+</script>
+</body>
+</html>
