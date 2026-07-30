@@ -144,11 +144,13 @@ panel.onAdd = function () {
   for (const [cat, c] of Object.entries(CATEGORIES)) {
     html += `<label><input type="checkbox" data-cat="${cat}" checked>${c.emoji} ${c.label} <span class="count">(${counts[cat] || 0})</span></label>`;
   }
+  html += `<label><input type="checkbox" data-cat="transit">🚇 Subway</label>`;
   div.innerHTML = html;
   L.DomEvent.disableClickPropagation(div);
   div.querySelectorAll("input").forEach(cb => {
     cb.addEventListener("change", e => {
       const cat = e.target.dataset.cat;
+      if (cat === "transit") { toggleTransit(e.target.checked); return; }
       if (e.target.checked) map.addLayer(layers[cat]);
       else map.removeLayer(layers[cat]);
     });
@@ -156,6 +158,34 @@ panel.onAdd = function () {
   return div;
 };
 panel.addTo(map);
+
+// ============================================================
+// SUBWAY OVERLAY (lazy-loaded on first toggle)
+// Data: subway-lines.geojson (routes from OSM, MTA colors),
+//       subway-stations-clean.geojson (NYC Open Data, Manhattan bbox)
+// ============================================================
+const transitLayer = L.layerGroup();
+let transitLoaded = false;
+
+function toggleTransit(on) {
+  if (!on) { map.removeLayer(transitLayer); return; }
+  map.addLayer(transitLayer);
+  if (transitLoaded) return;
+  transitLoaded = true;
+  Promise.all([
+    fetch("subway-lines.geojson").then(r => r.json()),
+    fetch("subway-stations-clean.geojson").then(r => r.json()),
+  ]).then(([lines, stations]) => {
+    L.geoJSON(lines, {
+      style: f => ({ color: f.properties.colour, weight: 3, opacity: 0.7, interactive: false }),
+    }).addTo(transitLayer);
+    L.geoJSON(stations, {
+      pointToLayer: (f, ll) =>
+        L.circleMarker(ll, { radius: 4, color: "#222", weight: 1.5, fillColor: "#fff", fillOpacity: 1 })
+          .bindPopup(`<div class="popup-name">${f.properties.name}</div><div class="popup-cat">🚇 ${f.properties.lines}</div>`),
+    }).addTo(transitLayer);
+  }).catch(() => { transitLoaded = false; alert("Couldn't load subway data."); });
+}
 
 // ============================================================
 // LIVE LOCATION (bottom-right button)
