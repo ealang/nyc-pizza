@@ -166,6 +166,55 @@ panel.addTo(map);
 // ============================================================
 const transitLayer = L.layerGroup();
 let transitLoaded = false;
+let headways = null;
+
+// Official MTA line colors for the popup bullets
+const LINE_COLORS = { "1":"#EE352E","2":"#EE352E","3":"#EE352E","4":"#00933C","5":"#00933C","6":"#00933C","6X":"#00933C",
+  "7":"#B933AD","7X":"#B933AD","A":"#0039A6","C":"#0039A6","E":"#0039A6","B":"#FF6319","D":"#FF6319","F":"#FF6319","FX":"#FF6319",
+  "M":"#FF6319","G":"#6CBE45","J":"#996633","Z":"#996633","L":"#A7A9AC","N":"#FCCC0A","Q":"#FCCC0A","R":"#FCCC0A","W":"#FCCC0A",
+  "S":"#808183","GS":"#808183" };
+
+function dayType() {
+  const d = new Date().getDay();
+  return d === 0 ? "Sunday" : d === 6 ? "Saturday" : "Weekday";
+}
+
+function currentBand() {
+  const h = new Date().getHours();
+  if (h < 6) return "12a-6a";
+  if (h < 10) return "6a-10a";
+  if (h < 16) return "10a-4p";
+  if (h < 20) return "4p-8p";
+  return "8p-12a";
+}
+
+// Schedule table for one station: per line & direction, headway by time band (today's schedule)
+function stationPopup(name, lines) {
+  let html = `<div class="popup-name">${name}</div><div class="popup-cat">🚇 ${lines}</div>`;
+  const st = headways && headways[name];
+  if (!st) return html + `<div class="popup-notes">No schedule data.</div>`;
+  const day = st[dayType()];
+  if (!day) return html + `<div class="popup-notes">No ${dayType()} schedule.</div>`;
+  const band = currentBand();
+  const BANDS = ["6a-10a", "10a-4p", "4p-8p", "8p-12a", "12a-6a"];
+
+  // group "route|dir" keys by route, skip express variants (6X etc.) to keep it readable
+  const rows = Object.keys(day).filter(k => !k.split("|")[0].endsWith("X")).sort();
+  html += `<table style="border-collapse:collapse;font-size:12px;margin-top:4px">`;
+  html += `<tr><th></th><th style="padding:1px 5px">Dir</th>` +
+    BANDS.map(b => `<th style="padding:1px 5px;${b===band?"background:#fff3bf;border-radius:4px":""}">${b}</th>`).join("") + `</tr>`;
+  for (const key of rows) {
+    const [route, dir] = key.split("|");
+    const c = LINE_COLORS[route] || "#555";
+    const dark = ["N","Q","R","W"].includes(route) ? "#000" : "#fff";
+    const arrow = dir === "0" ? "↑ Uptn" : "↓ Dntn";
+    html += `<tr><td style="padding:1px 3px"><span style="display:inline-block;width:17px;height:17px;line-height:17px;border-radius:50%;background:${c};color:${dark};text-align:center;font-weight:700;font-size:11px">${route}</span></td>` +
+      `<td style="padding:1px 5px;color:#555">${arrow}</td>` +
+      BANDS.map(b => `<td style="padding:1px 5px;text-align:center;${b===band?"background:#fff3bf;font-weight:700":""}">${day[key][b] ?? "–"}</td>`).join("") + `</tr>`;
+  }
+  html += `</table><div style="font-size:11px;color:#888;margin-top:3px">minutes between trains · ${dayType()} schedule</div>`;
+  return html;
+}
 
 function toggleTransit(on) {
   if (!on) { map.removeLayer(transitLayer); return; }
@@ -175,14 +224,16 @@ function toggleTransit(on) {
   Promise.all([
     fetch("subway-lines.geojson").then(r => r.json()),
     fetch("subway-stations-clean.geojson").then(r => r.json()),
-  ]).then(([lines, stations]) => {
+    fetch("subway-headways.json").then(r => r.json()),
+  ]).then(([lines, stations, hw]) => {
+    headways = hw;
     L.geoJSON(lines, {
       style: f => ({ color: f.properties.colour, weight: 3, opacity: 0.7, interactive: false }),
     }).addTo(transitLayer);
     L.geoJSON(stations, {
       pointToLayer: (f, ll) =>
-        L.circleMarker(ll, { radius: 4, color: "#222", weight: 1.5, fillColor: "#fff", fillOpacity: 1 })
-          .bindPopup(`<div class="popup-name">${f.properties.name}</div><div class="popup-cat">🚇 ${f.properties.lines}</div>`),
+        L.circleMarker(ll, { radius: 7, color: "#222", weight: 2, fillColor: "#fff", fillOpacity: 1 })
+          .bindPopup(() => stationPopup(f.properties.name, f.properties.lines), { maxWidth: 320 }),
     }).addTo(transitLayer);
   }).catch(() => { transitLoaded = false; alert("Couldn't load subway data."); });
 }
