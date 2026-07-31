@@ -7,16 +7,18 @@
   "rating": 5.0,
   "reviews": 17,
   "type": [
-   "chocolatier",
    "dessert cafe",
    "ice cream",
-   "drinks"
+   "drinks",
+   "bars",
+   "bonbons"
   ],
   "tags": [
    "#singleorigin"
   ],
   "usp": "British artisan chocolatier handcrafting single-origin chocolates from direct-trade partnerships with farmers in Colombia and Ecuador, with a cafe-style Chocolate House serving hot chocolate, coffee, and gelato.",
-  "website": "https://chococo.nyc/"
+  "website": "https://chococo.nyc/",
+  "hours": null
  },
  {
   "name": "Neuhaus Soho",
@@ -26,12 +28,14 @@
   "rating": 5.0,
   "reviews": 7,
   "type": [
-   "chocolatier",
-   "dessert cafe"
+   "dessert cafe",
+   "bars",
+   "bonbons"
   ],
   "tags": [],
   "usp": "Belgian chocolate retailer for over 160 years, inventor of the original Belgian praline, selling handcrafted bonbons, truffles, bars, tablets, and chocolate mousse, all made in Brussels atelier.",
-  "website": "https://www.neuhauschocolates.com/en_US/stores/detail?store=247"
+  "website": "https://www.neuhauschocolates.com/en_US/stores/detail?store=247",
+  "hours": "Mon 11am\u20138pm; Tue 11am\u20137pm; Wed 11am\u20137pm; Thu 11am\u20137pm; Fri 11am\u20137pm; Sat 11am\u20137pm; Sun 12pm\u20136pm"
  },
  {
   "name": "NETO Chocolatier",
@@ -41,11 +45,13 @@
   "rating": 5.0,
   "reviews": 4,
   "type": [
-   "chocolatier"
+   "bars",
+   "bonbons"
   ],
   "tags": [],
   "usp": "Family-owned small-batch handcrafted chocolatier from Brooklyn offering gluten-free and vegan truffles, mendiants, and specialty bars",
-  "website": "https://www.netochocolate.com"
+  "website": "https://www.netochocolate.com",
+  "hours": "Mon 11am\u20136pm; Tue 11am\u20136pm; Wed 11am\u20136pm; Thu 11am\u20136pm; Fri 10am\u20132pm; Sun 11am\u20136pm"
  },
  {
   "name": "Leonidas Chocolate",
@@ -55,11 +61,12 @@
   "rating": 5.0,
   "reviews": 4,
   "type": [
-   "chocolatier"
+   "bonbons"
   ],
   "tags": [],
   "usp": "Belgian chocolatier offering pralines and bonbons since 1913, with coffee and tea at Manon Cafe inside 120 Broadway",
-  "website": "https://www.leonidas.com"
+  "website": "https://www.leonidas.com",
+  "hours": "Mon 7am\u20135:30pm; Tue 7am\u20135:30pm; Wed 7am\u20135:30pm; Thu 7am\u20135:30pm; Fri 7am\u20135:30pm"
  },
  {
   "name": "Conspiracy Cafe",
@@ -75,7 +82,8 @@
   ],
   "tags": [],
   "usp": "Specialty crepes, Belgian waffles, and Dubai chocolate drinks in the East Village",
-  "website": null
+  "website": null,
+  "hours": "Mon 12pm\u201312am; Tue 12pm\u201312am; Wed 12pm\u201312am; Thu 12pm\u201312am; Fri 12pm\u20132am; Sat 12pm\u20132am; Sun 12pm\u201312am"
  },
  {
   "name": "Bissinger\u2019s",
@@ -85,11 +93,12 @@
   "rating": 5.0,
   "reviews": 3,
   "type": [
-   "chocolatier"
+   "bonbons"
   ],
   "tags": [],
   "usp": "Historic French chocolatier (founded 1668) offering small-batch truffles, caramels, and premium chocolates inside Macy's Herald Square",
-  "website": "https://www.bissingers.com"
+  "website": "https://www.bissingers.com",
+  "hours": "Mon 10am\u20139pm; Tue 10am\u20139pm; Wed 10am\u20139pm; Thu 10am\u20139pm; Fri 10am\u201310pm; Sat 10am\u201310pm; Sun 11am\u20139pm"
  },
  {
   "name": "Neuhaus Belgian Chocolate",
@@ -99,11 +108,13 @@
   "rating": 5.0,
   "reviews": 2,
   "type": [
-   "chocolatier"
+   "bars",
+   "bonbons"
   ],
   "tags": [],
   "usp": "Belgian praline inventor since 1857 offering premium handcrafted bonbons and hazelnut truffles made entirely in Belgium",
-  "website": "https://www.neuhauschocolates.com"
+  "website": "https://www.neuhauschocolates.com",
+  "hours": "Mon 10am\u20137pm; Tue 10am\u20137pm; Wed 10am\u20137pm; Thu 10am\u20137pm; Fri 10am\u20137pm; Sat 11am\u20136pm; Sun 11am\u20136pm"
  },
  {
   "name": "Neuhaus Chocolates",
@@ -113,11 +124,13 @@
   "rating": 5.0,
   "reviews": 2,
   "type": [
-   "chocolatier"
+   "bars",
+   "bonbons"
   ],
   "tags": [],
   "usp": "Flagship Madison Avenue boutique and experience center showcasing 110+ years of premium Belgian chocolate pralines and dark chocolate truffles",
-  "website": "https://www.neuhauschocolates.com"
+  "website": "https://www.neuhauschocolates.com",
+  "hours": "Mon 10am\u20138pm; Tue 10am\u20138pm; Wed 10am\u20138pm; Thu 10am\u20138pm; Fri 10am\u20138pm; Sat 11am\u20137pm; Sun 11am\u20137pm"
  },
  {
   "name": "BiGadeiros NYC",
@@ -131,7 +144,8 @@
   ],
   "tags": [],
   "usp": "Brazilian brigadeiro specialist crafting truffle-sized chocolate balls in 12+ flavors plus moist brigadeiro chocolate cake",
-  "website": "https://www.bigadeirosnyc.com"
+  "website": "https://www.bigadeirosnyc.com",
+  "hours": "Mon 12am\u201312am; Tue 12am\u201312am; Wed 12am\u201312am; Thu 12am\u201312am; Fri 12am\u201312am; Sat 12am\u201312am; Sun 12am\u201312am"
  },
  {
   "name": "Chococo Midtown",
@@ -141,15 +155,17 @@
   "rating": 5.0,
   "reviews": 1,
   "type": [
-   "chocolatier",
-   "dessert cafe"
+   "dessert cafe",
+   "bars",
+   "bonbons"
   ],
   "tags": [
    "#beantobar",
    "#singleorigin"
   ],
   "usp": "Award-winning British artisan chocolatier handcrafting bean-to-bar single-origin bars from Colombia and Ecuador, with chocolate tasting and custom bar decorating workshops",
-  "website": "https://chococo.nyc"
+  "website": "https://chococo.nyc",
+  "hours": null
  },
  {
   "name": "Tiki Tiki",
@@ -163,7 +179,8 @@
   ],
   "tags": [],
   "usp": "Sweet dessert shop featuring chocolate fondue, chocolate dips, Dubai chocolate bars, churros, skillet cookies, and waffle sticks.",
-  "website": null
+  "website": null,
+  "hours": null
  },
  {
   "name": "Confectionery",
@@ -173,14 +190,16 @@
   "rating": 4.8,
   "reviews": 183,
   "type": [
-   "chocolatier",
-   "bakery"
+   "bakery",
+   "bars",
+   "bonbons"
   ],
   "tags": [
    "#darkchocolate"
   ],
   "usp": "Vegan bakery and artisanal chocolate shop creating handcrafted bonbons, macarons, and baked goods with fair-trade, organic ingredients; no nuts, soy, or gluten.",
-  "website": null
+  "website": null,
+  "hours": "Mon 12pm\u20133:30pm, 4:15pm\u20138pm; Tue 12pm\u20133:30pm, 4:15pm\u20138pm; Wed 12pm\u20133:30pm, 4:15pm\u20138pm; Thu 12pm\u20133:30pm, 4:15pm\u20138pm; Fri 12pm\u20133:30pm, 4:15pm\u20138pm; Sat 12pm\u20133:30pm, 4:15pm\u20138pm; Sun 12pm\u20133:30pm, 4:15pm\u20138pm"
  },
  {
   "name": "Mojo Desserts",
@@ -197,7 +216,8 @@
    "#darkchocolate"
   ],
   "usp": "Country's first artisanal chocolate mousse bar, handcrafted in small batches with premium Belgian chocolate by Belgian Chef Johan Halsberghe, serving five signature mousse flavors.",
-  "website": "https://mojodesserts.com/"
+  "website": "https://mojodesserts.com/",
+  "hours": "Tue 3pm\u20139:30pm; Wed 3pm\u20139:30pm; Thu 3pm\u20139:30pm; Fri 3pm\u20139:30pm; Sat 1pm\u20139:30pm; Sun 1pm\u20139pm"
  },
  {
   "name": "Stick With Me",
@@ -207,11 +227,13 @@
   "rating": 4.7,
   "reviews": 373,
   "type": [
-   "chocolatier"
+   "bars",
+   "bonbons"
   ],
   "tags": [],
   "usp": "Artisanal chocolatier handcrafting luxury bonbons entirely by hand in small batches, with hand-shelled and hand-painted confections taking three days to create, recognized by Vogue and Oprah.",
-  "website": "https://swmsweets.com/"
+  "website": "https://swmsweets.com/",
+  "hours": "Mon 12pm\u20137pm; Tue 12pm\u20137pm; Wed 12pm\u20137pm; Thu 12pm\u20137pm; Fri 12pm\u20137pm; Sat 12pm\u20137pm; Sun 12pm\u20137pm"
  },
  {
   "name": "Chocolat Moderne",
@@ -221,11 +243,12 @@
   "rating": 4.7,
   "reviews": 100,
   "type": [
-   "chocolatier"
+   "bonbons"
   ],
   "tags": [],
   "usp": "Handcrafted gourmet chocolates using premium French Valrhona chocolate, featuring over 100 varieties of bonbons, bars, drinking chocolates, and caramel sauces with no preservatives or artificial flavorings.",
-  "website": "https://chocolatmoderne.com/"
+  "website": "https://chocolatmoderne.com/",
+  "hours": "Mon 12pm\u20136pm; Tue 12pm\u20136pm; Wed 12pm\u20136pm; Thu 12pm\u20136pm; Fri 12pm\u20136pm; Sat 12pm\u20136pm"
  },
  {
   "name": "Daniel Corpuz Chocolatier",
@@ -235,13 +258,14 @@
   "rating": 4.7,
   "reviews": 49,
   "type": [
-   "chocolatier",
    "bakery",
-   "dessert cafe"
+   "dessert cafe",
+   "bonbons"
   ],
   "tags": [],
   "usp": "Boutique chocolatier blending traditional Belgian chocolate techniques with Filipino-Asian flavors, offering handcrafted bonbons, cakes, cookies, pastries, and plated desserts with cultural influences like ube, calamansi, and pandan.",
-  "website": "https://www.danielcorpuz.com/"
+  "website": "https://www.danielcorpuz.com/",
+  "hours": "Mon 11am\u20137pm; Wed 11am\u20137pm; Thu 11am\u20137pm; Fri 12pm\u20138pm; Sat 12pm\u20138pm; Sun 11am\u20137pm"
  },
  {
   "name": "Sweet Vegan Chocolates",
@@ -251,13 +275,14 @@
   "rating": 4.7,
   "reviews": 23,
   "type": [
-   "chocolatier"
+   "bonbons"
   ],
   "tags": [
    "#darkchocolate"
   ],
   "usp": "Handcrafted vegan and allergen-free chocolate truffles with smooth ganache enrobed in 70% dark chocolate, offering 18+ flavors made entirely in NYC with fair-trade ingredients and no nuts, soy, or gluten.",
-  "website": "https://sweetvegan.nyc/"
+  "website": "https://sweetvegan.nyc/",
+  "hours": "Mon 12am\u201312am; Tue 12am\u201312am; Wed 12am\u201312am; Thu 12am\u201312am; Fri 12am\u201312am; Sat 12am\u201312am; Sun 12am\u201312am"
  },
  {
   "name": "Neuhaus Chocolate",
@@ -267,11 +292,13 @@
   "rating": 4.7,
   "reviews": 3,
   "type": [
-   "chocolatier"
+   "bars",
+   "bonbons"
   ],
   "tags": [],
   "usp": "Original Belgian Chocolate since 1857, all chocolates hand-made in Brussels by Ma\u00eetres Chocolatiers using finest natural ingredients.",
-  "website": "https://www.neuhauschocolates.com"
+  "website": "https://www.neuhauschocolates.com",
+  "hours": "Mon 10am\u20137pm; Tue 10am\u20137pm; Wed 10am\u20137pm; Thu 10am\u20137pm; Fri 10am\u20137pm; Sat 10am\u20136pm; Sun 11am\u20136pm"
  },
  {
   "name": "Varsano's Chocolate",
@@ -281,11 +308,12 @@
   "rating": 4.6,
   "reviews": 134,
   "type": [
-   "chocolatier"
+   "bonbons"
   ],
   "tags": [],
   "usp": "Greenwich Village chocolatier handcrafting and hand-dipping homemade chocolates daily, including truffles, caramels, fruit centers, and nut patties with varieties like s'mores and chocolate-covered potato chips.",
-  "website": "https://www.varsanos.com/"
+  "website": "https://www.varsanos.com/",
+  "hours": "Mon 12:30pm\u20136:30pm; Tue 12:30pm\u20136:30pm; Wed 12:30pm\u20136:30pm; Thu 12:30pm\u20136:30pm; Fri 12:30pm\u20136:30pm; Sat 12:30pm\u20136:30pm"
  },
  {
   "name": "Harlem Chocolate Factory",
@@ -295,11 +323,13 @@
   "rating": 4.6,
   "reviews": 36,
   "type": [
-   "chocolatier"
+   "bars",
+   "bonbons"
   ],
   "tags": [],
   "usp": "Artisan small-batch premium handcrafted chocolates including bonbons, truffles, tarts, and bark.",
-  "website": "https://harlemchocolatefactory.com"
+  "website": "https://harlemchocolatefactory.com",
+  "hours": "Wed 12pm\u20138pm; Thu 12pm\u20138pm; Fri 12pm\u20138pm; Sat 12pm\u20138pm; Sun 12pm\u20134pm"
  },
  {
   "name": "La Maison du Chocolat Paris",
@@ -309,12 +339,14 @@
   "rating": 4.6,
   "reviews": 5,
   "type": [
-   "chocolatier",
-   "bakery"
+   "bakery",
+   "bars",
+   "bonbons"
   ],
   "tags": [],
   "usp": "Luxury handmade French chocolates and pastries from Paris, including bonbons, macarons, and pastries.",
-  "website": "https://www.lamaisonduchocolat.com"
+  "website": "https://www.lamaisonduchocolat.com",
+  "hours": "Mon 7am\u20138pm; Tue 7am\u20138pm; Wed 7am\u20138pm; Thu 7am\u20138pm; Fri 7am\u20138pm; Sat 7am\u20138pm; Sun 7am\u20138pm"
  },
  {
   "name": "La Maison du Chocolate",
@@ -324,12 +356,14 @@
   "rating": 4.6,
   "reviews": 5,
   "type": [
-   "chocolatier",
-   "bakery"
+   "bakery",
+   "bars",
+   "bonbons"
   ],
   "tags": [],
   "usp": "Luxury French chocolates and pastries including signature bonbons, truffles, macarons, and pain au chocolat.",
-  "website": "https://www.lamaisonduchocolat.com"
+  "website": "https://www.lamaisonduchocolat.com",
+  "hours": "Mon 8am\u20137pm; Tue 8am\u20137pm; Wed 8am\u20137pm; Thu 8am\u20137pm; Fri 8am\u20137pm; Sat 10am\u20136pm; Sun 10am\u20136pm"
  },
  {
   "name": "Mondel Chocolates",
@@ -339,13 +373,14 @@
   "rating": 4.5,
   "reviews": 61,
   "type": [
-   "chocolatier"
+   "bonbons"
   ],
   "tags": [
    "#darkchocolate"
   ],
   "usp": "Family-owned since 1944 making homemade dark and milk chocolate varieties with old-world charm, including the historic Katharine Hepburn Mix.",
-  "website": null
+  "website": null,
+  "hours": "Tue 11:30am\u20136pm; Wed 11:30am\u20136pm; Thu 11:30am\u20136pm; Fri 11:30am\u20136pm; Sat 11:30am\u20136pm"
  },
  {
   "name": "L\u00e4derach",
@@ -355,11 +390,13 @@
   "rating": 4.5,
   "reviews": 31,
   "type": [
-   "chocolatier"
+   "bars",
+   "bonbons"
   ],
   "tags": [],
   "usp": "Swiss chocolatier handcrafting tartufi, bonbons, pralines, truffles, and chocolate bark using premium Swiss ingredients.",
-  "website": "https://www.laderach.com"
+  "website": "https://www.laderach.com",
+  "hours": "Mon 10am\u20138pm; Tue 10am\u20138pm; Wed 10am\u20138pm; Thu 10am\u20138pm; Fri 10am\u20138pm; Sat 10am\u20138pm; Sun 11am\u20136pm"
  },
  {
   "name": "Neuhaus - New York",
@@ -369,11 +406,13 @@
   "rating": 4.5,
   "reviews": 21,
   "type": [
-   "chocolatier"
+   "bars",
+   "bonbons"
   ],
   "tags": [],
   "usp": "Belgian chocolate manufacturer established 1857, handcrafting pralines (Belgian pralines invented in 1912), truffles, and gift collections with sustainably sourced cacao.",
-  "website": "https://www.neuhauschocolates.com"
+  "website": "https://www.neuhauschocolates.com",
+  "hours": "Mon 10am\u20139pm; Tue 10am\u20139pm; Wed 10am\u20139pm; Thu 10am\u20139pm; Fri 10am\u20139pm; Sat 10am\u20139pm; Sun 11am\u20137pm"
  },
  {
   "name": "Venchi",
@@ -383,14 +422,16 @@
   "rating": 4.5,
   "reviews": 4,
   "type": [
-   "chocolatier",
-   "ice cream"
+   "ice cream",
+   "bars",
+   "bonbons"
   ],
   "tags": [
    "#singleorigin"
   ],
   "usp": "Authentic Italian gelato and artisanal chocolates featuring single-origin chocolate from Ecuador, Venezuela, and Peru.",
-  "website": null
+  "website": null,
+  "hours": "Mon 10:30am\u201310pm; Tue 10:30am\u201310pm; Wed 10:30am\u201310pm; Thu 10:30am\u201310pm; Fri 10:30am\u201311pm; Sat 10:30am\u201311pm; Sun 10:30am\u201310pm"
  },
  {
   "name": "Myzel's Chocolate",
@@ -400,12 +441,14 @@
   "rating": 4.4,
   "reviews": 134,
   "type": [
-   "chocolatier",
-   "candy shop"
+   "candy shop",
+   "bars",
+   "bonbons"
   ],
   "tags": [],
   "usp": "Family-owned NYC institution for over two decades specializing in hand-made traditional European chocolates with beautifully decorated truffles, plus home-made baked cookies and over 100 licorice flavors.",
-  "website": "http://www.myzels.com/"
+  "website": "http://www.myzels.com/",
+  "hours": "Mon 11:30am\u20137:30pm; Tue 11:30am\u20137:30pm; Wed 11:30am\u20137:30pm; Thu 11:30am\u20137:30pm; Fri 11:30am\u20137:30pm; Sat 12pm\u20137pm; Sun 12pm\u20135pm"
  },
  {
   "name": "L\u00e4derach",
@@ -415,11 +458,13 @@
   "rating": 4.4,
   "reviews": 130,
   "type": [
-   "chocolatier"
+   "bars",
+   "bonbons"
   ],
   "tags": [],
   "usp": "Swiss premium chocolate artisan flagship store with handcrafted pralines and truffles using finest Swiss ingredients, featuring a unique rotating cocoa bean chocolate sculpture.",
-  "website": "https://laderach.com/"
+  "website": "https://laderach.com/",
+  "hours": "Mon 10am\u20139pm; Tue 10am\u20139pm; Wed 10am\u20139pm; Thu 10am\u20139pm; Fri 10am\u20139pm; Sat 10am\u20139pm; Sun 11am\u20137pm"
  },
  {
   "name": "No Chewing Allowed",
@@ -429,12 +474,13 @@
   "rating": 4.4,
   "reviews": 111,
   "type": [
-   "chocolatier",
-   "dessert cafe"
+   "dessert cafe",
+   "bonbons"
   ],
   "tags": [],
   "usp": "Specialty chocolaterie focused on French-style truffles and hot chocolate designed to be savored rather than chewed, emphasizing texture smoothness and taste over mastication.",
-  "website": "https://nochewingallowed.com/"
+  "website": "https://nochewingallowed.com/",
+  "hours": "Mon 11am\u20138pm; Tue 11am\u20138pm; Wed 11am\u20138pm; Thu 11am\u20138pm; Fri 11am\u20138pm; Sat 10am\u20138pm; Sun 10am\u20138pm"
  },
  {
   "name": "Li-Lac Chocolates - Chelsea Market",
@@ -444,11 +490,13 @@
   "rating": 4.4,
   "reviews": 36,
   "type": [
-   "chocolatier"
+   "bars",
+   "bonbons"
   ],
   "tags": [],
   "usp": "The Chelsea Market location of Manhattan's oldest chocolate house, offering over 140 fresh gourmet chocolates made in small batches with original recipes from 1923.",
-  "website": "https://www.li-lacchocolates.com/"
+  "website": "https://www.li-lacchocolates.com/",
+  "hours": "Mon 10am\u20138pm; Tue 10am\u20138pm; Wed 10am\u20138pm; Thu 10am\u20139pm; Fri 10am\u20139pm; Sat 10am\u20139pm; Sun 10am\u20138pm"
  },
  {
   "name": "Li-Lac Chocolates",
@@ -458,11 +506,13 @@
   "rating": 4.4,
   "reviews": 20,
   "type": [
-   "chocolatier"
+   "bars",
+   "bonbons"
   ],
   "tags": [],
   "usp": "Manhattan's oldest chocolate house since 1923, making fresh artisan chocolates in small batches using original recipes and time-honored techniques with over 120 items.",
-  "website": "https://www.li-lacchocolates.com/"
+  "website": "https://www.li-lacchocolates.com/",
+  "hours": "Mon 10am\u20139pm; Tue 10am\u20139pm; Wed 10am\u20139pm; Thu 10am\u20139pm; Fri 10am\u20139pm; Sat 10am\u20139pm; Sun 11am\u20137pm"
  },
  {
   "name": "MarieBelle",
@@ -472,14 +522,16 @@
   "rating": 4.3,
   "reviews": 742,
   "type": [
-   "chocolatier",
-   "dessert cafe"
+   "dessert cafe",
+   "bars",
+   "bonbons"
   ],
   "tags": [
    "#beantobar"
   ],
   "usp": "Woman-owned luxury chocolate company with fine art edibles, offering bean to bar artisan chocolates with intricate handcrafted designs and exotic flavors, plus renowned Aztec hot chocolate in Cacao Bar & Tea Salon.",
-  "website": "https://mariebelle.com/"
+  "website": "https://mariebelle.com/",
+  "hours": "Mon 11am\u20137pm; Tue 11am\u20137pm; Wed 11am\u20137pm; Thu 11am\u20137pm; Fri 11am\u20137pm; Sat 11am\u20137pm; Sun 11am\u20137pm"
  },
  {
   "name": "Blue Stripes Cacao Shop",
@@ -494,7 +546,8 @@
   ],
   "tags": [],
   "usp": "Chocolate-centric cafe by the creator of Max Brenner, serving specialty hot chocolate drinks, chocolate-filled cones, giant truffles, and chocolate fondue with a philosophy of true wellness through delicious cacao.",
-  "website": null
+  "website": null,
+  "hours": "Mon 8am\u20138pm; Tue 8am\u201312am; Wed 8am\u201312am; Thu 8am\u201312am; Fri 8am\u201312am; Sat 9am\u201312am; Sun 9am\u20138pm"
  },
  {
   "name": "Hershey\u2019s Chocolate World",
@@ -510,7 +563,8 @@
   ],
   "tags": [],
   "usp": "Massive flagship Hershey's store with experiential elements including personalized wrapper design, made-to-order s'mores, customized Reese's cups, and Hershey's Kitchens Bakery with 10 warm baked treats.",
-  "website": "https://www.chocolateworld.com/locations/times-square.html"
+  "website": "https://www.chocolateworld.com/locations/times-square.html",
+  "hours": "Mon 10am\u201312am; Tue 10am\u201312am; Wed 10am\u201312am; Thu 10am\u201312am; Fri 10am\u201312am; Sat 10am\u201312am; Sun 10am\u201312am"
  },
  {
   "name": "Roni-Sue's Chocolates",
@@ -520,14 +574,16 @@
   "rating": 4.3,
   "reviews": 88,
   "type": [
-   "chocolatier",
-   "dessert cafe"
+   "dessert cafe",
+   "bars",
+   "bonbons"
   ],
   "tags": [
    "#beantobar"
   ],
   "usp": "Woman-owned chocolatier making handmade truffles, caramels, and confections with direct-trade organic cacao from Belize and local NYC ingredients.",
-  "website": "https://www.roni-sue.com/"
+  "website": "https://www.roni-sue.com/",
+  "hours": "Fri 12pm\u20136pm; Sat 12pm\u20136pm; Sun 12pm\u20136pm"
  },
  {
   "name": "Venchi",
@@ -537,16 +593,18 @@
   "rating": 4.3,
   "reviews": 58,
   "type": [
-   "chocolatier",
    "ice cream",
    "dessert cafe",
-   "drinks"
+   "drinks",
+   "bars",
+   "bonbons"
   ],
   "tags": [
    "#100%chocolate"
   ],
   "usp": "Italian gelato and chocolate shop featuring signature gelato, chocolate fountain crepes with Suprema chocolate, and Italian-made confections with 100% natural ingredients.",
-  "website": "https://us.venchi.com/store/lexington"
+  "website": "https://us.venchi.com/store/lexington",
+  "hours": "Mon 11am\u201310:30pm; Tue 11am\u201310:30pm; Wed 11am\u201310:30pm; Thu 11am\u201310:30pm; Fri 11am\u201311pm; Sat 11am\u201311pm; Sun 11am\u201310pm"
  },
  {
   "name": "Neuhaus Belgian Chocolate",
@@ -556,11 +614,13 @@
   "rating": 4.3,
   "reviews": 54,
   "type": [
-   "chocolatier"
+   "bars",
+   "bonbons"
   ],
   "tags": [],
   "usp": "Inventor of the praline and the iconic gift box; handcrafted Belgian pralines, truffles, and chocolate tablets using sustainably sourced cacao.",
-  "website": "https://www.neuhauschocolates.com/en_US/home"
+  "website": "https://www.neuhauschocolates.com/en_US/home",
+  "hours": "Mon 9am\u20137pm; Tue 9am\u20137pm; Wed 9am\u20137pm; Thu 9am\u20137pm; Fri 9am\u20137pm; Sat 11am\u20137pm; Sun 11am\u20137pm"
  },
  {
   "name": "MarieBelle at The Kitano Hotel",
@@ -570,15 +630,17 @@
   "rating": 4.3,
   "reviews": 10,
   "type": [
-   "chocolatier",
-   "dessert cafe"
+   "dessert cafe",
+   "bars",
+   "bonbons"
   ],
   "tags": [
    "#beantobar",
    "#darkchocolate"
   ],
   "usp": "Artisanal ganache and bean-to-bar confections made with exotic flavors produced by hand in Brooklyn.",
-  "website": "https://mariebelle.com/"
+  "website": "https://mariebelle.com/",
+  "hours": "Mon 10am\u20135pm; Tue 10am\u20135pm; Wed 10am\u20135pm; Thu 10am\u20135pm; Fri 10am\u20136pm; Sat 10am\u20136pm; Sun 10am\u20136pm"
  },
  {
   "name": "La Maison du Chocolat",
@@ -588,12 +650,14 @@
   "rating": 4.3,
   "reviews": 7,
   "type": [
-   "chocolatier",
-   "dessert cafe"
+   "dessert cafe",
+   "bars",
+   "bonbons"
   ],
   "tags": [],
   "usp": "French luxury chocolate boutique with exquisite ganaches, truffles, pralines, and pastries crafted by Nicolas Cloiseau (Meilleur Ouvrier de France), offering serious tasting before purchase.",
-  "website": "https://www.lamaisonduchocolat.com/"
+  "website": "https://www.lamaisonduchocolat.com/",
+  "hours": "Tue 11am\u20137pm; Wed 11am\u20137pm; Thu 11am\u20137pm; Fri 11am\u20137pm; Sat 11am\u20137pm; Sun 11am\u20137pm"
  },
  {
   "name": "La Maison du Chocolat - Rockefeller",
@@ -603,14 +667,16 @@
   "rating": 4.2,
   "reviews": 479,
   "type": [
-   "chocolatier",
-   "dessert cafe"
+   "dessert cafe",
+   "bars",
+   "bonbons"
   ],
   "tags": [
    "#darkchocolate"
   ],
   "usp": "Paris-based luxury chocolatier offering handcrafted bonbons, pralines, pastries, and famous hot chocolate with all items made in Paris or on-site with French ingredients.",
-  "website": "https://www.lamaisonduchocolat.com/en_us/stores/usa/new-york/rockefeller-center"
+  "website": "https://www.lamaisonduchocolat.com/en_us/stores/usa/new-york/rockefeller-center",
+  "hours": "Mon 10:30am\u20137pm; Tue 10:30am\u20137pm; Wed 10:30am\u20137pm; Thu 10:30am\u20137pm; Fri 10:30am\u20137pm; Sat 11am\u20136pm; Sun 11am\u20136pm"
  },
  {
   "name": "Venchi",
@@ -620,15 +686,17 @@
   "rating": 4.2,
   "reviews": 426,
   "type": [
-   "chocolatier",
    "ice cream",
-   "dessert cafe"
+   "dessert cafe",
+   "bars",
+   "bonbons"
   ],
   "tags": [
    "#singleorigin"
   ],
   "usp": "Italian ChocoGelateria at Union Square since 1878, offering over 350 chocolate recipes and 90 gelato flavors using single-origin ingredients from Ecuador, Venezuela, and Peru.",
-  "website": "https://us.venchi.com/"
+  "website": "https://us.venchi.com/",
+  "hours": "Mon 11am\u201312am; Tue 11am\u201312am; Wed 11am\u201312am; Thu 11am\u201312am; Fri 10am\u20131am; Sat 10am\u20131am; Sun 10am\u201312am"
  },
  {
   "name": "L.A. Burdick Handmade Chocolates",
@@ -638,14 +706,15 @@
   "rating": 4.2,
   "reviews": 192,
   "type": [
-   "chocolatier",
-   "dessert cafe"
+   "dessert cafe",
+   "bonbons"
   ],
   "tags": [
    "#darkchocolate"
   ],
   "usp": "Artisan chocolatier specializing in individually handcrafted bonbons, signature chocolate mice and penguins, and premium drinking chocolate made with no artificial coloring or preservatives.",
-  "website": "https://www.burdickchocolate.com/"
+  "website": "https://www.burdickchocolate.com/",
+  "hours": "Mon 8am\u20136pm; Tue 8am\u20136pm; Wed 8am\u20136pm; Thu 8am\u20136pm; Fri 8am\u20138pm; Sat 8am\u20138pm; Sun 10am\u20138pm"
  },
  {
   "name": "Li-Lac Chocolates",
@@ -655,11 +724,13 @@
   "rating": 4.2,
   "reviews": 71,
   "type": [
-   "chocolatier"
+   "bars",
+   "bonbons"
   ],
   "tags": [],
   "usp": "Greenwich Village location of Manhattan's oldest chocolate house, making over 120 fresh gourmet chocolates daily since 1923.",
-  "website": "https://www.li-lacchocolates.com/"
+  "website": "https://www.li-lacchocolates.com/",
+  "hours": "Mon 11am\u20137pm; Tue 11am\u20137pm; Wed 11am\u20137pm; Thu 11am\u20137pm; Fri 11am\u20137pm; Sat 11am\u20137pm; Sun 11am\u20136pm"
  },
  {
   "name": "Belgian Neuhaus Chocolate",
@@ -669,11 +740,13 @@
   "rating": 4.2,
   "reviews": 56,
   "type": [
-   "chocolatier"
+   "bars",
+   "bonbons"
   ],
   "tags": [],
   "usp": "Luxury Belgian chocolatier selling handcrafted pralines, truffles, and chocolate tablets made with sustainably sourced cacao and natural ingredients.",
-  "website": "https://www.neuhauschocolates.com/en_US/home"
+  "website": "https://www.neuhauschocolates.com/en_US/home",
+  "hours": "Mon 8am\u20138pm; Tue 8am\u20138pm; Wed 8am\u20138pm; Thu 8am\u20138pm; Fri 8am\u20138pm; Sat 10am\u20137pm; Sun 10am\u20136pm"
  },
  {
   "name": "Li-Lac Chocolates",
@@ -683,12 +756,14 @@
   "rating": 4.2,
   "reviews": 36,
   "type": [
-   "chocolatier",
-   "candy shop"
+   "candy shop",
+   "bars",
+   "bonbons"
   ],
   "tags": [],
   "usp": "Manhattan's oldest chocolate house since 1923, hand-making artisanal chocolates in small batches using founder's original 1920s recipes.",
-  "website": "https://www.li-lacchocolates.com/"
+  "website": "https://www.li-lacchocolates.com/",
+  "hours": "Mon 11am\u20137pm; Tue 11am\u20137pm; Wed 11am\u20137pm; Thu 11am\u20137pm; Fri 11am\u20137:30pm; Sat 11am\u20137:30pm; Sun 11am\u20136pm"
  },
  {
   "name": "Venchi",
@@ -698,15 +773,17 @@
   "rating": 4.2,
   "reviews": 34,
   "type": [
-   "chocolatier",
    "ice cream",
-   "dessert cafe"
+   "dessert cafe",
+   "bars",
+   "bonbons"
   ],
   "tags": [
    "#singleorigin"
   ],
   "usp": "NoMad ChocoGelateria location featuring fresh daily gelato, authentic Italian coffee, chocolate crepes from Venchi's Suprema chocolate fountain, and artisanal chocolates.",
-  "website": "https://us.venchi.com/"
+  "website": "https://us.venchi.com/",
+  "hours": "Mon 11am\u201312:30am; Tue 11am\u201312:30am; Wed 11am\u201312:30am; Thu 11am\u201312:30am; Fri 10am\u20131am; Sat 10am\u20131am; Sun 10am\u201312:30am"
  },
  {
   "name": "Chocolate Moonshine",
@@ -716,12 +793,13 @@
   "rating": 4.2,
   "reviews": 5,
   "type": [
-   "chocolatier",
-   "dessert cafe"
+   "dessert cafe",
+   "bonbons"
   ],
   "tags": [],
   "usp": "Handcrafted gourmet fudge, truffles, and chocolate confections made small-batch with real cream and Belgian chocolate, located inside Macy's Herald Square.",
-  "website": "https://www.chocolatemoonshine.com/"
+  "website": "https://www.chocolatemoonshine.com/",
+  "hours": "Mon 10am\u20139pm; Tue 10am\u20139pm; Wed 10am\u20139pm; Thu 10am\u20139pm; Fri 10am\u201310pm; Sat 10am\u201310pm; Sun 11am\u20139pm"
  },
  {
   "name": "Jacques Torres Chocolate",
@@ -731,15 +809,17 @@
   "rating": 4.2,
   "reviews": 5,
   "type": [
-   "chocolatier",
    "dessert cafe",
-   "ice cream"
+   "ice cream",
+   "bars",
+   "bonbons"
   ],
   "tags": [
    "#darkchocolate"
   ],
   "usp": "Renowned pastry chef and chocolatier producing hand-made, hand-packaged chocolate treats, signature hot chocolate, and artisanal confections from his Brooklyn Army Terminal factory.",
-  "website": "https://mrchocolate.com/"
+  "website": "https://mrchocolate.com/",
+  "hours": "Mon 9am\u20137pm; Tue 9am\u20137pm; Wed 9am\u20137pm; Thu 9am\u20137pm; Fri 9am\u20137pm; Sat 9am\u20137pm; Sun 11am\u20136pm"
  },
  {
   "name": "La Maison Du Chocolat - Madison Ave",
@@ -749,12 +829,14 @@
   "rating": 4.1,
   "reviews": 236,
   "type": [
-   "chocolatier",
-   "dessert cafe"
+   "dessert cafe",
+   "bars",
+   "bonbons"
   ],
   "tags": [],
   "usp": "French luxury chocolate boutique on Upper East Side with tea room featuring exquisite pralines, pastries, and plated chocolate desserts; first US location opened 1998.",
-  "website": "https://www.lamaisonduchocolat.com/en_us/our-boutiques-new-york"
+  "website": "https://www.lamaisonduchocolat.com/en_us/our-boutiques-new-york",
+  "hours": "Mon 10:30am\u20137pm; Tue 10:30am\u20137pm; Wed 10:30am\u20137pm; Thu 10:30am\u20137pm; Fri 10:30am\u20137pm; Sat 10:30am\u20136pm; Sun 10:30am\u20136pm"
  },
  {
   "name": "Venchi",
@@ -764,12 +846,14 @@
   "rating": 4.1,
   "reviews": 198,
   "type": [
-   "chocolatier",
-   "ice cream"
+   "ice cream",
+   "bars",
+   "bonbons"
   ],
   "tags": [],
   "usp": "Italian chocogelateria founded in 1878 offering gourmet chocolates, pralines, and fresh gelato with vegan options at Columbus Circle.",
-  "website": "https://us.venchi.com/store/columbus-circle"
+  "website": "https://us.venchi.com/store/columbus-circle",
+  "hours": "Mon 11am\u201311:30pm; Tue 11am\u201311:30pm; Wed 11am\u201311pm; Thu 11am\u201311:30pm; Fri 10am\u201312:30pm; Sat 9am\u201312:30pm; Sun 10:30am\u201311:30am"
  },
  {
   "name": "Teuscher",
@@ -779,13 +863,14 @@
   "rating": 4.1,
   "reviews": 163,
   "type": [
-   "chocolatier"
+   "bonbons"
   ],
   "tags": [
    "#darkchocolate"
   ],
   "usp": "Swiss chocolatier from Z\u00fcrich operating in Rockefeller Center for 30+ years, famous for hand-made Champagne truffles flown in weekly from Switzerland with no preservatives.",
-  "website": "https://teuschernyc.com/"
+  "website": "https://teuschernyc.com/",
+  "hours": "Mon 11am\u20137pm; Tue 11am\u20137pm; Wed 11am\u20137pm; Thu 11am\u20137pm; Fri 11am\u20137pm; Sat 11am\u20137pm; Sun 11am\u20136pm"
  },
  {
   "name": "Venchi",
@@ -795,12 +880,14 @@
   "rating": 4.1,
   "reviews": 141,
   "type": [
-   "chocolatier",
-   "ice cream"
+   "ice cream",
+   "bars",
+   "bonbons"
   ],
   "tags": [],
   "usp": "Italian chocogelateria with over 350 chocolate recipes and 90 gelato flavors made fresh daily using natural ingredients like Piedmont hazelnuts and Sicilian almonds.",
-  "website": "https://us.venchi.com/store/bleecker"
+  "website": "https://us.venchi.com/store/bleecker",
+  "hours": "Mon 11:30am\u201311pm; Tue 11:30am\u201311pm; Wed 11:30am\u201311pm; Thu 11:30am\u201311pm; Fri 11am\u201312am; Sat 11am\u201312am; Sun 11am\u201311pm"
  },
  {
   "name": "L\u00e4derach",
@@ -810,11 +897,13 @@
   "rating": 4.1,
   "reviews": 104,
   "type": [
-   "chocolatier"
+   "bars",
+   "bonbons"
   ],
   "tags": [],
   "usp": "Swiss chocolatier (since 1962) in Bloomberg Tower offering handcrafted pralines and truffles with glass-view workshop; first US location opened 2019.",
-  "website": "https://laderach.com/us-en"
+  "website": "https://laderach.com/us-en",
+  "hours": "Mon 9am\u20138pm; Tue 9am\u20138pm; Wed 9am\u20138pm; Thu 9am\u20138pm; Fri 9am\u20138pm; Sat 10am\u20138pm; Sun 11am\u20137pm"
  },
  {
   "name": "Amedei",
@@ -824,14 +913,16 @@
   "rating": 4.1,
   "reviews": 15,
   "type": [
-   "chocolatier"
+   "bars",
+   "bonbons"
   ],
   "tags": [
    "#beantobar",
    "#singleorigin"
   ],
   "usp": "Italian chocolatier producing award-winning single-origin and single-variety cru chocolate bars from Venezuela, Peru, Madagascar, and Ecuador, bean to bar process.",
-  "website": "https://amedei.it/"
+  "website": "https://amedei.it/",
+  "hours": "Mon 10am\u20138pm; Tue 10am\u20138pm; Wed 10am\u20138pm; Thu 10am\u20138pm; Fri 10am\u20138pm; Sat 10am\u20138pm; Sun 10am\u20136pm"
  },
  {
   "name": "Li-Lac Chocolates - Grand Central Market",
@@ -841,11 +932,13 @@
   "rating": 4.0,
   "reviews": 55,
   "type": [
-   "chocolatier"
+   "bars",
+   "bonbons"
   ],
   "tags": [],
   "usp": "Manhattan's oldest chocolate house since 1923, handcrafting over 120 fresh gourmet chocolates including truffles and fudge made in small batches using original recipes.",
-  "website": "https://www.li-lacchocolates.com/"
+  "website": "https://www.li-lacchocolates.com/",
+  "hours": "Mon 7am\u20138pm; Tue 7am\u20138pm; Wed 7am\u20138pm; Thu 7am\u20138pm; Fri 7am\u20138pm; Sat 10am\u20137pm; Sun 11am\u20136pm"
  },
  {
   "name": "Teuscher Chocolates of Switzerland",
@@ -855,11 +948,12 @@
   "rating": 4.0,
   "reviews": 46,
   "type": [
-   "chocolatier"
+   "bonbons"
   ],
   "tags": [],
   "usp": "Swiss chocolatier from Zurich founded in 1932 hand-manufacturing over 200 varieties of confections, famous for champagne truffles flown in fresh weekly from Switzerland.",
-  "website": "https://teuschernyc.com/"
+  "website": "https://teuschernyc.com/",
+  "hours": "Mon 11am\u20136pm; Tue 11am\u20136pm; Wed 11am\u20136pm; Thu 11am\u20136pm; Fri 11am\u20136pm; Sat 11am\u20136pm"
  },
  {
   "name": "Ghirardelli Chocolate & Ice Cream Shop",
@@ -874,7 +968,8 @@
   ],
   "tags": [],
   "usp": "San Francisco-based chocolate and ice cream shop at Empire State Building serving world-famous handmade hot fudge sundaes, sundaes, milkshakes, and custom chocolate squares.",
-  "website": "https://www.ghirardelli.com/stores/new-york"
+  "website": "https://www.ghirardelli.com/stores/new-york",
+  "hours": "Mon 10am\u20139pm; Tue 10am\u20139pm; Wed 10am\u20139pm; Thu 10am\u20139pm; Fri 10am\u20139pm; Sat 10am\u201310pm; Sun 10am\u20139pm"
  },
  {
   "name": "Le Chocolat Maxime Fr\u00e9d\u00e9ric",
@@ -884,11 +979,13 @@
   "rating": 4.0,
   "reviews": 5,
   "type": [
-   "chocolatier"
+   "bars",
+   "bonbons"
   ],
   "tags": [],
   "usp": "Luxury French chocolatier inside Louis Vuitton flagship with handmade bonbons crafted in Paris using milk, butter, eggs, and nuts from small French farms.",
-  "website": "https://us.louisvuitton.com/eng-us/point-of-sale/usa/louis-vuitton-new-york-5th-avenue-chocolate-shop"
+  "website": "https://us.louisvuitton.com/eng-us/point-of-sale/usa/louis-vuitton-new-york-5th-avenue-chocolate-shop",
+  "hours": "Mon 10am\u20138pm; Tue 10am\u20138pm; Wed 10am\u20138pm; Thu 10am\u20138pm; Fri 10am\u20138pm; Sat 10am\u20138pm; Sun 11am\u20137pm"
  },
  {
   "name": "Venchi Chocolate and Gelato Columbus Av",
@@ -898,12 +995,14 @@
   "rating": 4.0,
   "reviews": 5,
   "type": [
-   "chocolatier",
-   "ice cream"
+   "ice cream",
+   "bars",
+   "bonbons"
   ],
   "tags": [],
   "usp": "Italian chocogelateria founded in 1878 offering gourmet chocolates, pralines, gelato, and hot chocolate with chocolate fountain and signature chocolate wall on Upper West Side.",
-  "website": "https://us.venchi.com/store/columbus-avenue"
+  "website": "https://us.venchi.com/store/columbus-avenue",
+  "hours": "Mon 10:30am\u201311pm; Tue 10:30am\u201311pm; Wed 10:30am\u201311pm; Thu 10:30am\u201311pm; Fri 10:30am\u201312am; Sat 10:30am\u201312am; Sun 10:30am\u201311pm"
  },
  {
   "name": "Cacao by Cipriani",
@@ -913,11 +1012,13 @@
   "rating": 4.0,
   "reviews": 4,
   "type": [
-   "chocolatier"
+   "bars",
+   "bonbons"
   ],
   "tags": [],
   "usp": "Artisanal handmade chocolates fashioned into luxury objects like plateau shoes, clutches, and bags, by Ma\u00eetre Chocolatiers trained in Italy.",
-  "website": "https://shop.cacaobycipriani.com"
+  "website": "https://shop.cacaobycipriani.com",
+  "hours": "Mon 11am\u20137pm; Tue 11am\u20137pm; Wed 11am\u20137pm; Thu 11am\u20137pm; Fri 11am\u20137pm"
  },
  {
   "name": "Neuhaus",
@@ -927,11 +1028,13 @@
   "rating": 4.0,
   "reviews": 4,
   "type": [
-   "chocolatier"
+   "bars",
+   "bonbons"
   ],
   "tags": [],
   "usp": "Original Belgian Chocolate since 1857, with multiple Manhattan locations including Grand Central Terminal and Hudson Yards.",
-  "website": "https://www.neuhauschocolates.com"
+  "website": "https://www.neuhauschocolates.com",
+  "hours": "Mon 9am\u20139pm; Tue 9am\u20139pm; Wed 9am\u20139pm; Thu 9am\u20139pm; Fri 9am\u20139pm; Sat 10am\u20139pm; Sun 11am\u20137pm"
  },
  {
   "name": "Vere",
@@ -941,14 +1044,16 @@
   "rating": 4.0,
   "reviews": 2,
   "type": [
-   "chocolatier"
+   "bars",
+   "bonbons"
   ],
   "tags": [
    "#singleorigin",
    "#darkchocolate"
   ],
   "usp": "Artisanal hand-made chocolates with 75% single varietal heirloom cacao, low sugar and gluten free, produced in on-site chocolate factory.",
-  "website": null
+  "website": null,
+  "hours": null
  },
  {
   "name": "MarieBelle",
@@ -958,11 +1063,13 @@
   "rating": 4.0,
   "reviews": 2,
   "type": [
-   "chocolatier"
+   "bars",
+   "bonbons"
   ],
   "tags": [],
   "usp": "Luxury artisanal New York chocolatier founded by Maribel Lieberman, offering signature chocolate ganache, truffles, and bars in sophisticated boutique settings.",
-  "website": "https://mariebelle.com"
+  "website": "https://mariebelle.com",
+  "hours": "Mon 11am\u20137pm; Tue 11am\u20137pm; Wed 11am\u20137pm; Thu 11am\u20137pm; Fri 11am\u20137pm; Sat 11am\u20137pm; Sun 11am\u20137pm"
  },
  {
   "name": "Neuhaus",
@@ -972,11 +1079,13 @@
   "rating": 4.0,
   "reviews": 1,
   "type": [
-   "chocolatier"
+   "bars",
+   "bonbons"
   ],
   "tags": [],
   "usp": "Original Belgian Chocolate since 1857, newest Upper West Side location with bulk chocolate counter for custom assortments and signature pralines.",
-  "website": "https://www.neuhauschocolates.com"
+  "website": "https://www.neuhauschocolates.com",
+  "hours": "Mon 10am\u20137pm; Tue 10am\u20137pm; Wed 10am\u20137pm; Thu 10am\u20137pm; Fri 10am\u20137pm; Sat 10am\u20137pm; Sun 10am\u20137pm"
  },
  {
   "name": "Ladur\u00e9e New York - Penn Station",
@@ -991,7 +1100,8 @@
   ],
   "tags": [],
   "usp": "French luxury pastry house founded in 1862, offering signature macarons, pastries, fine chocolates, and specialty teas in Moynihan Train Hall.",
-  "website": "https://laduree.com"
+  "website": "https://laduree.com",
+  "hours": "Mon 7am\u20138pm; Tue 7am\u20138pm; Wed 7am\u20138pm; Thu 7am\u20138pm; Fri 7am\u20138pm; Sat 7am\u20138pm; Sun 7am\u20138pm"
  },
  {
   "name": "Venchi",
@@ -1001,14 +1111,16 @@
   "rating": 3.9,
   "reviews": 47,
   "type": [
-   "chocolatier",
    "ice cream",
    "drinks",
-   "dessert cafe"
+   "dessert cafe",
+   "bars",
+   "bonbons"
   ],
   "tags": [],
   "usp": "Italian chocogelateria offering handcrafted chocolates, gelato, and hot chocolate with chocolate fountain",
-  "website": "us.venchi.com"
+  "website": "us.venchi.com",
+  "hours": "Mon 11am\u20131am; Tue 11am\u20131am; Wed 11am\u20131am; Thu 11am\u20131am; Fri 10am\u20131:30am; Sat 10am\u20131:30am; Sun 10am\u20131:30am"
  },
  {
   "name": "Venchi",
@@ -1018,14 +1130,16 @@
   "rating": 3.8,
   "reviews": 65,
   "type": [
-   "chocolatier",
    "ice cream",
    "drinks",
-   "dessert cafe"
+   "dessert cafe",
+   "bars",
+   "bonbons"
   ],
   "tags": [],
   "usp": "Italian chocogelateria with chocolate fountain, specializing in handcrafted chocolates, gelato, and hot chocolate",
-  "website": "us.venchi.com"
+  "website": "us.venchi.com",
+  "hours": "Mon 11am\u201310:30pm; Tue 11am\u201310:30pm; Wed 11am\u201310:30pm; Thu 11am\u201310:30pm; Fri 11am\u201311:30pm; Sat 11am\u201311:30pm; Sun 11am\u201310:30pm"
  },
  {
   "name": "Li-Lac Chocolates - Hudson Yards",
@@ -1035,11 +1149,13 @@
   "rating": 3.8,
   "reviews": 12,
   "type": [
-   "chocolatier"
+   "bars",
+   "bonbons"
   ],
   "tags": [],
   "usp": "Manhattan's oldest chocolate house since 1923, making fresh artisan chocolates in small batches using original recipes",
-  "website": "www.li-lacchocolates.com"
+  "website": "www.li-lacchocolates.com",
+  "hours": "Mon 10am\u20138pm; Tue 10am\u20138pm; Wed 10am\u20138pm; Thu 10am\u20138pm; Fri 10am\u20139pm; Sat 10am\u20139pm; Sun 10am\u20137pm"
  },
  {
   "name": "No Chewing Allowed",
@@ -1049,12 +1165,13 @@
   "rating": 3.7,
   "reviews": 3,
   "type": [
-   "chocolatier",
-   "drinks"
+   "drinks",
+   "bonbons"
   ],
   "tags": [],
   "usp": "Boutique featuring fine truffles and hot chocolate with uniquely defined taste and melting profile",
-  "website": "nochewingallowed.com"
+  "website": "nochewingallowed.com",
+  "hours": "Mon 10am\u20138pm; Tue 10am\u20138pm; Wed 10am\u20138pm; Thu 10am\u20138pm; Fri 10am\u20138pm; Sat 10am\u20138pm; Sun 10am\u20137pm"
  },
  {
   "name": "Max Brenner Times square - Chocolate Shop",
@@ -1064,13 +1181,15 @@
   "rating": 3.6,
   "reviews": 58,
   "type": [
-   "chocolatier",
    "drinks",
-   "dessert cafe"
+   "dessert cafe",
+   "bars",
+   "bonbons"
   ],
   "tags": [],
   "usp": "Handcrafted chocolate creations including truffles, pralines, waffles, and signature hot chocolate experiences",
-  "website": "maxbrenner.com"
+  "website": "maxbrenner.com",
+  "hours": "Mon 10am\u201311pm; Tue 10am\u201311pm; Wed 10am\u201311pm; Thu 10am\u201311pm; Fri 10am\u201312am; Sat 10am\u201312am; Sun 10am\u201311pm"
  },
  {
   "name": "La Maison du Chocolat - New York",
@@ -1080,11 +1199,13 @@
   "rating": 3.5,
   "reviews": 12,
   "type": [
-   "chocolatier",
-   "dessert cafe"
+   "dessert cafe",
+   "bars",
+   "bonbons"
   ],
   "tags": [],
   "usp": "Luxurious French chocolatier crafting hand-made ganaches and pralines using traditional techniques and finest cocoa",
-  "website": "www.lamaisonduchocolat.com"
+  "website": "www.lamaisonduchocolat.com",
+  "hours": "Mon 10am\u20138pm; Tue 10am\u20138pm; Wed 10am\u20138pm; Thu 10am\u20138pm; Fri 10am\u20138pm; Sat 10am\u20138pm; Sun 11am\u20137pm"
  }
 ]

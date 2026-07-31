@@ -185,7 +185,8 @@ panel.onAdd = function () {
   html += `<label><input type="checkbox" data-cat="chocatlas">🍫 Chocolate <span class="count">(71)</span></label>`;
   html += `<div id="choc-filters" style="display:none; margin:2px 0 0 20px; font-size:12px;">
     <div>
-      <label style="display:inline"><input type="checkbox" class="cf-type" value="chocolatier" checked>🍫 bars/bonbons</label><br>
+      <label style="display:inline"><input type="checkbox" class="cf-type" value="bars" checked>🍫 bars</label><br>
+      <label style="display:inline"><input type="checkbox" class="cf-type" value="bonbons" checked>🍬 bonbons/truffles</label><br>
       <label style="display:inline"><input type="checkbox" class="cf-type" value="dessert cafe" checked>🍮 dessert cafe</label>
     </div>
     <div><span id="cf-count" class="count"></span></div>
@@ -261,6 +262,7 @@ async function toggleChoc(on) {
         <div class="popup-cat">🍫 ${p.type.join(", ")} · ${p.rating}★ (${p.reviews.toLocaleString()} reviews)</div>
         <div class="popup-notes">${p.usp || ""}</div>
         ${p.tags.length ? `<div class="popup-notes" style="color:#b8860b">${p.tags.join(" ")}</div>` : ""}
+        ${p.hours ? `<div class="popup-cat">🕐 ${p.hours}</div>` : ""}
         <div class="popup-cat">${p.address || ""}</div>
         <div class="popup-links">${links}</div>`, { maxWidth: 280 });
       chocMarkers.push({ marker: m, type: p.type });
