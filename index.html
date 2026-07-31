@@ -65,11 +65,7 @@
 // category must match an entry in CATEGORIES below.
 // ============================================================
 const CATEGORIES = {
-  place:      { label: "Places",      emoji: "📍", color: "#2a6f97" },
-  museum:     { label: "Museums & Art", emoji: "🎨", color: "#6a4c93" },
-  restaurant: { label: "Restaurants", emoji: "🍽️", color: "#e07a00" },
-  pizza:      { label: "Pizza",       emoji: "🍕", color: "#d62828" },
-  snack:      { label: "Snacks",      emoji: "🍰", color: "#b5179e" },
+  place: { label: "Places", emoji: "📍", color: "#2a6f97" },
 };
 
 const PLACES = [
@@ -84,17 +80,17 @@ const PLACES = [
     address: "Liberty Island — ferry from Battery Park", notes: "Same ferry as Ellis Island; reserve crown/pedestal tickets ahead." },
   { name: "Central Park Zoo", category: "place", emoji: "🦭", lat: 40.7678, lng: -73.9718,
     address: "E 64th St & 5th Ave", notes: "Sea lion pool at the center; snow leopards, penguins." },
-  { name: "The Met", category: "museum", emoji: "🏛️", lat: 40.7794, lng: -73.9632,
+  { name: "The Met", category: "place", emoji: "🏛️", lat: 40.7794, lng: -73.9632,
     address: "1000 5th Ave", notes: "Metropolitan Museum of Art; could fill a whole day." },
-  { name: "American Museum of Natural History", category: "museum", emoji: "🦖", lat: 40.7813, lng: -73.9740,
+  { name: "American Museum of Natural History", category: "place", emoji: "🦖", lat: 40.7813, lng: -73.9740,
     address: "200 Central Park West", notes: "Dinosaur halls, blue whale, planetarium." },
-  { name: "MoMA", category: "museum", lat: 40.7614, lng: -73.9776,
+  { name: "MoMA", category: "place", emoji: "🎨", lat: 40.7614, lng: -73.9776,
     address: "11 W 53rd St", notes: "Museum of Modern Art." },
-  { name: "Whitney Museum of American Art", category: "museum", lat: 40.7396, lng: -74.0089,
+  { name: "Whitney Museum of American Art", category: "place", emoji: "🎨", lat: 40.7396, lng: -74.0089,
     address: "99 Gansevoort St", notes: "At the foot of the High Line." },
   { name: "Brooklyn Bridge", category: "place", lat: 40.7061, lng: -73.9969,
     address: "Walkway entrance near City Hall Park", notes: "Walk toward Brooklyn for the skyline view." },
-  { name: "New York Transit Museum", category: "museum", emoji: "🚃", lat: 40.6906, lng: -73.9902,
+  { name: "New York Transit Museum", category: "place", emoji: "🚃", lat: 40.6906, lng: -73.9902,
     address: "99 Schermerhorn St, Brooklyn", notes: "In a decommissioned 1936 subway station; vintage trains." },
   { name: "Penn Station", category: "place", emoji: "🚂", lat: 40.7506, lng: -73.9935,
     address: "W 32nd St & 8th Ave (Moynihan Train Hall)", notes: "Amtrak/NJT/LIRR hub." },
@@ -109,36 +105,14 @@ const PLACES = [
   { name: "Bethesda Terrace & Fountain", category: "place", emoji: "⛲", lat: 40.7740, lng: -73.9708,
     address: "Central Park, mid-park at 72nd St", notes: "Central Park's heart — arcade tiles, fountain, Bow Bridge nearby." },
 
-  // --- Restaurants ---
-  { name: "Fonty's Deli + Dukaan", category: "restaurant", lat: 40.7337, lng: -74.0009,
+  // --- Food (non-pizza) ---
+  { name: "Fonty's Deli + Dukaan", category: "place", emoji: "🍽️", lat: 40.7337, lng: -74.0009,
     address: "20 Christopher St", notes: "" },
-  { name: "Juliana's Pizza", category: "restaurant", lat: 40.7027, lng: -73.9935,
-    address: "19 Old Fulton St, Brooklyn (DUMBO)", notes: "From Portillo. Patsy Grimaldi's return spot, coal-fired." },
-  { name: "Nathan's Famous (original)", category: "restaurant", lat: 40.5755, lng: -73.9814,
+  { name: "Nathan's Famous (original)", category: "place", emoji: "🌭", lat: 40.5755, lng: -73.9814,
     address: "1310 Surf Ave, Coney Island", notes: "From Portillo. The original 1916 stand." },
-
-  // --- Pizza ---
-  { name: "F&F Pizzeria", category: "pizza", lat: 40.6773, lng: -73.9982,
-    address: "459 Court St, Carroll Gardens, Brooklyn", notes: "From Babish review. Took the #1 overall spot." },
-  { name: "Philomena's Pizza", category: "pizza", lat: 40.7434, lng: -73.9230,
-    address: "41-16 Queens Blvd, Sunnyside, Queens", notes: "From Babish review. \"Some of the best pizza yet imagined\" (accidentally left off his final on-screen ranking)." },
-  { name: "Scarr's Pizza", category: "pizza", lat: 40.7150, lng: -73.9916,
-    address: "35 Orchard St, Lower East Side", notes: "From Babish review. House-milled flour." },
-  { name: "L'industrie Pizzeria", category: "pizza", lat: 40.7116, lng: -73.9578,
-    address: "254 S 2nd St, Williamsburg, Brooklyn", notes: "From Babish review. Smoky flavor, thin crisp undercarriage." },
-  { name: "Paulie Gee's Slice Shop", category: "pizza", lat: 40.7284, lng: -73.9572,
-    address: "110 Franklin St, Greenpoint, Brooklyn", notes: "From Babish review. Cupped pepperoni, crisp crust." },
-  { name: "Lucia Pizza of Avenue X", category: "pizza", lat: 40.5931, lng: -73.9481,
-    address: "2201 Avenue X, Sheepshead Bay, Brooklyn", notes: "From Babish review. High-quality mozzarella, perfectly baked base." },
-  { name: "Di Fara Pizza", category: "pizza", lat: 40.6250, lng: -73.9615,
-    address: "1424 Avenue J, Midwood, Brooklyn", notes: "From Babish review. Legendary baseline, basil snipped onto pie." },
-  { name: "Joe's Pizza", category: "pizza", lat: 40.7305, lng: -74.0021,
-    address: "7 Carmine St, Greenwich Village", notes: "From Babish review. Quintessential street slice, standard-bearer." },
-
-  // --- Snacks ---
-  { name: "Magnolia Bakery", category: "snack", lat: 40.7359, lng: -74.0067,
+  { name: "Magnolia Bakery", category: "place", emoji: "🍰", lat: 40.7359, lng: -74.0067,
     address: "401 Bleecker St (original)", notes: "Coworker rec. Famous banana pudding." },
-  { name: "Salswee", category: "snack", lat: 40.7409, lng: -73.9896,
+  { name: "Salswee", category: "place", emoji: "🍰", lat: 40.7409, lng: -73.9896,
     address: "180 5th Ave (Flatiron)", notes: "Coworker rec: mango dessert. Asian-French patisserie, fruit-shaped pastries." },
 ];
 
@@ -193,7 +167,7 @@ panel.onAdd = function () {
     html += `<label><input type="checkbox" data-cat="${cat}" checked>${c.emoji} ${c.label} <span class="count">(${counts[cat] || 0})</span></label>`;
   }
   html += `<label><input type="checkbox" data-cat="transit">🚇 Subway</label>`;
-  html += `<label><input type="checkbox" data-cat="pizzatlas">🍕 Pizza Atlas <span class="count">(69)</span></label>`;
+  html += `<label><input type="checkbox" data-cat="pizzatlas">🍕 Pizza <span class="count">(77)</span></label>`;
   html += `<div id="atlas-filters" style="display:none; margin:2px 0 0 20px; font-size:12px;">
     <div>
       <label style="display:inline"><input type="checkbox" class="af-price" value="$" checked>$</label>
@@ -242,8 +216,8 @@ function applyAtlasFilters() {
   const prices = new Set([...document.querySelectorAll(".af-price:checked")].map(cb => cb.value));
   const minR = parseFloat(document.getElementById("af-rating").value);
   let shown = 0;
-  for (const { marker, price, rating } of atlasMarkers) {
-    const ok = prices.has(price) && rating >= minR;
+  for (const { marker, price, rating, star } of atlasMarkers) {
+    const ok = star || (prices.has(price) && rating >= minR);
     if (ok) { atlasLayer.addLayer(marker); shown++; }
     else atlasLayer.removeLayer(marker);
   }
@@ -275,21 +249,22 @@ async function toggleAtlas(on) {
     const rows = await (await fetch("pizza-top.json")).json();
     for (const p of rows) {
       const m = L.circleMarker([p.lat, p.lng], {
-        radius: 9, color: "#fff", weight: 2,
+        radius: 9, color: p.star ? "#ffd700" : "#fff", weight: p.star ? 3 : 2,
         fillColor: styleColor(p.style), fillOpacity: 0.9,
       });
       const gmaps = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(p.name + " " + (p.address || "") + " New York NY")}`;
       let links = `<a href="${gmaps}" target="_blank" rel="noopener">Directions ↗</a>`;
       if (p.website) links += ` · <a href="${p.website}" target="_blank" rel="noopener">Website ↗</a>`;
+      const ratingBit = p.rating ? ` · ${p.rating}★ (${p.reviews.toLocaleString()} reviews)` : "";
       m.bindPopup(`
-        <div class="popup-name">${p.name}</div>
-        <div class="popup-cat">🍕 ${p.style} · ${p.rating}★ (${p.reviews.toLocaleString()} reviews)${p.price ? " · " + p.price : ""}</div>
+        <div class="popup-name">${p.star ? "⭐ " : ""}${p.name}</div>
+        <div class="popup-cat">🍕 ${p.style}${ratingBit}${p.price ? " · " + p.price : ""}</div>
         <div class="popup-notes">${p.usp || ""}</div>
         ${p.slice === "yes" ? '<div class="popup-notes">Sells single slices.</div>' : ""}
         ${p.hours ? `<div class="popup-notes">🕐 ${p.hours}</div>` : ""}
         <div class="popup-cat">${p.address || ""}</div>
         <div class="popup-links">${links}</div>`, { maxWidth: 280 });
-      atlasMarkers.push({ marker: m, price: p.price, rating: p.rating });
+      atlasMarkers.push({ marker: m, price: p.price, rating: p.rating, star: p.star });
     }
     atlasLoaded = true;
   }
@@ -306,7 +281,8 @@ atlasLegend.onAdd = function () {
     ["Grandma", "#e0b000"], ["Roman/al taglio", "#6a4c93"], ["Detroit", "#1565c0"],
     ["Wood/coal-fired", "#795548"], ["Other", "#888"]];
   div.innerHTML = items.map(([l, c]) =>
-    `<div style="font-size:12px"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:${c};margin-right:5px"></span>${l}</div>`).join("");
+    `<div style="font-size:12px"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:${c};margin-right:5px"></span>${l}</div>`).join("")
+    + `<div style="font-size:12px"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#bbb;border:2px solid #ffd700;margin-right:3px"></span>⭐ featured</div>`;
   return div;
 };
 

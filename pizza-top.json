@@ -11,7 +11,8 @@
   "usp": "Wood-fired oven serves house-made dough pizza with authentic Southern Italian cuisine in a charming Greenwich Village setting with 45-seat patio.",
   "website": "https://www.olionyc.com/",
   "slice": "no",
-  "hours": "Mon\u2013Fri 11:00\u201300:00; Sat\u2013Sun 10:00\u201300:00"
+  "hours": "Mon\u2013Fri 11:00\u201300:00; Sat\u2013Sun 10:00\u201300:00",
+  "star": false
  },
  {
   "name": "L\u2019industrie Pizzeria",
@@ -22,10 +23,11 @@
   "reviews": 1166,
   "price": "$$",
   "style": "NY slice",
-  "usp": "Brooklyn cult favorite now in Manhattan's West Village using long sourdough fermentation for puffy, crunchy-bottomed slices with imported Italian ingredients.",
+  "usp": "Brooklyn cult favorite now in Manhattan's West Village using long sourdough fermentation for puffy, crunchy-bottomed slices with imported Italian ingredients. From Babish review. Smoky flavor, thin crisp undercarriage.",
   "website": "https://www.lindustriebk.com/",
   "slice": "yes",
-  "hours": "Mon\u2013Sun 12:00\u201322:00"
+  "hours": "Mon\u2013Sun 12:00\u201322:00",
+  "star": true
  },
  {
   "name": "Song E Napule",
@@ -39,7 +41,8 @@
   "usp": "Award-winning Neapolitan pizzeria (Gambero Rosso Pizzeria of the Year 2019) with wood-fired margherita and traditional brick-oven pizzas in Greenwich Village.",
   "website": "https://songenapule.us/",
   "slice": "unknown",
-  "hours": "Mon\u2013Sun 12:00\u201323:00"
+  "hours": "Mon\u2013Sun 12:00\u201323:00",
+  "star": false
  },
  {
   "name": "Vito's Slices and Ices",
@@ -53,7 +56,8 @@
   "usp": "Old school New York style pizzeria with hand-stretched pies, Sicilian and Grandma style squares, plus house-made Italian ice with no artificial flavors.",
   "website": "https://vitosslicesandices.com/",
   "slice": "yes",
-  "hours": "Mon\u2013Thu 11:00\u201323:00; Fri\u2013Sat 11:00\u201300:00; Sun 11:00\u201323:00"
+  "hours": "Mon\u2013Thu 11:00\u201323:00; Fri\u2013Sat 11:00\u201300:00; Sun 11:00\u201323:00",
+  "star": false
  },
  {
   "name": "Andiamo Pizza",
@@ -67,7 +71,8 @@
   "usp": "Family-owned by three brothers from Kosovo with generational Margherita recipe, handcrafted sauce daily",
   "website": "andiamopizzamenu.com",
   "slice": "yes",
-  "hours": "Mon\u2013Tue 09:00\u201304:00; Wed 09:00\u201305:00; Thu 09:00\u201304:00; Fri\u2013Sat 09:00\u201305:00; Sun 10:00\u201304:00"
+  "hours": "Mon\u2013Tue 09:00\u201304:00; Wed 09:00\u201305:00; Thu 09:00\u201304:00; Fri\u2013Sat 09:00\u201305:00; Sun 10:00\u201304:00",
+  "star": false
  },
  {
   "name": "BarDough",
@@ -81,7 +86,8 @@
   "usp": "Brick oven craft cocktail and pizza concept with customizable personal pizzas and choice of Old World or NY style",
   "website": "bardoughnyc.com",
   "slice": "no",
-  "hours": "Mon\u2013Fri 16:00\u201300:00; Sat\u2013Sun 11:30\u201300:00"
+  "hours": "Mon\u2013Fri 16:00\u201300:00; Sat\u2013Sun 11:30\u201300:00",
+  "star": false
  },
  {
   "name": "Carnegie Pizza",
@@ -95,7 +101,8 @@
   "usp": "Hell's Kitchen neighborhood pizzeria serving classic New York-style pies, Sicilian squares brushed with olive oil and garlic, and upside-down pizzas.",
   "website": "https://www.carnegiepizzanewyork.com/",
   "slice": "yes",
-  "hours": "Mon\u2013Wed 11:00\u201300:00; Thu 11:00\u201301:00; Fri\u2013Sat 11:00\u201302:00; Sun 11:00\u201300:00"
+  "hours": "Mon\u2013Wed 11:00\u201300:00; Thu 11:00\u201301:00; Fri\u2013Sat 11:00\u201302:00; Sun 11:00\u201300:00",
+  "star": false
  },
  {
   "name": "Nolita Pizza",
@@ -109,7 +116,8 @@
   "usp": "Classic Nolita slice joint with thin and thick crust options using imported cold-pressed virgin oil, homemade marinara, and aged mozzarella with extended late-night hours.",
   "website": "https://nolitapizzanyc.com/",
   "slice": "yes",
-  "hours": "Mon\u2013Wed 11:00\u201302:00; Thu 11:00\u201303:00; Fri\u2013Sat 11:00\u201305:00; Sun 11:00\u201302:00"
+  "hours": "Mon\u2013Wed 11:00\u201302:00; Thu 11:00\u201303:00; Fri\u2013Sat 11:00\u201305:00; Sun 11:00\u201302:00",
+  "star": false
  },
  {
   "name": "Sottocasa Pizzeria - Harlem",
@@ -123,7 +131,8 @@
   "usp": "Traditional Neapolitan pizza from a wood-burning oven imported from Naples that reaches over 900 degrees",
   "website": "https://www.sottocasanyc.com",
   "slice": "no",
-  "hours": "Mon\u2013Thu 17:00\u201322:00; Fri 17:00\u201323:00; Sat 12:00\u201323:00; Sun 12:00\u201322:00"
+  "hours": "Mon\u2013Thu 17:00\u201322:00; Fri 17:00\u201323:00; Sat 12:00\u201323:00; Sun 12:00\u201322:00",
+  "star": false
  },
  {
   "name": "Pop's Pizza",
@@ -137,7 +146,8 @@
   "usp": "Hell's Kitchen pizzeria offering house-made dough and fresh ingredients with authentic flavors, casual dining with specialty pizzas like Garden White and Spinach Mushroom.",
   "website": null,
   "slice": "yes",
-  "hours": "Mon\u2013Sun 10:00\u201323:00"
+  "hours": "Mon\u2013Sun 10:00\u201323:00",
+  "star": false
  },
  {
   "name": "Mimi's Pizza - East 86th",
@@ -151,7 +161,8 @@
   "usp": "Upper East Side pizzeria blending Roman-style and traditional New York pizza with higher hydration dough and extended fermentation for lighter, crispier pies.",
   "website": "https://mimispizzaeast86.com/",
   "slice": "yes",
-  "hours": "Mon 00:00\u201300:00; Tue 10:00\u201301:45; Wed\u2013Sat 10:00\u201303:45; Sun 10:00\u201300:00"
+  "hours": "Mon 00:00\u201300:00; Tue 10:00\u201301:45; Wed\u2013Sat 10:00\u201303:45; Sun 10:00\u201300:00",
+  "star": false
  },
  {
   "name": "Sim\u00f2 Pizza - Meatpacking",
@@ -165,7 +176,8 @@
   "usp": "Authentic Neapolitan pizza with fresh daily-made dough and pizza ready in 90 seconds, in the Meatpacking District.",
   "website": null,
   "slice": "unknown",
-  "hours": "Mon\u2013Sun 11:00\u201322:00"
+  "hours": "Mon\u2013Sun 11:00\u201322:00",
+  "star": false
  },
  {
   "name": "Donna Margherita",
@@ -179,7 +191,8 @@
   "usp": "Lenox Hill brick oven trattoria featuring authentic Neapolitan pizzas with imported Italian ingredients, run by Chef Rosanna Di Michele who grew up in her family's Italian pizzeria.",
   "website": "https://www.donnamargheritany.com/",
   "slice": "unknown",
-  "hours": "Mon\u2013Sun 12:00\u201322:30"
+  "hours": "Mon\u2013Sun 12:00\u201322:30",
+  "star": false
  },
  {
   "name": "Emmy Squared Pizza - Hell's Kitchen",
@@ -193,7 +206,8 @@
   "usp": "Detroit-style square pizzas with crispy frico cheese edges and fluffy focaccia-like dough, combining grandma pie techniques with Detroit style innovation.",
   "website": "https://www.emmysquaredpizza.com/location/hells-kitchen-new-york/",
   "slice": "unknown",
-  "hours": "Mon\u2013Thu 11:00\u201322:00; Fri\u2013Sat 11:00\u201323:00; Sun 11:00\u201322:00"
+  "hours": "Mon\u2013Thu 11:00\u201322:00; Fri\u2013Sat 11:00\u201323:00; Sun 11:00\u201322:00",
+  "star": false
  },
  {
   "name": "Nuovo York Pizza",
@@ -207,7 +221,8 @@
   "usp": "East Village pizzeria made by a chemical engineer using pH-tested sauce and 72-hour fermented dough for scientifically engineered light, crispy crusts and balanced flavor.",
   "website": "https://www.nuovoyorkpizza.com/",
   "slice": "yes",
-  "hours": "Mon\u2013Thu 11:00\u201303:00; Fri\u2013Sat 11:00\u201304:30; Sun 11:00\u201303:00"
+  "hours": "Mon\u2013Thu 11:00\u201303:00; Fri\u2013Sat 11:00\u201304:30; Sun 11:00\u201303:00",
+  "star": false
  },
  {
   "name": "Jonny's Pizza",
@@ -221,7 +236,8 @@
   "usp": "Lower East Side pizzeria famous for exceptional lightness\u2014thin as a folded napkin crust that crunches when hot, with bold toppings.",
   "website": "https://www.jonnyspizzanyc.com/",
   "slice": "yes",
-  "hours": "Mon\u2013Tue 12:00\u201323:00; Wed 12:00\u201300:00; Thu 12:00\u201302:00; Fri\u2013Sat 12:00\u201303:30; Sun 12:00\u201323:00"
+  "hours": "Mon\u2013Tue 12:00\u201323:00; Wed 12:00\u201300:00; Thu 12:00\u201302:00; Fri\u2013Sat 12:00\u201303:30; Sun 12:00\u201323:00",
+  "star": false
  },
  {
   "name": "314 Pizza Pasta & Cocktail Bar",
@@ -235,7 +251,8 @@
   "usp": "Wood-fired brick oven pizza with homemade light and airy dough, plus craft cocktails",
   "website": "bar314nyc.com",
   "slice": "no",
-  "hours": "Mon\u2013Thu 12:00\u201322:00; Fri\u2013Sat 12:00\u201323:00; Sun 12:00\u201322:00"
+  "hours": "Mon\u2013Thu 12:00\u201322:00; Fri\u2013Sat 12:00\u201323:00; Sun 12:00\u201322:00",
+  "star": false
  },
  {
   "name": "Pizza Palace",
@@ -249,7 +266,8 @@
   "usp": "Classic Inwood institution since 1945 with famously large, doughy and cheesy slices that require utensils to eat, cash-only operation.",
   "website": null,
   "slice": "yes",
-  "hours": "Mon\u2013Thu 10:00\u201323:00; Fri\u2013Sat 10:00\u201300:00; Sun 10:00\u201323:00"
+  "hours": "Mon\u2013Thu 10:00\u201323:00; Fri\u2013Sat 10:00\u201300:00; Sun 10:00\u201323:00",
+  "star": false
  },
  {
   "name": "See No Evil Pizza",
@@ -263,7 +281,8 @@
   "usp": "Hybrid Neapolitan and New York style pizza with house-made ingredients and fresh-from-the-farm produce, located in Times Square subway concourse.",
   "website": "https://seenoevilpizza.com/",
   "slice": "yes",
-  "hours": "Mon 17:00\u201322:00; Tue\u2013Fri 17:00\u201300:00; Sat 16:00\u201300:00; Sun 16:00\u201322:00"
+  "hours": "Mon 17:00\u201322:00; Tue\u2013Fri 17:00\u201300:00; Sat 16:00\u201300:00; Sun 16:00\u201322:00",
+  "star": false
  },
  {
   "name": "Pizza Loves Sauce",
@@ -277,7 +296,8 @@
   "usp": "NYC pizza with bold flavors serving both classic NY slices and specialty creative variations from classic Margherita to vodka sauce pies.",
   "website": "https://pizzalovessauce.shop/",
   "slice": "yes",
-  "hours": "Mon\u2013Wed 12:00\u201300:00; Thu 12:00\u201302:00; Fri\u2013Sat 12:00\u201304:00; Sun 12:00\u201300:00"
+  "hours": "Mon\u2013Wed 12:00\u201300:00; Thu 12:00\u201302:00; Fri\u2013Sat 12:00\u201304:00; Sun 12:00\u201300:00",
+  "star": false
  },
  {
   "name": "Little Charli",
@@ -291,7 +311,8 @@
   "usp": "Small 35-seat Roman-style wood-fired pizzeria in West Village with authentic Italian preparation and chef Salvatore Olivella's family pizza traditions.",
   "website": "https://littlecharli.com/",
   "slice": "no",
-  "hours": "Tue\u2013Wed 16:00\u201323:00; Thu\u2013Fri 16:00\u201300:00; Sat 14:00\u201300:00; Sun 14:00\u201322:00"
+  "hours": "Tue\u2013Wed 16:00\u201323:00; Thu\u2013Fri 16:00\u201300:00; Sat 14:00\u201300:00; Sun 14:00\u201322:00",
+  "star": false
  },
  {
   "name": "Bosino",
@@ -305,7 +326,8 @@
   "usp": "Authentic Northern Italian brick oven pizzeria from Varese tradition, Romana-style pizza with 3-4 minute cook time at lower temperature for crispy, thin crust",
   "website": "bosinonyc.com",
   "slice": "no",
-  "hours": "Mon\u2013Thu 16:00\u201322:00; Fri\u2013Sat 12:00\u201323:00; Sun 12:00\u201322:00"
+  "hours": "Mon\u2013Thu 16:00\u201322:00; Fri\u2013Sat 12:00\u201323:00; Sun 12:00\u201322:00",
+  "star": false
  },
  {
   "name": "LTD Pizza and Bar",
@@ -319,7 +341,8 @@
   "usp": "Gourmet pizzeria and slice shop with a 900-degree oven, crafted dough for perfect balance of crisp and chew, curated wine selection.",
   "website": "https://www.ltdpizza.com/",
   "slice": "yes",
-  "hours": "Mon\u2013Wed 11:00\u201323:00; Thu\u2013Fri 11:00\u201300:00; Sat 11:30\u201300:00; Sun 11:30\u201323:00"
+  "hours": "Mon\u2013Wed 11:00\u201323:00; Thu\u2013Fri 11:00\u201300:00; Sat 11:30\u201300:00; Sun 11:30\u201323:00",
+  "star": false
  },
  {
   "name": "Uncle Sam's Pizza",
@@ -333,7 +356,8 @@
   "usp": "Lower East Side classic known for its famous signature spicy pepperoni square slice and late-night hours",
   "website": "https://www.unclesamspizzanyc.com/",
   "slice": "yes",
-  "hours": "Mon 11:00\u201300:00; Tue\u2013Thu 11:00\u201302:00; Fri\u2013Sat 11:00\u201304:00; Sun 11:00\u201300:00"
+  "hours": "Mon 11:00\u201300:00; Tue\u2013Thu 11:00\u201302:00; Fri\u2013Sat 11:00\u201304:00; Sun 11:00\u201300:00",
+  "star": false
  },
  {
   "name": "Grand Street Pizza",
@@ -347,7 +371,8 @@
   "usp": "Classic thin-crust New York-style slice shop with crispy, flavorful pies available by the slice or whole pie.",
   "website": "https://www.grandstreetpizza.com/",
   "slice": "yes",
-  "hours": "Mon\u2013Sun 11:00\u201300:00"
+  "hours": "Mon\u2013Sun 11:00\u201300:00",
+  "star": false
  },
  {
   "name": "Heritage Grand Restaurant & Pizza Bar",
@@ -361,7 +386,8 @@
   "usp": "Mediterranean-inspired pizzeria with wood-fired ovens, bakery, and full restaurant near Bryant Park.",
   "website": "https://www.heritagegrandbakery.com/",
   "slice": "unknown",
-  "hours": "Mon\u2013Sun 11:00\u201323:00"
+  "hours": "Mon\u2013Sun 11:00\u201323:00",
+  "star": false
  },
  {
   "name": "Sim\u00f2 Pizza - University",
@@ -375,7 +401,8 @@
   "usp": "Authentic Neapolitan pizza at accessible prices, with famous Margherita made with San Marzano tomatoes and fresh mozzarella, near Union Square.",
   "website": null,
   "slice": "unknown",
-  "hours": "Mon\u2013Sun 11:00\u201322:00"
+  "hours": "Mon\u2013Sun 11:00\u201322:00",
+  "star": false
  },
  {
   "name": "Bucatini",
@@ -389,7 +416,8 @@
   "usp": "Elevated Italian fine dining in Midtown with crispy thin-crust pizzas and an exceptional wine program curated by an in-house sommelier.",
   "website": "https://www.bucatininyc.com/",
   "slice": "unknown",
-  "hours": "Mon\u2013Fri 11:30\u201322:00; Sat\u2013Sun 15:00\u201322:00"
+  "hours": "Mon\u2013Fri 11:30\u201322:00; Sat\u2013Sun 15:00\u201322:00",
+  "star": false
  },
  {
   "name": "Reilly's Plates & Pours",
@@ -403,7 +431,8 @@
   "usp": "Irish gastropub with 60+ beers on tap and brick-oven pizza in Midtown Manhattan near Rockefeller Center.",
   "website": "https://reillysnyc.com/",
   "slice": "unknown",
-  "hours": "Tue\u2013Sat 11:00\u201300:00"
+  "hours": "Tue\u2013Sat 11:00\u201300:00",
+  "star": false
  },
  {
   "name": "L'industrie Pizzeria - Little Italy",
@@ -414,10 +443,11 @@
   "reviews": 78,
   "price": "$$",
   "style": "NY slice, Roman/al taglio",
-  "usp": "High-quality slice shop with stand-up counter format featuring the famous burrata slice and house-made pasta made with long fermentation techniques.",
+  "usp": "High-quality slice shop with stand-up counter format featuring the famous burrata slice and house-made pasta made with long fermentation techniques. From Babish review. Smoky flavor, thin crisp undercarriage.",
   "website": "https://www.lindustriebk.com/",
   "slice": "yes",
-  "hours": "Mon\u2013Sun 12:00\u201322:00"
+  "hours": "Mon\u2013Sun 12:00\u201322:00",
+  "star": true
  },
  {
   "name": "Norm's Pizza",
@@ -431,7 +461,8 @@
   "usp": "Financial District no-frills pizza parlor using naturally leavened Sicilian-style dough from Central Milling flour, Sicilian olive oil, and sourdough starter baked in Swedish electric ovens.",
   "website": "https://normspizza.com/",
   "slice": "yes",
-  "hours": "Mon\u2013Sat 10:00\u201322:00; Sun 11:00\u201321:00"
+  "hours": "Mon\u2013Sat 10:00\u201322:00; Sun 11:00\u201321:00",
+  "star": false
  },
  {
   "name": "Crispiano Pizza Bar",
@@ -445,7 +476,8 @@
   "usp": "East Village wood-fired pizzeria known for authentic Italian preparations with fresh mozzarella, basil, and premium toppings like prosciutto di parma and black truffle.",
   "website": "https://www.crispianopizzabar.com/",
   "slice": "unknown",
-  "hours": "Tue 17:00\u201300:00; Wed\u2013Thu 16:00\u201300:00; Fri 16:00\u201301:00; Sat 11:30\u201301:00; Sun 11:30\u201321:30"
+  "hours": "Tue 17:00\u201300:00; Wed\u2013Thu 16:00\u201300:00; Fri 16:00\u201301:00; Sat 11:30\u201301:00; Sun 11:30\u201321:30",
+  "star": false
  },
  {
   "name": "Baggios Pizzeria",
@@ -459,7 +491,8 @@
   "usp": "Family-owned pizzeria with 30-year history, thin crust and sauce-centric slices",
   "website": "baggiospizzeria.com",
   "slice": "yes",
-  "hours": "Mon\u2013Thu 11:00\u201322:00; Fri\u2013Sat 11:00\u201323:00; Sun 11:00\u201322:00"
+  "hours": "Mon\u2013Thu 11:00\u201322:00; Fri\u2013Sat 11:00\u201323:00; Sun 11:00\u201322:00",
+  "star": false
  },
  {
   "name": "Unregular Pizza",
@@ -473,7 +506,8 @@
   "usp": "Innovative Roman-style square pizza with the signature Burrapizza, where each slice is topped with a whole burrata",
   "website": "https://www.unregularpizza.com/",
   "slice": "yes",
-  "hours": "Mon\u2013Sat 11:00\u201320:00; Sun 11:00\u201318:00"
+  "hours": "Mon\u2013Sat 11:00\u201320:00; Sun 11:00\u201318:00",
+  "star": false
  },
  {
   "name": "La Piazza",
@@ -487,7 +521,8 @@
   "usp": "Brings authentic Venetian culinary tradition to Midtown Manhattan with hand-rolled pastas, fresh Adriatic seafood, and wood-fired pizzas in a refined setting at Rockefeller Center.",
   "website": "https://lapiazza.com/newyork/",
   "slice": "no",
-  "hours": "Mon\u2013Sun 11:00\u201322:00"
+  "hours": "Mon\u2013Sun 11:00\u201322:00",
+  "star": false
  },
  {
   "name": "Pop's Pizza",
@@ -501,7 +536,8 @@
   "usp": "East Village pizzeria featuring 72-hour fermented dough using poolish pre-ferment for digestibility, fresh imported ingredients and highest quality tomatoes and cheese.",
   "website": "https://www.popspizzanyc.com/",
   "slice": "yes",
-  "hours": "Mon\u2013Wed 11:00\u201300:00; Thu 11:00\u201301:00; Fri\u2013Sat 11:00\u201304:00; Sun 11:00\u201300:00"
+  "hours": "Mon\u2013Wed 11:00\u201300:00; Thu 11:00\u201301:00; Fri\u2013Sat 11:00\u201304:00; Sun 11:00\u201300:00",
+  "star": false
  },
  {
   "name": "The Pizza Box",
@@ -515,7 +551,8 @@
   "usp": "Farm-to-table pizzeria with 72-hour fermented dough, organic tomatoes, and seasonal toppings served fresh from a wood-fired oven",
   "website": "https://thepizzaboxny.com/",
   "slice": "no",
-  "hours": "Tue\u2013Thu 11:00\u201322:00; Fri\u2013Sat 11:00\u201300:00; Sun 11:00\u201321:00"
+  "hours": "Tue\u2013Thu 11:00\u201322:00; Fri\u2013Sat 11:00\u201300:00; Sun 11:00\u201321:00",
+  "star": false
  },
  {
   "name": "Quality Pizza",
@@ -529,7 +566,8 @@
   "usp": "Thick-crust square slices and round pies with handmade sauces and fresh ingredients, known for crispy crust and garlic knots.",
   "website": "https://www.orderqualitypizzaco.com/",
   "slice": "yes",
-  "hours": "Mon\u2013Thu 10:00\u201302:00; Fri\u2013Sat 10:00\u201304:00; Sun 10:00\u201300:00"
+  "hours": "Mon\u2013Thu 10:00\u201302:00; Fri\u2013Sat 10:00\u201304:00; Sun 10:00\u201300:00",
+  "star": false
  },
  {
   "name": "Previti Pizza 34th",
@@ -543,7 +581,8 @@
   "usp": "Murray Hill's number one pizzeria offering both classic NY slices and gourmet pizzas with high-quality ingredients, casual counter service and digital ordering.",
   "website": "https://orders.previtipizza.com/",
   "slice": "yes",
-  "hours": "Mon\u2013Sat 11:00\u201322:00; Sun 11:00\u201321:00"
+  "hours": "Mon\u2013Sat 11:00\u201322:00; Sun 11:00\u201321:00",
+  "star": false
  },
  {
   "name": "Pizzazz",
@@ -557,7 +596,8 @@
   "usp": "Neapolitan-inspired fast-casual concept serving personal-sized pizzas made fresh-to-order in super-hot oven, featuring hand-dosed Italian 00 flour dough.",
   "website": "https://pizzazznyc.com/",
   "slice": "no",
-  "hours": "Mon\u2013Fri 11:00\u201321:00; Sat\u2013Sun 12:00\u201321:00"
+  "hours": "Mon\u2013Fri 11:00\u201321:00; Sat\u2013Sun 12:00\u201321:00",
+  "star": false
  },
  {
   "name": "Audace",
@@ -571,7 +611,8 @@
   "usp": "Award-winning Neapolitan-style pizza from chef with Michelin-starred experience, ranked 37th-best pizzeria in USA by 50 Top Pizza",
   "website": "audacenyc.com",
   "slice": "no",
-  "hours": "Mon\u2013Sat 12:00\u201323:00; Sun 12:00\u201322:00"
+  "hours": "Mon\u2013Sat 12:00\u201323:00; Sun 12:00\u201322:00",
+  "star": false
  },
  {
   "name": "The Beer Garage",
@@ -585,7 +626,8 @@
   "usp": "Sports bar and beer establishment with personal-size pizzas and locally-sourced craft beer selection",
   "website": "https://www.beergarageny.com/",
   "slice": "unknown",
-  "hours": "Mon\u2013Thu 14:00\u201323:00; Fri 13:00\u201300:00; Sat 11:00\u201301:00; Sun 12:00\u201322:00"
+  "hours": "Mon\u2013Thu 14:00\u201323:00; Fri 13:00\u201300:00; Sat 11:00\u201301:00; Sun 12:00\u201322:00",
+  "star": false
  },
  {
   "name": "Slicehaus Pizzeria",
@@ -599,7 +641,8 @@
   "usp": "New York-style pizza with 48-hour fermented doughs and creative toppings, plus excellent sandwiches (meatball parm, porchetta) in West Village.",
   "website": "https://slicehauspizzeria.com/",
   "slice": "yes",
-  "hours": "Mon\u2013Thu 12:00\u201322:00; Fri\u2013Sat 12:00\u201323:00; Sun 12:00\u201321:00"
+  "hours": "Mon\u2013Thu 12:00\u201322:00; Fri\u2013Sat 12:00\u201323:00; Sun 12:00\u201321:00",
+  "star": false
  },
  {
   "name": "The Oven\u2019s Slice ",
@@ -613,7 +656,8 @@
   "usp": "Classic New York-style pizza shop with specialty slices like The Brooklyn, plus Sicilian square pies and vegan options",
   "website": "https://www.theovensslice.com/",
   "slice": "yes",
-  "hours": "Mon\u2013Wed 11:00\u201301:00; Thu 11:00\u201302:00; Fri\u2013Sat 11:00\u201305:00; Sun 11:00\u201301:00"
+  "hours": "Mon\u2013Wed 11:00\u201301:00; Thu 11:00\u201302:00; Fri\u2013Sat 11:00\u201305:00; Sun 11:00\u201301:00",
+  "star": false
  },
  {
   "name": "Song E Napule",
@@ -627,7 +671,8 @@
   "usp": "Award-winning Neapolitan pizzeria (Gambero Rosso Pizzeria of the Year 2019) with wood-fired margherita and traditional brick-oven pizzas in Greenwich Village.",
   "website": "https://songenapule.us/",
   "slice": "unknown",
-  "hours": "Mon\u2013Sun 12:00\u201323:00"
+  "hours": "Mon\u2013Sun 12:00\u201323:00",
+  "star": false
  },
  {
   "name": "Spoto Pizza",
@@ -641,7 +686,8 @@
   "usp": "Thin-crust pies and house-made gelato with 5-day fermented signature dough and San Marzano tomatoes",
   "website": "https://spotopizza.com/",
   "slice": "yes",
-  "hours": null
+  "hours": null,
+  "star": false
  },
  {
   "name": "Niccolo Pizzeria",
@@ -655,7 +701,8 @@
   "usp": "Washington Heights Napoli-style pizzeria using 100% organic olive oil, Caputo organic flour, and San Marzano pomodoro with wood-fired oven for authentic Margherita pies.",
   "website": "https://niccolopizzeria.com/",
   "slice": "yes",
-  "hours": "Mon\u2013Fri 11:30\u201321:00; Sat\u2013Sun 12:00\u201321:00"
+  "hours": "Mon\u2013Fri 11:30\u201321:00; Sat\u2013Sun 12:00\u201321:00",
+  "star": false
  },
  {
   "name": "Pizza Spot Hells Kitchen",
@@ -669,7 +716,8 @@
   "usp": "NYC pizza influencer-founded spot featuring NY thin-crust alongside Sicilian square slices and grandma pizza, open late until 5 AM weekends.",
   "website": "https://pizzaspothellskitchen.com/",
   "slice": "yes",
-  "hours": "Mon\u2013Wed 10:00\u201300:00; Thu 10:00\u201302:00; Fri\u2013Sat 10:00\u201305:00; Sun 11:00\u201300:00"
+  "hours": "Mon\u2013Wed 10:00\u201300:00; Thu 10:00\u201302:00; Fri\u2013Sat 10:00\u201305:00; Sun 11:00\u201300:00",
+  "star": false
  },
  {
   "name": "El Tanque Trattoria Bar ",
@@ -683,7 +731,8 @@
   "usp": "Inwood neighborhood fusion trattoria opened in 2023, blending authentic Italian brick oven pizzas with Dominican-inspired dishes and cocktails.",
   "website": "https://eltanquetrattoria.com/",
   "slice": "unknown",
-  "hours": "Mon 14:00\u201300:00; Wed\u2013Thu 14:00\u201300:00; Fri\u2013Sat 14:00\u201301:00; Sun 13:00\u201300:00"
+  "hours": "Mon 14:00\u201300:00; Wed\u2013Thu 14:00\u201300:00; Fri\u2013Sat 14:00\u201301:00; Sun 13:00\u201300:00",
+  "star": false
  },
  {
   "name": "Square Pizza",
@@ -697,7 +746,8 @@
   "usp": "Detroit-style square pizzas with thick, airy crusts and caramelized cheese edges baked in steel pans",
   "website": "https://squarepizzanyc.com/",
   "slice": "unknown",
-  "hours": "Mon\u2013Thu 11:00\u201301:00; Fri\u2013Sat 11:00\u201303:00; Sun 11:00\u201301:00"
+  "hours": "Mon\u2013Thu 11:00\u201301:00; Fri\u2013Sat 11:00\u201303:00; Sun 11:00\u201301:00",
+  "star": false
  },
  {
   "name": "Nate\u2019s Detroit Pizza",
@@ -711,7 +761,8 @@
   "usp": "East Village Detroit-style pizza based on seven premium ingredients including San Marzano tomatoes, fresh mozzarella, and aged Parmesan for a style between Chicago pan pizza and Sicilian.",
   "website": "https://www.natesdetroitpizzanewyork.com/",
   "slice": "yes",
-  "hours": "Mon\u2013Thu 12:00\u201322:00; Fri\u2013Sat 12:00\u201323:00; Sun 12:00\u201322:00"
+  "hours": "Mon\u2013Thu 12:00\u201322:00; Fri\u2013Sat 12:00\u201323:00; Sun 12:00\u201322:00",
+  "star": false
  },
  {
   "name": "La Pecora Bianca Theater District",
@@ -725,7 +776,8 @@
   "usp": "Large-scale Italian restaurant featuring handmade pastas and exclusive Neapolitan-style pizzas, with outdoor seating and pre-theater prix fixe.",
   "website": "https://www.lapecorabianca.com/",
   "slice": "no",
-  "hours": "Mon 11:30\u201322:00; Tue 11:30\u201323:30; Wed 11:00\u201323:30; Thu 11:00\u201300:00; Fri 11:30\u201300:00; Sat 10:00\u201300:00; Sun 10:00\u201322:00"
+  "hours": "Mon 11:30\u201322:00; Tue 11:30\u201323:30; Wed 11:00\u201323:30; Thu 11:00\u201300:00; Fri 11:30\u201300:00; Sat 10:00\u201300:00; Sun 10:00\u201322:00",
+  "star": false
  },
  {
   "name": "Andrea's Pizza",
@@ -739,7 +791,8 @@
   "usp": "Veteran pizzaiolo Andrea Kenuti from Scarrs Pizza and L'Industrie, hand-tossed thin crust with light char at 700\u00b0F",
   "website": "andreaspizzanyc.com",
   "slice": "yes",
-  "hours": "Mon\u2013Thu 12:00\u201300:00; Fri\u2013Sat 12:00\u201302:00; Sun 12:00\u201323:00"
+  "hours": "Mon\u2013Thu 12:00\u201300:00; Fri\u2013Sat 12:00\u201302:00; Sun 12:00\u201323:00",
+  "star": false
  },
  {
   "name": "Caggiano's Pizza",
@@ -753,7 +806,8 @@
   "usp": "Greenwich Village pizzeria specializing in freshly baked artisanal grandma pizza and cheesy New York-style slices with quality toppings.",
   "website": null,
   "slice": "yes",
-  "hours": "Mon\u2013Thu 11:30\u201318:00; Fri\u2013Sat 11:30\u201320:00"
+  "hours": "Mon\u2013Thu 11:30\u201318:00; Fri\u2013Sat 11:30\u201320:00",
+  "star": false
  },
  {
   "name": "Verdello",
@@ -767,7 +821,8 @@
   "usp": "Southern Italian inspired wood-fired Neapolitan pizzas with hand-stretched dough and fresh ingredients, located on the Upper West Side.",
   "website": "https://verdello.nyc/",
   "slice": "no",
-  "hours": "Tue\u2013Fri 16:00\u201321:30; Sat\u2013Sun 13:00\u201322:00"
+  "hours": "Tue\u2013Fri 16:00\u201321:30; Sat\u2013Sun 13:00\u201322:00",
+  "star": false
  },
  {
   "name": "Gnocchi House Bar",
@@ -781,7 +836,8 @@
   "usp": "Italian restaurant specializing in handmade gnocchi with wood-fired pizza service and cocktails on the Upper East Side.",
   "website": "https://www.gnocchihousebarnyc.com/",
   "slice": "no",
-  "hours": "Mon\u2013Fri 16:00\u201322:00; Sat\u2013Sun 12:00\u201322:00"
+  "hours": "Mon\u2013Fri 16:00\u201322:00; Sat\u2013Sun 12:00\u201322:00",
+  "star": false
  },
  {
   "name": "Potenza Centrale Pizza",
@@ -795,7 +851,8 @@
   "usp": "Roman-style rectangular pizzas with 72-96 hour fermentation producing soft and chewy interior with charred, crispy exterior, fresh in-house mozzarella and tomato sauce.",
   "website": "https://potenzacentrale.com/",
   "slice": "yes",
-  "hours": "Mon 12:00\u201320:00; Wed\u2013Sat 12:00\u201320:00; Sun 12:00\u201319:00"
+  "hours": "Mon 12:00\u201320:00; Wed\u2013Sat 12:00\u201320:00; Sun 12:00\u201319:00",
+  "star": false
  },
  {
   "name": "Nova Pizza & Grill",
@@ -809,7 +866,8 @@
   "usp": "Newly opened Upper East Side corner pizzeria offering artisanal premium slices, Cava-style rice bowls, and sweet treats with big space and counter seating.",
   "website": "https://novapizzagrill.com/",
   "slice": "yes",
-  "hours": null
+  "hours": null,
+  "star": false
  },
  {
   "name": "Jay's Pizza",
@@ -823,7 +881,8 @@
   "usp": "Classic New York slice shop in Tribeca crafted by two seasoned restaurateurs, featuring crispy edges, airy crust, and quality ingredients.",
   "website": "https://www.jayspizzanyc.com/",
   "slice": "yes",
-  "hours": "Mon\u2013Sat 11:00\u201321:00; Sun 12:00\u201320:00"
+  "hours": "Mon\u2013Sat 11:00\u201321:00; Sun 12:00\u201320:00",
+  "star": false
  },
  {
   "name": "$1 Pizza",
@@ -837,7 +896,8 @@
   "usp": "Affordable one-dollar slices with perfect cheese-to-sauce ratio",
   "website": null,
   "slice": "yes",
-  "hours": "Mon\u2013Sun 11:00\u201319:30"
+  "hours": "Mon\u2013Sun 11:00\u201319:30",
+  "star": false
  },
  {
   "name": "Sama 'Za",
@@ -851,7 +911,8 @@
   "usp": "72-hour fermented-dough pizzas with charred crusts and retro Pizza Hut-inspired aesthetic in Hell's Kitchen.",
   "website": "https://www.sama-za.com/",
   "slice": "unknown",
-  "hours": "Tue\u2013Sun 17:00\u201323:00"
+  "hours": "Tue\u2013Sun 17:00\u201323:00",
+  "star": false
  },
  {
   "name": "Zara Pizza",
@@ -865,7 +926,8 @@
   "usp": "Family-owned brick oven pizzeria on the Lower East Side since 2008, handcrafted pizza with crispy crust and quality ingredients, no vegetable oil.",
   "website": "https://www.zarapizzamenu.com/",
   "slice": "yes",
-  "hours": "Mon\u2013Thu 11:00\u201300:30; Fri\u2013Sat 11:00\u201302:30; Sun 11:00\u201300:30"
+  "hours": "Mon\u2013Thu 11:00\u201300:30; Fri\u2013Sat 11:00\u201302:30; Sun 11:00\u201300:30",
+  "star": false
  },
  {
   "name": "Double Pie Pizza",
@@ -879,7 +941,8 @@
   "usp": "Upper West Side family-owned stone-baked pizzeria since 2011, specializing in naturally leavened 72-hour dough with premium Wisconsin mozzarella and Italian tomato sauce.",
   "website": "https://dblpienyc.com/",
   "slice": "yes",
-  "hours": "Mon\u2013Tue 11:00\u201322:00; Wed\u2013Sat 11:00\u201323:00; Sun 12:00\u201322:00"
+  "hours": "Mon\u2013Tue 11:00\u201322:00; Wed\u2013Sat 11:00\u201323:00; Sun 12:00\u201322:00",
+  "star": false
  },
  {
   "name": "Briciola Pizza Bar",
@@ -893,7 +956,8 @@
   "usp": "West Village brick oven pizzeria with traditional Italian 12-inch pies featuring authentic ingredients like fior di latte mozzarella and fresh basil.",
   "website": "https://www.briciolapizzabarnewyork.com/",
   "slice": "unknown",
-  "hours": "Mon\u2013Fri 11:30\u201300:00; Sat\u2013Sun 11:00\u201300:00"
+  "hours": "Mon\u2013Fri 11:30\u201300:00; Sat\u2013Sun 11:00\u201300:00",
+  "star": false
  },
  {
   "name": "Supreme Eats Pizza and Pasta",
@@ -907,7 +971,8 @@
   "usp": "Neighborhood pizza spot with fresh house-made mozzarella sticks and multiple pizza styles including grandma-style and Sicilian square pies",
   "website": "https://www.supremeeatspizzaandpasta.com/",
   "slice": "unknown",
-  "hours": "Mon\u2013Sun 10:00\u201322:00"
+  "hours": "Mon\u2013Sun 10:00\u201322:00",
+  "star": false
  },
  {
   "name": "Hots Pizza",
@@ -921,7 +986,8 @@
   "usp": "New York-style sourdough pizza shop using 100% organic, naturally leavened dough and organic ingredients.",
   "website": "https://www.hotspizza.com/",
   "slice": "yes",
-  "hours": "Mon\u2013Sun 11:30\u201322:00"
+  "hours": "Mon\u2013Sun 11:30\u201322:00",
+  "star": false
  },
  {
   "name": "One Fabene Pizza",
@@ -935,7 +1001,8 @@
   "usp": "Affordable neighborhood pizzeria in Harlem serving slices and full pies with quick takeout service since established.",
   "website": null,
   "slice": "yes",
-  "hours": "Mon\u2013Sat 10:30\u201323:00; Sun 11:00\u201322:00"
+  "hours": "Mon\u2013Sat 10:30\u201323:00; Sun 11:00\u201322:00",
+  "star": false
  },
  {
   "name": "Famous Pizza",
@@ -949,7 +1016,8 @@
   "usp": "Budget-friendly Times Square neighborhood pizzeria serving $1.50 cheese slices and fresh-made pizza with quality toppings, no seating (takeout only).",
   "website": "https://www.famouspizzaofnewyork.com/",
   "slice": "yes",
-  "hours": "Mon\u2013Thu 10:00\u201302:00; Fri\u2013Sat 10:00\u201304:00; Sun 10:00\u201302:00"
+  "hours": "Mon\u2013Thu 10:00\u201302:00; Fri\u2013Sat 10:00\u201304:00; Sun 10:00\u201302:00",
+  "star": false
  },
  {
   "name": "Avenue D Pizza",
@@ -963,6 +1031,127 @@
   "usp": "East Village neighborhood spot serving pizza slices and Dominican specialties",
   "website": null,
   "slice": "yes",
-  "hours": "Mon\u2013Sun 08:30\u201321:00"
+  "hours": "Mon\u2013Sun 08:30\u201321:00",
+  "star": false
+ },
+ {
+  "name": "F&F Pizzeria",
+  "lat": 40.6773,
+  "lng": -73.9982,
+  "address": "459 Court St, Carroll Gardens, Brooklyn",
+  "rating": null,
+  "reviews": null,
+  "price": null,
+  "style": "NY slice",
+  "usp": "From Babish review. Took the #1 overall spot.",
+  "website": null,
+  "slice": "unknown",
+  "hours": null,
+  "star": true
+ },
+ {
+  "name": "Philomena's Pizza",
+  "lat": 40.7434,
+  "lng": -73.923,
+  "address": "41-16 Queens Blvd, Sunnyside, Queens",
+  "rating": null,
+  "reviews": null,
+  "price": null,
+  "style": "unspecified",
+  "usp": "From Babish review. \"Some of the best pizza yet imagined\" (accidentally left off his final on-screen ranking).",
+  "website": null,
+  "slice": "unknown",
+  "hours": null,
+  "star": true
+ },
+ {
+  "name": "Scarr's Pizza",
+  "lat": 40.715,
+  "lng": -73.9916,
+  "address": "35 Orchard St, Lower East Side",
+  "rating": null,
+  "reviews": null,
+  "price": null,
+  "style": "NY slice",
+  "usp": "From Babish review. House-milled flour.",
+  "website": null,
+  "slice": "unknown",
+  "hours": null,
+  "star": true
+ },
+ {
+  "name": "Paulie Gee's Slice Shop",
+  "lat": 40.7284,
+  "lng": -73.9572,
+  "address": "110 Franklin St, Greenpoint, Brooklyn",
+  "rating": null,
+  "reviews": null,
+  "price": null,
+  "style": "NY slice",
+  "usp": "From Babish review. Cupped pepperoni, crisp crust.",
+  "website": null,
+  "slice": "unknown",
+  "hours": null,
+  "star": true
+ },
+ {
+  "name": "Lucia Pizza of Avenue X",
+  "lat": 40.5931,
+  "lng": -73.9481,
+  "address": "2201 Avenue X, Sheepshead Bay, Brooklyn",
+  "rating": null,
+  "reviews": null,
+  "price": null,
+  "style": "NY slice",
+  "usp": "From Babish review. High-quality mozzarella, perfectly baked base.",
+  "website": null,
+  "slice": "unknown",
+  "hours": null,
+  "star": true
+ },
+ {
+  "name": "Di Fara Pizza",
+  "lat": 40.625,
+  "lng": -73.9615,
+  "address": "1424 Avenue J, Midwood, Brooklyn",
+  "rating": null,
+  "reviews": null,
+  "price": null,
+  "style": "unspecified",
+  "usp": "From Babish review. Legendary baseline, basil snipped onto pie.",
+  "website": null,
+  "slice": "unknown",
+  "hours": null,
+  "star": true
+ },
+ {
+  "name": "Joe's Pizza",
+  "lat": 40.7305,
+  "lng": -74.0021,
+  "address": "7 Carmine St, Greenwich Village",
+  "rating": null,
+  "reviews": null,
+  "price": null,
+  "style": "NY slice",
+  "usp": "From Babish review. Quintessential street slice, standard-bearer.",
+  "website": null,
+  "slice": "unknown",
+  "hours": null,
+  "star": true
+ },
+ {
+  "name": "Juliana's Pizza",
+  "lat": 40.7027,
+  "lng": -73.9935,
+  "address": "19 Old Fulton St, Brooklyn (DUMBO)",
+  "rating": null,
+  "reviews": null,
+  "price": null,
+  "style": "coal-fired",
+  "usp": "From Portillo. Patsy Grimaldi's return spot, coal-fired.",
+  "website": null,
+  "slice": "unknown",
+  "hours": null,
+  "star": true
  }
 ]
