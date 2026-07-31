@@ -9,12 +9,58 @@
   "type": [
    "chocolatier",
    "dessert cafe",
+   "ice cream",
    "drinks"
   ],
-  "fanciness": "fancy",
-  "dark": true,
-  "usp": "British artisan chocolatier offering handcrafted single-origin chocolate bars, bonbons, and truffles sourced directly from farmers in Colombia and Ecuador, with cafe seating for specialty coffee and hot chocolate.",
+  "tags": [
+   "#singleorigin"
+  ],
+  "usp": "British artisan chocolatier handcrafting single-origin chocolates from direct-trade partnerships with farmers in Colombia and Ecuador, with a cafe-style Chocolate House serving hot chocolate, coffee, and gelato.",
   "website": "https://chococo.nyc/"
+ },
+ {
+  "name": "Varsano's Chocolate",
+  "lat": 40.73212,
+  "lng": -74.00173,
+  "address": "172 W 4th St",
+  "rating": 4.6,
+  "reviews": 134,
+  "type": [
+   "chocolatier"
+  ],
+  "tags": [],
+  "usp": "Greenwich Village chocolatier handcrafting and hand-dipping homemade chocolates daily, including truffles, caramels, fruit centers, and nut patties with varieties like s'mores and chocolate-covered potato chips.",
+  "website": "https://www.varsanos.com/"
+ },
+ {
+  "name": "Daniel Corpuz Chocolatier",
+  "lat": 40.71551,
+  "lng": -73.99933,
+  "address": "60 Mulberry St",
+  "rating": 4.7,
+  "reviews": 49,
+  "type": [
+   "chocolatier",
+   "bakery",
+   "dessert cafe"
+  ],
+  "tags": [],
+  "usp": "Boutique chocolatier blending traditional Belgian chocolate techniques with Filipino-Asian flavors, offering handcrafted bonbons, cakes, cookies, pastries, and plated desserts with cultural influences like ube, calamansi, and pandan.",
+  "website": "https://www.danielcorpuz.com/"
+ },
+ {
+  "name": "Stick With Me",
+  "lat": 40.72127,
+  "lng": -73.99551,
+  "address": "202A Mott St",
+  "rating": 4.7,
+  "reviews": 373,
+  "type": [
+   "chocolatier"
+  ],
+  "tags": [],
+  "usp": "Artisanal chocolatier handcrafting luxury bonbons entirely by hand in small batches, with hand-shelled and hand-painted confections taking three days to create, recognized by Vogue and Oprah.",
+  "website": "https://swmsweets.com/"
  },
  {
   "name": "Confectionery",
@@ -25,12 +71,12 @@
   "reviews": 183,
   "type": [
    "chocolatier",
-   "bakery",
-   "dessert cafe"
+   "bakery"
   ],
-  "fanciness": "casual",
-  "dark": true,
-  "usp": "Vegan artisanal chocolate and pastry shop offering handcrafted dark and white chocolate bonbons with unique flavor combinations (rosemary sea salt caramel, preserved lemon thyme), vegan macarons, and baked goods.",
+  "tags": [
+   "#darkchocolate"
+  ],
+  "usp": "Vegan bakery and artisanal chocolate shop creating handcrafted bonbons, macarons, and baked goods with fair-trade, organic ingredients; no nuts, soy, or gluten.",
   "website": null
  },
  {
@@ -41,12 +87,12 @@
   "rating": 5.0,
   "reviews": 7,
   "type": [
-   "chocolatier"
+   "chocolatier",
+   "dessert cafe"
   ],
-  "fanciness": "fancy",
-  "dark": true,
-  "usp": "Belgian luxury chocolatier and inventor of the original praline (1912), selling handcrafted bonbons and chocolate bars made in Vlezenbeek, Belgium with premium dark and milk chocolate varieties.",
-  "website": "https://www.neuhauschocolates.com/"
+  "tags": [],
+  "usp": "Belgian chocolate retailer for over 160 years, inventor of the original Belgian praline, selling handcrafted bonbons, truffles, bars, tablets, and chocolate mousse, all made in Brussels atelier.",
+  "website": "https://www.neuhauschocolates.com/en_US/stores/detail?store=247"
  },
  {
   "name": "Mojo Desserts",
@@ -56,11 +102,43 @@
   "rating": 4.8,
   "reviews": 108,
   "type": [
-   "dessert cafe"
+   "dessert cafe",
+   "drinks"
   ],
-  "fanciness": "fancy",
-  "dark": true,
-  "usp": "America's first chocolate mousse bar, offering artisanal handcrafted mousses made with Belgian Callebaut chocolate (70% dark cacao featured), emphasizing simplicity and freshness with rotating seasonal flavors.",
+  "tags": [
+   "#darkchocolate"
+  ],
+  "usp": "Country's first artisanal chocolate mousse bar, handcrafted in small batches with premium Belgian chocolate by Belgian Chef Johan Halsberghe, serving five signature mousse flavors.",
   "website": "https://mojodesserts.com/"
+ },
+ {
+  "name": "Sweet Vegan Chocolates",
+  "lat": 40.80956,
+  "lng": -73.95819,
+  "address": "414 W 121st St",
+  "rating": 4.7,
+  "reviews": 23,
+  "type": [
+   "chocolatier"
+  ],
+  "tags": [
+   "#darkchocolate"
+  ],
+  "usp": "Handcrafted vegan and allergen-free chocolate truffles with smooth ganache enrobed in 70% dark chocolate, offering 18+ flavors made entirely in NYC with fair-trade ingredients and no nuts, soy, or gluten.",
+  "website": "https://sweetvegan.nyc/"
+ },
+ {
+  "name": "Chocolat Moderne",
+  "lat": 40.74063,
+  "lng": -73.9927,
+  "address": "27 West 20th St",
+  "rating": 4.7,
+  "reviews": 100,
+  "type": [
+   "chocolatier"
+  ],
+  "tags": [],
+  "usp": "Handcrafted gourmet chocolates using premium French Valrhona chocolate, featuring over 100 varieties of bonbons, bars, drinking chocolates, and caramel sauces with no preservatives or artificial flavorings.",
+  "website": "https://chocolatmoderne.com/"
  }
 ]

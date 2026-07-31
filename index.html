@@ -182,7 +182,7 @@ panel.onAdd = function () {
       <option value="4.9">4.9★</option>
     </select> <span id="af-count" class="count"></span></div>
   </div>`;
-  html += `<label><input type="checkbox" data-cat="chocatlas">🍫 Chocolate <span class="count">(4)</span></label>`;
+  html += `<label><input type="checkbox" data-cat="chocatlas">🍫 Chocolate <span class="count">(9)</span></label>`;
   html += `<div id="choc-filters" style="display:none; margin:2px 0 0 20px; font-size:12px;">
     <div>
       <label style="display:inline"><input type="checkbox" class="cf-type" value="chocolatier" checked>🍫 bars/bonbons</label><br>
@@ -191,11 +191,7 @@ panel.onAdd = function () {
       <label style="display:inline"><input type="checkbox" class="cf-type" value="ice cream" checked>🍦 ice cream</label><br>
       <label style="display:inline"><input type="checkbox" class="cf-type" value="drinks" checked>☕ drinks</label>
     </div>
-    <div style="margin-top:2px">
-      <label style="display:inline"><input type="checkbox" class="cf-fancy" value="casual" checked>casual</label>
-      <label style="display:inline; margin-left:6px"><input type="checkbox" class="cf-fancy" value="fancy" checked>fancy</label>
-    </div>
-    <div><label style="display:inline"><input type="checkbox" id="cf-dark">dark chocolate only</label> <span id="cf-count" class="count"></span></div>
+    <div><span id="cf-count" class="count"></span></div>
   </div>`;
   div.innerHTML = html;
   L.DomEvent.disableClickPropagation(div);
@@ -219,7 +215,7 @@ panel.onAdd = function () {
   });
   div.querySelectorAll(".af-price").forEach(cb => cb.addEventListener("change", applyAtlasFilters));
   div.querySelector("#af-rating").addEventListener("change", applyAtlasFilters);
-  div.querySelectorAll(".cf-type, .cf-fancy, #cf-dark").forEach(cb => cb.addEventListener("change", applyChocFilters));
+  div.querySelectorAll(".cf-type").forEach(cb => cb.addEventListener("change", applyChocFilters));
   return div;
 };
 panel.addTo(map);
@@ -230,26 +226,25 @@ panel.addTo(map);
 // ============================================================
 const chocLayer = L.layerGroup();
 let chocLoaded = false;
-let chocMarkers = [];   // [{marker, type, fanciness, dark}]
+let chocMarkers = [];   // [{marker, type}]
 
-function chocIcon() {
+function chocIcon(special) {
+  // gold ring behind the emoji marks specialty flags (bean-to-bar etc.)
+  const ring = special
+    ? "background:radial-gradient(circle, rgba(255,215,0,0.95) 55%, rgba(255,215,0,0) 72%); border-radius:50%;"
+    : "";
   return L.divIcon({
     className: "",
-    html: `<div style="font-size:22px; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.4));">🍫</div>`,
-    iconSize: [22, 22], iconAnchor: [11, 20], popupAnchor: [0, -18],
+    html: `<div style="font-size:22px; width:30px; height:30px; line-height:30px; text-align:center; ${ring} filter: drop-shadow(0 1px 2px rgba(0,0,0,0.4));">🍫</div>`,
+    iconSize: [30, 30], iconAnchor: [15, 26], popupAnchor: [0, -22],
   });
 }
 
 function applyChocFilters() {
   const types = new Set([...document.querySelectorAll(".cf-type:checked")].map(cb => cb.value));
-  const fancy = new Set([...document.querySelectorAll(".cf-fancy:checked")].map(cb => cb.value));
-  const darkOnly = document.getElementById("cf-dark").checked;
   let shown = 0;
-  for (const { marker, type, fanciness, dark } of chocMarkers) {
-    const ok = type.some(t => types.has(t))
-      && (fancy.has(fanciness) || fanciness === "unknown")
-      && (!darkOnly || dark);
-    if (ok) { chocLayer.addLayer(marker); shown++; }
+  for (const { marker, type } of chocMarkers) {
+    if (type.some(t => types.has(t))) { chocLayer.addLayer(marker); shown++; }
     else chocLayer.removeLayer(marker);
   }
   document.getElementById("cf-count").textContent = `(${shown})`;
@@ -260,18 +255,18 @@ async function toggleChoc(on) {
   if (!chocLoaded) {
     const rows = await (await fetch("choc-top.json")).json();
     for (const p of rows) {
-      const m = L.marker([p.lat, p.lng], { icon: chocIcon() });
+      const m = L.marker([p.lat, p.lng], { icon: chocIcon(p.tags.length > 0) });
       const gmaps = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(p.name + " " + (p.address || "") + " New York NY")}`;
       let links = `<a href="${gmaps}" target="_blank" rel="noopener">Directions ↗</a>`;
       if (p.website) links += ` · <a href="${p.website}" target="_blank" rel="noopener">Website ↗</a>`;
       m.bindPopup(`
         <div class="popup-name">${p.name}</div>
-        <div class="popup-cat">🍫 ${p.type.join(", ")} · ${p.fanciness}${p.dark ? " · dark chocolate" : ""}</div>
-        <div class="popup-cat">${p.rating}★ (${p.reviews.toLocaleString()} reviews)</div>
+        <div class="popup-cat">🍫 ${p.type.join(", ")} · ${p.rating}★ (${p.reviews.toLocaleString()} reviews)</div>
         <div class="popup-notes">${p.usp || ""}</div>
+        ${p.tags.length ? `<div class="popup-notes" style="color:#b8860b">${p.tags.join(" ")}</div>` : ""}
         <div class="popup-cat">${p.address || ""}</div>
         <div class="popup-links">${links}</div>`, { maxWidth: 280 });
-      chocMarkers.push({ marker: m, type: p.type, fanciness: p.fanciness, dark: p.dark });
+      chocMarkers.push({ marker: m, type: p.type });
     }
     chocLoaded = true;
   }
