@@ -66,6 +66,7 @@
 // ============================================================
 const CATEGORIES = {
   place:      { label: "Places",      emoji: "📍", color: "#2a6f97" },
+  museum:     { label: "Museums & Art", emoji: "🎨", color: "#6a4c93" },
   restaurant: { label: "Restaurants", emoji: "🍽️", color: "#e07a00" },
   pizza:      { label: "Pizza",       emoji: "🍕", color: "#d62828" },
   snack:      { label: "Snacks",      emoji: "🍰", color: "#b5179e" },
@@ -83,15 +84,15 @@ const PLACES = [
     address: "Liberty Island — ferry from Battery Park", notes: "Same ferry as Ellis Island; reserve crown/pedestal tickets ahead." },
   { name: "Central Park Zoo", category: "place", lat: 40.7678, lng: -73.9718,
     address: "E 64th St & 5th Ave", notes: "" },
-  { name: "MoMA", category: "place", lat: 40.7614, lng: -73.9776,
+  { name: "MoMA", category: "museum", lat: 40.7614, lng: -73.9776,
     address: "11 W 53rd St", notes: "Museum of Modern Art." },
-  { name: "Whitney Museum of American Art", category: "place", lat: 40.7396, lng: -74.0089,
+  { name: "Whitney Museum of American Art", category: "museum", lat: 40.7396, lng: -74.0089,
     address: "99 Gansevoort St", notes: "At the foot of the High Line." },
   { name: "Brooklyn Bridge", category: "place", lat: 40.7061, lng: -73.9969,
     address: "Walkway entrance near City Hall Park", notes: "Walk toward Brooklyn for the skyline view." },
-  { name: "New York Transit Museum", category: "place", lat: 40.6906, lng: -73.9902,
+  { name: "New York Transit Museum", category: "museum", emoji: "🚃", lat: 40.6906, lng: -73.9902,
     address: "99 Schermerhorn St, Brooklyn", notes: "In a decommissioned 1936 subway station; vintage trains." },
-  { name: "Penn Station", category: "place", lat: 40.7506, lng: -73.9935,
+  { name: "Penn Station", category: "place", emoji: "🚂", lat: 40.7506, lng: -73.9935,
     address: "W 32nd St & 8th Ave (Moynihan Train Hall)", notes: "Amtrak/NJT/LIRR hub." },
 
   // --- Restaurants ---
