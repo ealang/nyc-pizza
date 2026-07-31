@@ -66,7 +66,8 @@
 // ============================================================
 const CATEGORIES = {
   place:      { label: "Places",      emoji: "🗽", color: "#2a6f97" },
-  restaurant: { label: "Restaurants", emoji: "🍽️", color: "#d62828" },
+  restaurant: { label: "Restaurants", emoji: "🍽️", color: "#e07a00" },
+  pizza:      { label: "Pizza",       emoji: "🍕", color: "#d62828" },
   snack:      { label: "Snacks",      emoji: "🍰", color: "#b5179e" },
 };
 
@@ -98,6 +99,24 @@ const PLACES = [
     address: "19 Old Fulton St, Brooklyn (DUMBO)", notes: "From Portillo. Patsy Grimaldi's return spot, coal-fired." },
   { name: "Nathan's Famous (original)", category: "restaurant", lat: 40.5755, lng: -73.9814,
     address: "1310 Surf Ave, Coney Island", notes: "From Portillo. The original 1916 stand." },
+
+  // --- Pizza ---
+  { name: "F&F Pizzeria", category: "pizza", lat: 40.6773, lng: -73.9982,
+    address: "459 Court St, Carroll Gardens, Brooklyn", notes: "From Babish review. Took the #1 overall spot." },
+  { name: "Philomena's Pizza", category: "pizza", lat: 40.7434, lng: -73.9230,
+    address: "41-16 Queens Blvd, Sunnyside, Queens", notes: "From Babish review. \"Some of the best pizza yet imagined\" (accidentally left off his final on-screen ranking)." },
+  { name: "Scarr's Pizza", category: "pizza", lat: 40.7150, lng: -73.9916,
+    address: "35 Orchard St, Lower East Side", notes: "From Babish review. House-milled flour." },
+  { name: "L'industrie Pizzeria", category: "pizza", lat: 40.7116, lng: -73.9578,
+    address: "254 S 2nd St, Williamsburg, Brooklyn", notes: "From Babish review. Smoky flavor, thin crisp undercarriage." },
+  { name: "Paulie Gee's Slice Shop", category: "pizza", lat: 40.7284, lng: -73.9572,
+    address: "110 Franklin St, Greenpoint, Brooklyn", notes: "From Babish review. Cupped pepperoni, crisp crust." },
+  { name: "Lucia Pizza of Avenue X", category: "pizza", lat: 40.5931, lng: -73.9481,
+    address: "2201 Avenue X, Sheepshead Bay, Brooklyn", notes: "From Babish review. High-quality mozzarella, perfectly baked base." },
+  { name: "Di Fara Pizza", category: "pizza", lat: 40.6250, lng: -73.9615,
+    address: "1424 Avenue J, Midwood, Brooklyn", notes: "From Babish review. Legendary baseline, basil snipped onto pie." },
+  { name: "Joe's Pizza", category: "pizza", lat: 40.7305, lng: -74.0021,
+    address: "7 Carmine St, Greenwich Village", notes: "From Babish review. Quintessential street slice, standard-bearer." },
 
   // --- Snacks ---
   { name: "Magnolia Bakery", category: "snack", lat: 40.7359, lng: -74.0067,
