@@ -193,7 +193,7 @@ panel.onAdd = function () {
     html += `<label><input type="checkbox" data-cat="${cat}" checked>${c.emoji} ${c.label} <span class="count">(${counts[cat] || 0})</span></label>`;
   }
   html += `<label><input type="checkbox" data-cat="transit">🚇 Subway</label>`;
-  html += `<label><input type="checkbox" data-cat="pizzatlas">🍕 Pizza Atlas <span class="count">(1082)</span></label>`;
+  html += `<label><input type="checkbox" data-cat="pizzatlas">🍕 Pizza Atlas <span class="count">(69)</span></label>`;
   div.innerHTML = html;
   L.DomEvent.disableClickPropagation(div);
   div.querySelectorAll("input").forEach(cb => {
@@ -210,37 +210,71 @@ panel.onAdd = function () {
 panel.addTo(map);
 
 // ============================================================
-// PIZZA ATLAS (lazy-loaded on first toggle) — preview layer
-// Data: pizza-atlas-preview.json rows [lat, lng, name, rating, reviews, price]
+// PIZZA ATLAS (lazy-loaded on first toggle)
+// Data: pizza-top.json — curated 4.5★+ confirmed pizza places,
+// dot color = primary style (see STYLE_COLORS)
 // ============================================================
 const atlasLayer = L.layerGroup();
 let atlasLoaded = false;
 
-function atlasColor(rating, reviews) {
-  if (!reviews) return "#999";
-  if (rating >= 4.5) return "#1a7f37";
-  if (rating >= 4.0) return "#7cb342";
-  if (rating >= 3.0) return "#f9a825";
-  return "#d32f2f";
+const STYLE_COLORS = {
+  "NY slice":        "#d62828",
+  "NY whole-pie":    "#d62828",
+  "Neapolitan":      "#1a7f37",
+  "Sicilian/square": "#e07a00",
+  "grandma":         "#e0b000",
+  "Roman/al taglio": "#6a4c93",
+  "Detroit":         "#1565c0",
+  "wood-fired":      "#795548",
+  "coal-fired":      "#795548",
+  "bar pie":         "#00838f",
+};
+const STYLE_OTHER = "#888";
+
+function styleColor(style) {
+  const primary = style.split(",")[0].trim();
+  return STYLE_COLORS[primary] || STYLE_OTHER;
 }
 
 async function toggleAtlas(on) {
-  if (!on) { map.removeLayer(atlasLayer); return; }
+  if (!on) { map.removeLayer(atlasLayer); atlasLegend.remove(); return; }
   if (!atlasLoaded) {
-    const rows = await (await fetch("pizza-atlas-preview.json")).json();
-    for (const [lat, lng, name, rating, reviews, price] of rows) {
-      const m = L.circleMarker([lat, lng], {
-        radius: 4, color: "#fff", weight: 1,
-        fillColor: atlasColor(rating, reviews), fillOpacity: 0.85,
+    const rows = await (await fetch("pizza-top.json")).json();
+    for (const p of rows) {
+      const m = L.circleMarker([p.lat, p.lng], {
+        radius: 6, color: "#fff", weight: 1.5,
+        fillColor: styleColor(p.style), fillOpacity: 0.9,
       });
-      m.bindPopup(`<div class="popup-name">${name}</div>
-        <div class="popup-cat">🍕 ${reviews ? rating + "★ · " + reviews + " reviews" : "no reviews"}${price ? " · " + price : ""}</div>`);
+      const gmaps = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(p.name + " " + (p.address || "") + " New York NY")}`;
+      let links = `<a href="${gmaps}" target="_blank" rel="noopener">Directions ↗</a>`;
+      if (p.website) links += ` · <a href="${p.website}" target="_blank" rel="noopener">Website ↗</a>`;
+      m.bindPopup(`
+        <div class="popup-name">${p.name}</div>
+        <div class="popup-cat">🍕 ${p.style} · ${p.rating}★ (${p.reviews.toLocaleString()} reviews)${p.price ? " · " + p.price : ""}</div>
+        <div class="popup-notes">${p.usp || ""}</div>
+        ${p.slice === "yes" ? '<div class="popup-notes">Sells single slices.</div>' : ""}
+        ${p.hours ? `<div class="popup-notes">🕐 ${p.hours}</div>` : ""}
+        <div class="popup-cat">${p.address || ""}</div>
+        <div class="popup-links">${links}</div>`, { maxWidth: 280 });
       m.addTo(atlasLayer);
     }
     atlasLoaded = true;
   }
   map.addLayer(atlasLayer);
+  atlasLegend.addTo(map);
 }
+
+// Style color legend, shown while atlas layer is on
+const atlasLegend = L.control({ position: "bottomleft" });
+atlasLegend.onAdd = function () {
+  const div = L.DomUtil.create("div", "panel");
+  const items = [["NY slice / pie", "#d62828"], ["Neapolitan", "#1a7f37"], ["Sicilian/square", "#e07a00"],
+    ["Grandma", "#e0b000"], ["Roman/al taglio", "#6a4c93"], ["Detroit", "#1565c0"],
+    ["Wood/coal-fired", "#795548"], ["Other", "#888"]];
+  div.innerHTML = items.map(([l, c]) =>
+    `<div style="font-size:12px"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:${c};margin-right:5px"></span>${l}</div>`).join("");
+  return div;
+};
 
 // ============================================================
 // SUBWAY OVERLAY (lazy-loaded on first toggle)
