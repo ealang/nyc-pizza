@@ -19,67 +19,6 @@
   "website": "https://chococo.nyc/"
  },
  {
-  "name": "Varsano's Chocolate",
-  "lat": 40.73212,
-  "lng": -74.00173,
-  "address": "172 W 4th St",
-  "rating": 4.6,
-  "reviews": 134,
-  "type": [
-   "chocolatier"
-  ],
-  "tags": [],
-  "usp": "Greenwich Village chocolatier handcrafting and hand-dipping homemade chocolates daily, including truffles, caramels, fruit centers, and nut patties with varieties like s'mores and chocolate-covered potato chips.",
-  "website": "https://www.varsanos.com/"
- },
- {
-  "name": "Daniel Corpuz Chocolatier",
-  "lat": 40.71551,
-  "lng": -73.99933,
-  "address": "60 Mulberry St",
-  "rating": 4.7,
-  "reviews": 49,
-  "type": [
-   "chocolatier",
-   "bakery",
-   "dessert cafe"
-  ],
-  "tags": [],
-  "usp": "Boutique chocolatier blending traditional Belgian chocolate techniques with Filipino-Asian flavors, offering handcrafted bonbons, cakes, cookies, pastries, and plated desserts with cultural influences like ube, calamansi, and pandan.",
-  "website": "https://www.danielcorpuz.com/"
- },
- {
-  "name": "Stick With Me",
-  "lat": 40.72127,
-  "lng": -73.99551,
-  "address": "202A Mott St",
-  "rating": 4.7,
-  "reviews": 373,
-  "type": [
-   "chocolatier"
-  ],
-  "tags": [],
-  "usp": "Artisanal chocolatier handcrafting luxury bonbons entirely by hand in small batches, with hand-shelled and hand-painted confections taking three days to create, recognized by Vogue and Oprah.",
-  "website": "https://swmsweets.com/"
- },
- {
-  "name": "Confectionery",
-  "lat": 40.72737,
-  "lng": -73.98312,
-  "address": "440 E 9th St",
-  "rating": 4.8,
-  "reviews": 183,
-  "type": [
-   "chocolatier",
-   "bakery"
-  ],
-  "tags": [
-   "#darkchocolate"
-  ],
-  "usp": "Vegan bakery and artisanal chocolate shop creating handcrafted bonbons, macarons, and baked goods with fair-trade, organic ingredients; no nuts, soy, or gluten.",
-  "website": null
- },
- {
   "name": "Neuhaus Soho",
   "lat": 40.72438,
   "lng": -74.00178,
@@ -95,9 +34,26 @@
   "website": "https://www.neuhauschocolates.com/en_US/stores/detail?store=247"
  },
  {
+  "name": "Confectionery",
+  "lat": 40.72736771772591,
+  "lng": -73.9831177,
+  "address": "440 E 9th St",
+  "rating": 4.8,
+  "reviews": 183,
+  "type": [
+   "chocolatier",
+   "bakery"
+  ],
+  "tags": [
+   "#darkchocolate"
+  ],
+  "usp": "Vegan bakery and artisanal chocolate shop creating handcrafted bonbons, macarons, and baked goods with fair-trade, organic ingredients; no nuts, soy, or gluten.",
+  "website": null
+ },
+ {
   "name": "Mojo Desserts",
-  "lat": 40.78836,
-  "lng": -73.94866,
+  "lat": 40.7883604,
+  "lng": -73.9486555,
   "address": "177 East 100th St",
   "rating": 4.8,
   "reviews": 108,
@@ -112,9 +68,53 @@
   "website": "https://mojodesserts.com/"
  },
  {
+  "name": "Stick With Me",
+  "lat": 40.72127316565047,
+  "lng": -73.99550859877705,
+  "address": "202A Mott St",
+  "rating": 4.7,
+  "reviews": 373,
+  "type": [
+   "chocolatier"
+  ],
+  "tags": [],
+  "usp": "Artisanal chocolatier handcrafting luxury bonbons entirely by hand in small batches, with hand-shelled and hand-painted confections taking three days to create, recognized by Vogue and Oprah.",
+  "website": "https://swmsweets.com/"
+ },
+ {
+  "name": "Chocolat Moderne",
+  "lat": 40.740633,
+  "lng": -73.9927017,
+  "address": "27 West 20th St",
+  "rating": 4.7,
+  "reviews": 100,
+  "type": [
+   "chocolatier"
+  ],
+  "tags": [],
+  "usp": "Handcrafted gourmet chocolates using premium French Valrhona chocolate, featuring over 100 varieties of bonbons, bars, drinking chocolates, and caramel sauces with no preservatives or artificial flavorings.",
+  "website": "https://chocolatmoderne.com/"
+ },
+ {
+  "name": "Daniel Corpuz Chocolatier",
+  "lat": 40.7155119,
+  "lng": -73.9993293,
+  "address": "60 Mulberry St",
+  "rating": 4.7,
+  "reviews": 49,
+  "type": [
+   "chocolatier",
+   "bakery",
+   "dessert cafe"
+  ],
+  "tags": [],
+  "usp": "Boutique chocolatier blending traditional Belgian chocolate techniques with Filipino-Asian flavors, offering handcrafted bonbons, cakes, cookies, pastries, and plated desserts with cultural influences like ube, calamansi, and pandan.",
+  "website": "https://www.danielcorpuz.com/"
+ },
+ {
   "name": "Sweet Vegan Chocolates",
-  "lat": 40.80956,
-  "lng": -73.95819,
+  "lat": 40.809555,
+  "lng": -73.958191,
   "address": "414 W 121st St",
   "rating": 4.7,
   "reviews": 23,
@@ -128,17 +128,734 @@
   "website": "https://sweetvegan.nyc/"
  },
  {
-  "name": "Chocolat Moderne",
-  "lat": 40.74063,
-  "lng": -73.9927,
-  "address": "27 West 20th St",
-  "rating": 4.7,
-  "reviews": 100,
+  "name": "Varsano's Chocolate",
+  "lat": 40.73212,
+  "lng": -74.00173,
+  "address": "172 W 4th St",
+  "rating": 4.6,
+  "reviews": 134,
   "type": [
    "chocolatier"
   ],
   "tags": [],
-  "usp": "Handcrafted gourmet chocolates using premium French Valrhona chocolate, featuring over 100 varieties of bonbons, bars, drinking chocolates, and caramel sauces with no preservatives or artificial flavorings.",
-  "website": "https://chocolatmoderne.com/"
+  "usp": "Greenwich Village chocolatier handcrafting and hand-dipping homemade chocolates daily, including truffles, caramels, fruit centers, and nut patties with varieties like s'mores and chocolate-covered potato chips.",
+  "website": "https://www.varsanos.com/"
+ },
+ {
+  "name": "Harlem Chocolate Factory",
+  "lat": 40.8173,
+  "lng": -73.94171,
+  "address": "2363 Adam Clayton Power Jr Blvd",
+  "rating": 4.6,
+  "reviews": 36,
+  "type": [
+   "chocolatier"
+  ],
+  "tags": [],
+  "usp": "Artisan small-batch premium handcrafted chocolates including bonbons, truffles, tarts, and bark.",
+  "website": "https://harlemchocolatefactory.com"
+ },
+ {
+  "name": "La Maison du Chocolat Paris",
+  "lat": 40.75157,
+  "lng": -73.996984,
+  "address": "383 W 31st St Unit",
+  "rating": 4.6,
+  "reviews": 5,
+  "type": [
+   "chocolatier",
+   "bakery"
+  ],
+  "tags": [],
+  "usp": "Luxury handmade French chocolates and pastries from Paris, including bonbons, macarons, and pastries.",
+  "website": "https://www.lamaisonduchocolat.com"
+ },
+ {
+  "name": "La Maison du Chocolate",
+  "lat": 40.711795545901666,
+  "lng": -74.01182933273881,
+  "address": "185 Greenwich St",
+  "rating": 4.6,
+  "reviews": 5,
+  "type": [
+   "chocolatier",
+   "bakery"
+  ],
+  "tags": [],
+  "usp": "Luxury French chocolates and pastries including signature bonbons, truffles, macarons, and pain au chocolat.",
+  "website": "https://www.lamaisonduchocolat.com"
+ },
+ {
+  "name": "ROYCE Chocolate",
+  "lat": 40.752761,
+  "lng": -73.983486,
+  "address": "32 W 40th St",
+  "rating": 4.5,
+  "reviews": 264,
+  "type": [
+   "candy shop"
+  ],
+  "tags": [],
+  "usp": "Japanese chocolate boutique importing premium chocolates from Hokkaido, known for signature nama chocolates and gourmet chocolate varieties.",
+  "website": null
+ },
+ {
+  "name": "The Meadow",
+  "lat": 40.72281,
+  "lng": -73.99583,
+  "address": "240 Mulberry St",
+  "rating": 4.5,
+  "reviews": 118,
+  "type": [
+   "candy shop"
+  ],
+  "tags": [],
+  "usp": "Specialty retailer curating over 300 craft chocolate bars alongside artisan salts and cocktail bitters, featuring free chocolate tastings every Thursday.",
+  "website": "https://themeadow.com"
+ },
+ {
+  "name": "Mondel Chocolates",
+  "lat": 40.8066216,
+  "lng": -73.9652308,
+  "address": "2913 Broadway",
+  "rating": 4.5,
+  "reviews": 61,
+  "type": [
+   "chocolatier"
+  ],
+  "tags": [
+   "#darkchocolate"
+  ],
+  "usp": "Family-owned since 1944 making homemade dark and milk chocolate varieties with old-world charm, including the historic Katharine Hepburn Mix.",
+  "website": null
+ },
+ {
+  "name": "L\u00e4derach",
+  "lat": 40.760579,
+  "lng": -73.982965,
+  "address": "745 7th Ave",
+  "rating": 4.5,
+  "reviews": 31,
+  "type": [
+   "chocolatier"
+  ],
+  "tags": [],
+  "usp": "Swiss chocolatier handcrafting tartufi, bonbons, pralines, truffles, and chocolate bark using premium Swiss ingredients.",
+  "website": "https://www.laderach.com"
+ },
+ {
+  "name": "Cocoa Store",
+  "lat": 40.738171183369495,
+  "lng": -73.99035363298168,
+  "address": "873 Broadway",
+  "rating": 4.5,
+  "reviews": 25,
+  "type": [
+   "candy shop"
+  ],
+  "tags": [
+   "#beantobar"
+  ],
+  "usp": "Curated retailer of bean-to-bar artisanal chocolate bars and bonbons from established makers like Amedei and Domori, with guided tastings and chocolate education.",
+  "website": "https://cocoastore.com"
+ },
+ {
+  "name": "Neuhaus - New York",
+  "lat": 40.75338,
+  "lng": -74.00113,
+  "address": "20 Hudson Yards",
+  "rating": 4.5,
+  "reviews": 21,
+  "type": [
+   "chocolatier"
+  ],
+  "tags": [],
+  "usp": "Belgian chocolate manufacturer established 1857, handcrafting pralines (Belgian pralines invented in 1912), truffles, and gift collections with sustainably sourced cacao.",
+  "website": "https://www.neuhauschocolates.com"
+ },
+ {
+  "name": "Myzel's Chocolate",
+  "lat": 40.7638944245561,
+  "lng": -73.9799313247204,
+  "address": "140 W 55th St",
+  "rating": 4.4,
+  "reviews": 134,
+  "type": [
+   "chocolatier",
+   "candy shop"
+  ],
+  "tags": [],
+  "usp": "Family-owned NYC institution for over two decades specializing in hand-made traditional European chocolates with beautifully decorated truffles, plus home-made baked cookies and over 100 licorice flavors.",
+  "website": "http://www.myzels.com/"
+ },
+ {
+  "name": "L\u00e4derach",
+  "lat": 40.75503,
+  "lng": -73.97956,
+  "address": "537 5th Ave",
+  "rating": 4.4,
+  "reviews": 130,
+  "type": [
+   "chocolatier"
+  ],
+  "tags": [],
+  "usp": "Swiss premium chocolate artisan flagship store with handcrafted pralines and truffles using finest Swiss ingredients, featuring a unique rotating cocoa bean chocolate sculpture.",
+  "website": "https://laderach.com/"
+ },
+ {
+  "name": "No Chewing Allowed",
+  "lat": 40.752915,
+  "lng": -73.983679,
+  "address": "31W 40th St",
+  "rating": 4.4,
+  "reviews": 111,
+  "type": [
+   "chocolatier",
+   "dessert cafe"
+  ],
+  "tags": [],
+  "usp": "Specialty chocolaterie focused on French-style truffles and hot chocolate designed to be savored rather than chewed, emphasizing texture smoothness and taste over mastication.",
+  "website": "https://nochewingallowed.com/"
+ },
+ {
+  "name": "Li-Lac Chocolates - Chelsea Market",
+  "lat": 40.74215,
+  "lng": -74.005513,
+  "address": "75 9th Ave At 15th St",
+  "rating": 4.4,
+  "reviews": 36,
+  "type": [
+   "chocolatier"
+  ],
+  "tags": [],
+  "usp": "The Chelsea Market location of Manhattan's oldest chocolate house, offering over 140 fresh gourmet chocolates made in small batches with original recipes from 1923.",
+  "website": "https://www.li-lacchocolates.com/"
+ },
+ {
+  "name": "Li-Lac Chocolates",
+  "lat": 40.7164977,
+  "lng": -74.0089735,
+  "address": "20 Hudson Yards",
+  "rating": 4.4,
+  "reviews": 20,
+  "type": [
+   "chocolatier"
+  ],
+  "tags": [],
+  "usp": "Manhattan's oldest chocolate house since 1923, making fresh artisan chocolates in small batches using original recipes and time-honored techniques with over 120 items.",
+  "website": "https://www.li-lacchocolates.com/"
+ },
+ {
+  "name": "MarieBelle",
+  "lat": 40.7232107708636,
+  "lng": -74.002450627852,
+  "address": "484 Broome St",
+  "rating": 4.3,
+  "reviews": 742,
+  "type": [
+   "chocolatier",
+   "dessert cafe"
+  ],
+  "tags": [
+   "#beantobar"
+  ],
+  "usp": "Woman-owned luxury chocolate company with fine art edibles, offering bean to bar artisan chocolates with intricate handcrafted designs and exotic flavors, plus renowned Aztec hot chocolate in Cacao Bar & Tea Salon.",
+  "website": "https://mariebelle.com/"
+ },
+ {
+  "name": "Blue Stripes Cacao Shop",
+  "lat": 40.73464,
+  "lng": -73.9929,
+  "address": "28 East 13th St",
+  "rating": 4.3,
+  "reviews": 544,
+  "type": [
+   "dessert cafe",
+   "drinks"
+  ],
+  "tags": [],
+  "usp": "Chocolate-centric cafe by the creator of Max Brenner, serving specialty hot chocolate drinks, chocolate-filled cones, giant truffles, and chocolate fondue with a philosophy of true wellness through delicious cacao.",
+  "website": null
+ },
+ {
+  "name": "Hershey\u2019s Chocolate World",
+  "lat": 40.75933,
+  "lng": -73.98433,
+  "address": "701 7th Ave",
+  "rating": 4.3,
+  "reviews": 257,
+  "type": [
+   "candy shop",
+   "dessert cafe",
+   "drinks"
+  ],
+  "tags": [],
+  "usp": "Massive flagship Hershey's store with experiential elements including personalized wrapper design, made-to-order s'mores, customized Reese's cups, and Hershey's Kitchens Bakery with 10 warm baked treats.",
+  "website": "https://www.chocolateworld.com/locations/times-square.html"
+ },
+ {
+  "name": "Funny Face Bakery",
+  "lat": 40.72533,
+  "lng": -73.99494,
+  "address": "319 Lafayette St",
+  "rating": 4.3,
+  "reviews": 132,
+  "type": [
+   "bakery"
+  ],
+  "tags": [],
+  "usp": "Pop-culture bakery specializing in hand-made cookies with meme-worthy designs, famous for its 6-ounce gooey chocolate chip cookie with vegan and gluten-free options available.",
+  "website": "https://funnyfacebakery.com/"
+ },
+ {
+  "name": "Roni-Sue's Chocolates",
+  "lat": 40.720389,
+  "lng": -73.991616,
+  "address": "148 Forsyth St",
+  "rating": 4.3,
+  "reviews": 88,
+  "type": [
+   "chocolatier",
+   "dessert cafe"
+  ],
+  "tags": [
+   "#beantobar"
+  ],
+  "usp": "Woman-owned chocolatier making handmade truffles, caramels, and confections with direct-trade organic cacao from Belize and local NYC ingredients.",
+  "website": "https://www.roni-sue.com/"
+ },
+ {
+  "name": "Venchi",
+  "lat": 40.77406339411591,
+  "lng": -73.95951531049595,
+  "address": "1117 Lexington Ave",
+  "rating": 4.3,
+  "reviews": 58,
+  "type": [
+   "chocolatier",
+   "ice cream",
+   "dessert cafe",
+   "drinks"
+  ],
+  "tags": [
+   "#100%chocolate"
+  ],
+  "usp": "Italian gelato and chocolate shop featuring signature gelato, chocolate fountain crepes with Suprema chocolate, and Italian-made confections with 100% natural ingredients.",
+  "website": "https://us.venchi.com/store/lexington"
+ },
+ {
+  "name": "Neuhaus Belgian Chocolate",
+  "lat": 40.7593654,
+  "lng": -73.9699589,
+  "address": "651 Lexington Ave",
+  "rating": 4.3,
+  "reviews": 54,
+  "type": [
+   "chocolatier"
+  ],
+  "tags": [],
+  "usp": "Inventor of the praline and the iconic gift box; handcrafted Belgian pralines, truffles, and chocolate tablets using sustainably sourced cacao.",
+  "website": "https://www.neuhauschocolates.com/en_US/home"
+ },
+ {
+  "name": "MarieBelle at The Kitano Hotel",
+  "lat": 40.74954,
+  "lng": -73.97986,
+  "address": "66 Park Ave",
+  "rating": 4.3,
+  "reviews": 10,
+  "type": [
+   "chocolatier",
+   "dessert cafe"
+  ],
+  "tags": [
+   "#beantobar",
+   "#darkchocolate"
+  ],
+  "usp": "Artisanal ganache and bean-to-bar confections made with exotic flavors produced by hand in Brooklyn.",
+  "website": "https://mariebelle.com/"
+ },
+ {
+  "name": "La Maison du Chocolat",
+  "lat": 40.7268782,
+  "lng": -74.00267645571927,
+  "address": "199 Prince St",
+  "rating": 4.3,
+  "reviews": 7,
+  "type": [
+   "chocolatier",
+   "dessert cafe"
+  ],
+  "tags": [],
+  "usp": "French luxury chocolate boutique with exquisite ganaches, truffles, pralines, and pastries crafted by Nicolas Cloiseau (Meilleur Ouvrier de France), offering serious tasting before purchase.",
+  "website": "https://www.lamaisonduchocolat.com/"
+ },
+ {
+  "name": "La Maison du Chocolat - Rockefeller",
+  "lat": 40.75892,
+  "lng": -73.97973,
+  "address": "51 W 49TH St",
+  "rating": 4.2,
+  "reviews": 479,
+  "type": [
+   "chocolatier",
+   "dessert cafe"
+  ],
+  "tags": [
+   "#darkchocolate"
+  ],
+  "usp": "Paris-based luxury chocolatier offering handcrafted bonbons, pralines, pastries, and famous hot chocolate with all items made in Paris or on-site with French ingredients.",
+  "website": "https://www.lamaisonduchocolat.com/en_us/stores/usa/new-york/rockefeller-center"
+ },
+ {
+  "name": "Venchi",
+  "lat": 40.737487,
+  "lng": -73.990474,
+  "address": "861 Broadway",
+  "rating": 4.2,
+  "reviews": 426,
+  "type": [
+   "chocolatier",
+   "ice cream",
+   "dessert cafe"
+  ],
+  "tags": [
+   "#singleorigin"
+  ],
+  "usp": "Italian ChocoGelateria at Union Square since 1878, offering over 350 chocolate recipes and 90 gelato flavors using single-origin ingredients from Ecuador, Venezuela, and Peru.",
+  "website": "https://us.venchi.com/"
+ },
+ {
+  "name": "BonBon - A Swedish Candy",
+  "lat": 40.71981167661863,
+  "lng": -73.98980644419574,
+  "address": "130 Allen St",
+  "rating": 4.2,
+  "reviews": 262,
+  "type": [
+   "candy shop"
+  ],
+  "tags": [],
+  "usp": "Authentic Swedish candy shop selling imported marshmallows, licorice, nougat, chocolate, and confections with vegan and gluten-free options.",
+  "website": "https://bonbonnyc.com/"
+ },
+ {
+  "name": "L.A. Burdick Handmade Chocolates",
+  "lat": 40.72577,
+  "lng": -74.00136,
+  "address": "156 Prince St",
+  "rating": 4.2,
+  "reviews": 192,
+  "type": [
+   "chocolatier",
+   "dessert cafe"
+  ],
+  "tags": [
+   "#darkchocolate"
+  ],
+  "usp": "Artisan chocolatier specializing in individually handcrafted bonbons, signature chocolate mice and penguins, and premium drinking chocolate made with no artificial coloring or preservatives.",
+  "website": "https://www.burdickchocolate.com/"
+ },
+ {
+  "name": "Li-Lac Chocolates",
+  "lat": 40.7286040856695,
+  "lng": -74.0002480629822,
+  "address": "162 Bleecker St",
+  "rating": 4.2,
+  "reviews": 71,
+  "type": [
+   "chocolatier"
+  ],
+  "tags": [],
+  "usp": "Greenwich Village location of Manhattan's oldest chocolate house, making over 120 fresh gourmet chocolates daily since 1923.",
+  "website": "https://www.li-lacchocolates.com/"
+ },
+ {
+  "name": "Belgian Neuhaus Chocolate",
+  "lat": 40.752503,
+  "lng": -73.97775,
+  "address": "460 Grand Central Terminal 42nd St",
+  "rating": 4.2,
+  "reviews": 56,
+  "type": [
+   "chocolatier"
+  ],
+  "tags": [],
+  "usp": "Luxury Belgian chocolatier selling handcrafted pralines, truffles, and chocolate tablets made with sustainably sourced cacao and natural ingredients.",
+  "website": "https://www.neuhauschocolates.com/en_US/home"
+ },
+ {
+  "name": "Li-Lac Chocolates",
+  "lat": 40.73674,
+  "lng": -74.001417,
+  "address": "75 Greenwich Ave",
+  "rating": 4.2,
+  "reviews": 36,
+  "type": [
+   "chocolatier",
+   "candy shop"
+  ],
+  "tags": [],
+  "usp": "Manhattan's oldest chocolate house since 1923, hand-making artisanal chocolates in small batches using founder's original 1920s recipes.",
+  "website": "https://www.li-lacchocolates.com/"
+ },
+ {
+  "name": "Venchi",
+  "lat": 40.7452855361453,
+  "lng": -73.98835891497478,
+  "address": "1178 Broadway",
+  "rating": 4.2,
+  "reviews": 34,
+  "type": [
+   "chocolatier",
+   "ice cream",
+   "dessert cafe"
+  ],
+  "tags": [
+   "#singleorigin"
+  ],
+  "usp": "NoMad ChocoGelateria location featuring fresh daily gelato, authentic Italian coffee, chocolate crepes from Venchi's Suprema chocolate fountain, and artisanal chocolates.",
+  "website": "https://us.venchi.com/"
+ },
+ {
+  "name": "Lindt Chocolate Shop",
+  "lat": 40.7491859317026,
+  "lng": -73.9858256630727,
+  "address": "7 West 34th St",
+  "rating": 4.2,
+  "reviews": 23,
+  "type": [
+   "candy shop"
+  ],
+  "tags": [],
+  "usp": "Swiss chocolatier retail shop near Empire State Building featuring Lindt's signature Lindor truffles, EXCELLENCE dark chocolate bars, and seasonal specialties.",
+  "website": "https://www.lindtusa.com/"
+ },
+ {
+  "name": "Chocolate Moonshine",
+  "lat": 40.750819,
+  "lng": -73.989108,
+  "address": "151 W 34th St",
+  "rating": 4.2,
+  "reviews": 5,
+  "type": [
+   "chocolatier",
+   "dessert cafe"
+  ],
+  "tags": [],
+  "usp": "Handcrafted gourmet fudge, truffles, and chocolate confections made small-batch with real cream and Belgian chocolate, located inside Macy's Herald Square.",
+  "website": "https://www.chocolatemoonshine.com/"
+ },
+ {
+  "name": "Jacques Torres Chocolate",
+  "lat": 40.7533582,
+  "lng": -73.9768041,
+  "address": "17 Grand Central  Terminal",
+  "rating": 4.2,
+  "reviews": 5,
+  "type": [
+   "chocolatier",
+   "dessert cafe",
+   "ice cream"
+  ],
+  "tags": [
+   "#darkchocolate"
+  ],
+  "usp": "Renowned pastry chef and chocolatier producing hand-made, hand-packaged chocolate treats, signature hot chocolate, and artisanal confections from his Brooklyn Army Terminal factory.",
+  "website": "https://mrchocolate.com/"
+ },
+ {
+  "name": "The Sweet Shop NYC",
+  "lat": 40.768054,
+  "lng": -73.955091,
+  "address": "404 E 73rd St",
+  "rating": 4.1,
+  "reviews": 523,
+  "type": [
+   "candy shop",
+   "ice cream",
+   "bakery"
+  ],
+  "tags": [],
+  "usp": "Vintage-style sweet shop on Upper East Side since 2012 featuring handmade marshmallows, fresh-baked cookies, artisan ice cream, gelato, sorbets, and specialty candies.",
+  "website": "https://www.thesweetshopnyc.com/"
+ },
+ {
+  "name": "La Maison Du Chocolat - Madison Ave",
+  "lat": 40.775993,
+  "lng": -73.962546,
+  "address": "1018 Madison Ave",
+  "rating": 4.1,
+  "reviews": 236,
+  "type": [
+   "chocolatier",
+   "dessert cafe"
+  ],
+  "tags": [],
+  "usp": "French luxury chocolate boutique on Upper East Side with tea room featuring exquisite pralines, pastries, and plated chocolate desserts; first US location opened 1998.",
+  "website": "https://www.lamaisonduchocolat.com/en_us/our-boutiques-new-york"
+ },
+ {
+  "name": "Venchi",
+  "lat": 40.767213579329265,
+  "lng": -73.98126836638254,
+  "address": "1796 Broadway",
+  "rating": 4.1,
+  "reviews": 198,
+  "type": [
+   "chocolatier",
+   "ice cream"
+  ],
+  "tags": [],
+  "usp": "Italian chocogelateria founded in 1878 offering gourmet chocolates, pralines, and fresh gelato with vegan options at Columbus Circle.",
+  "website": "https://us.venchi.com/store/columbus-circle"
+ },
+ {
+  "name": "Teuscher",
+  "lat": 40.75841283242,
+  "lng": -73.9775406686386,
+  "address": "620 Fifth Ave",
+  "rating": 4.1,
+  "reviews": 163,
+  "type": [
+   "chocolatier"
+  ],
+  "tags": [
+   "#darkchocolate"
+  ],
+  "usp": "Swiss chocolatier from Z\u00fcrich operating in Rockefeller Center for 30+ years, famous for hand-made Champagne truffles flown in weekly from Switzerland with no preservatives.",
+  "website": "https://teuschernyc.com/"
+ },
+ {
+  "name": "Venchi",
+  "lat": 40.730475320207155,
+  "lng": -74.00244717393493,
+  "address": "233 Bleecker St",
+  "rating": 4.1,
+  "reviews": 141,
+  "type": [
+   "chocolatier",
+   "ice cream"
+  ],
+  "tags": [],
+  "usp": "Italian chocogelateria with over 350 chocolate recipes and 90 gelato flavors made fresh daily using natural ingredients like Piedmont hazelnuts and Sicilian almonds.",
+  "website": "https://us.venchi.com/store/bleecker"
+ },
+ {
+  "name": "L\u00e4derach",
+  "lat": 40.76188,
+  "lng": -73.96826,
+  "address": "731 Lexington Ave",
+  "rating": 4.1,
+  "reviews": 104,
+  "type": [
+   "chocolatier"
+  ],
+  "tags": [],
+  "usp": "Swiss chocolatier (since 1962) in Bloomberg Tower offering handcrafted pralines and truffles with glass-view workshop; first US location opened 2019.",
+  "website": "https://laderach.com/us-en"
+ },
+ {
+  "name": "Amedei",
+  "lat": 40.7381081,
+  "lng": -73.9906063,
+  "address": "15 E 18th St",
+  "rating": 4.1,
+  "reviews": 15,
+  "type": [
+   "chocolatier"
+  ],
+  "tags": [
+   "#beantobar",
+   "#singleorigin"
+  ],
+  "usp": "Italian chocolatier producing award-winning single-origin and single-variety cru chocolate bars from Venezuela, Peru, Madagascar, and Ecuador, bean to bar process.",
+  "website": "https://amedei.it/"
+ },
+ {
+  "name": "Li-Lac Chocolates - Grand Central Market",
+  "lat": 40.75238,
+  "lng": -73.976239,
+  "address": "43rd St & Lexington Ave",
+  "rating": 4.0,
+  "reviews": 55,
+  "type": [
+   "chocolatier"
+  ],
+  "tags": [],
+  "usp": "Manhattan's oldest chocolate house since 1923, handcrafting over 120 fresh gourmet chocolates including truffles and fudge made in small batches using original recipes.",
+  "website": "https://www.li-lacchocolates.com/"
+ },
+ {
+  "name": "Bonbon - A Swedish Candy",
+  "lat": 40.77737495027219,
+  "lng": -73.9573587,
+  "address": "1220 Lexington Ave",
+  "rating": 4.0,
+  "reviews": 52,
+  "type": [
+   "candy shop"
+  ],
+  "tags": [],
+  "usp": "Upscale Swedish candy shop with pick-and-mix selection of gummies, licorice, toffee, chocolates, and sour candies imported directly from Sweden with vegan options.",
+  "website": "https://bonbonnyc.com/"
+ },
+ {
+  "name": "Teuscher Chocolates of Switzerland",
+  "lat": 40.76479,
+  "lng": -73.97011,
+  "address": "25 E 61st St",
+  "rating": 4.0,
+  "reviews": 46,
+  "type": [
+   "chocolatier"
+  ],
+  "tags": [],
+  "usp": "Swiss chocolatier from Zurich founded in 1932 hand-manufacturing over 200 varieties of confections, famous for champagne truffles flown in fresh weekly from Switzerland.",
+  "website": "https://teuschernyc.com/"
+ },
+ {
+  "name": "Ghirardelli Chocolate & Ice Cream Shop",
+  "lat": 40.74900111,
+  "lng": -73.98600749,
+  "address": "16 W 34th St",
+  "rating": 4.0,
+  "reviews": 33,
+  "type": [
+   "ice cream",
+   "dessert cafe"
+  ],
+  "tags": [],
+  "usp": "San Francisco-based chocolate and ice cream shop at Empire State Building serving world-famous handmade hot fudge sundaes, sundaes, milkshakes, and custom chocolate squares.",
+  "website": "https://www.ghirardelli.com/stores/new-york"
+ },
+ {
+  "name": "Le Chocolat Maxime Fr\u00e9d\u00e9ric",
+  "lat": 40.76244,
+  "lng": -73.973319,
+  "address": "6 E 57th St",
+  "rating": 4.0,
+  "reviews": 5,
+  "type": [
+   "chocolatier"
+  ],
+  "tags": [],
+  "usp": "Luxury French chocolatier inside Louis Vuitton flagship with handmade bonbons crafted in Paris using milk, butter, eggs, and nuts from small French farms.",
+  "website": "https://us.louisvuitton.com/eng-us/point-of-sale/usa/louis-vuitton-new-york-5th-avenue-chocolate-shop"
+ },
+ {
+  "name": "Venchi Chocolate and Gelato Columbus Av",
+  "lat": 40.775481,
+  "lng": -73.980441,
+  "address": "198 Columbus Ave",
+  "rating": 4.0,
+  "reviews": 5,
+  "type": [
+   "chocolatier",
+   "ice cream"
+  ],
+  "tags": [],
+  "usp": "Italian chocogelateria founded in 1878 offering gourmet chocolates, pralines, gelato, and hot chocolate with chocolate fountain and signature chocolate wall on Upper West Side.",
+  "website": "https://us.venchi.com/store/columbus-avenue"
  }
 ]
