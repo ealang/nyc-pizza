@@ -106,20 +106,6 @@
   "website": "https://www.neuhauschocolates.com"
  },
  {
-  "name": "Sweetie's Candy",
-  "lat": 40.726254,
-  "lng": -73.986534,
-  "address": "93 1st Ave",
-  "rating": 5.0,
-  "reviews": 2,
-  "type": [
-   "candy shop"
-  ],
-  "tags": [],
-  "usp": "Largest selection of Swedish candy in NYC with 160+ unique imports plus ice cream and chocolate from Sweden, Spain, and Netherlands",
-  "website": null
- },
- {
   "name": "Neuhaus Chocolates",
   "lat": 40.7589103,
   "lng": -73.97514323848814,
@@ -177,20 +163,6 @@
   ],
   "tags": [],
   "usp": "Sweet dessert shop featuring chocolate fondue, chocolate dips, Dubai chocolate bars, churros, skillet cookies, and waffle sticks.",
-  "website": null
- },
- {
-  "name": "Shayberries",
-  "lat": 40.809175,
-  "lng": -73.95820333815678,
-  "address": "",
-  "rating": 5.0,
-  "reviews": 1,
-  "type": [
-   "candy shop"
-  ],
-  "tags": [],
-  "usp": "Artisanal chocolate-covered strawberries with custom designs like roses and hearts, made with high-quality chocolate.",
   "website": null
  },
  {
@@ -360,34 +332,6 @@
   "website": "https://www.lamaisonduchocolat.com"
  },
  {
-  "name": "ROYCE Chocolate",
-  "lat": 40.752761,
-  "lng": -73.983486,
-  "address": "32 W 40th St",
-  "rating": 4.5,
-  "reviews": 264,
-  "type": [
-   "candy shop"
-  ],
-  "tags": [],
-  "usp": "Japanese chocolate boutique importing premium chocolates from Hokkaido, known for signature nama chocolates and gourmet chocolate varieties.",
-  "website": null
- },
- {
-  "name": "The Meadow",
-  "lat": 40.72281,
-  "lng": -73.99583,
-  "address": "240 Mulberry St",
-  "rating": 4.5,
-  "reviews": 118,
-  "type": [
-   "candy shop"
-  ],
-  "tags": [],
-  "usp": "Specialty retailer curating over 300 craft chocolate bars alongside artisan salts and cocktail bitters, featuring free chocolate tastings every Thursday.",
-  "website": "https://themeadow.com"
- },
- {
   "name": "Mondel Chocolates",
   "lat": 40.8066216,
   "lng": -73.9652308,
@@ -416,22 +360,6 @@
   "tags": [],
   "usp": "Swiss chocolatier handcrafting tartufi, bonbons, pralines, truffles, and chocolate bark using premium Swiss ingredients.",
   "website": "https://www.laderach.com"
- },
- {
-  "name": "Cocoa Store",
-  "lat": 40.738171183369495,
-  "lng": -73.99035363298168,
-  "address": "873 Broadway",
-  "rating": 4.5,
-  "reviews": 25,
-  "type": [
-   "candy shop"
-  ],
-  "tags": [
-   "#beantobar"
-  ],
-  "usp": "Curated retailer of bean-to-bar artisanal chocolate bars and bonbons from established makers like Amedei and Domori, with guided tastings and chocolate education.",
-  "website": "https://cocoastore.com"
  },
  {
   "name": "Neuhaus - New York",
@@ -585,20 +513,6 @@
   "website": "https://www.chocolateworld.com/locations/times-square.html"
  },
  {
-  "name": "Funny Face Bakery",
-  "lat": 40.72533,
-  "lng": -73.99494,
-  "address": "319 Lafayette St",
-  "rating": 4.3,
-  "reviews": 132,
-  "type": [
-   "bakery"
-  ],
-  "tags": [],
-  "usp": "Pop-culture bakery specializing in hand-made cookies with meme-worthy designs, famous for its 6-ounce gooey chocolate chip cookie with vegan and gluten-free options available.",
-  "website": "https://funnyfacebakery.com/"
- },
- {
   "name": "Roni-Sue's Chocolates",
   "lat": 40.720389,
   "lng": -73.991616,
@@ -717,20 +631,6 @@
   "website": "https://us.venchi.com/"
  },
  {
-  "name": "BonBon - A Swedish Candy",
-  "lat": 40.71981167661863,
-  "lng": -73.98980644419574,
-  "address": "130 Allen St",
-  "rating": 4.2,
-  "reviews": 262,
-  "type": [
-   "candy shop"
-  ],
-  "tags": [],
-  "usp": "Authentic Swedish candy shop selling imported marshmallows, licorice, nougat, chocolate, and confections with vegan and gluten-free options.",
-  "website": "https://bonbonnyc.com/"
- },
- {
   "name": "L.A. Burdick Handmade Chocolates",
   "lat": 40.72577,
   "lng": -74.00136,
@@ -809,20 +709,6 @@
   "website": "https://us.venchi.com/"
  },
  {
-  "name": "Lindt Chocolate Shop",
-  "lat": 40.7491859317026,
-  "lng": -73.9858256630727,
-  "address": "7 West 34th St",
-  "rating": 4.2,
-  "reviews": 23,
-  "type": [
-   "candy shop"
-  ],
-  "tags": [],
-  "usp": "Swiss chocolatier retail shop near Empire State Building featuring Lindt's signature Lindor truffles, EXCELLENCE dark chocolate bars, and seasonal specialties.",
-  "website": "https://www.lindtusa.com/"
- },
- {
   "name": "Chocolate Moonshine",
   "lat": 40.750819,
   "lng": -73.989108,
@@ -854,22 +740,6 @@
   ],
   "usp": "Renowned pastry chef and chocolatier producing hand-made, hand-packaged chocolate treats, signature hot chocolate, and artisanal confections from his Brooklyn Army Terminal factory.",
   "website": "https://mrchocolate.com/"
- },
- {
-  "name": "The Sweet Shop NYC",
-  "lat": 40.768054,
-  "lng": -73.955091,
-  "address": "404 E 73rd St",
-  "rating": 4.1,
-  "reviews": 523,
-  "type": [
-   "candy shop",
-   "ice cream",
-   "bakery"
-  ],
-  "tags": [],
-  "usp": "Vintage-style sweet shop on Upper East Side since 2012 featuring handmade marshmallows, fresh-baked cookies, artisan ice cream, gelato, sorbets, and specialty candies.",
-  "website": "https://www.thesweetshopnyc.com/"
  },
  {
   "name": "La Maison Du Chocolat - Madison Ave",
@@ -976,20 +846,6 @@
   "tags": [],
   "usp": "Manhattan's oldest chocolate house since 1923, handcrafting over 120 fresh gourmet chocolates including truffles and fudge made in small batches using original recipes.",
   "website": "https://www.li-lacchocolates.com/"
- },
- {
-  "name": "Bonbon - A Swedish Candy",
-  "lat": 40.77737495027219,
-  "lng": -73.9573587,
-  "address": "1220 Lexington Ave",
-  "rating": 4.0,
-  "reviews": 52,
-  "type": [
-   "candy shop"
-  ],
-  "tags": [],
-  "usp": "Upscale Swedish candy shop with pick-and-mix selection of gummies, licorice, toffee, chocolates, and sour candies imported directly from Sweden with vegan options.",
-  "website": "https://bonbonnyc.com/"
  },
  {
   "name": "Teuscher Chocolates of Switzerland",
@@ -1215,34 +1071,6 @@
   "tags": [],
   "usp": "Handcrafted chocolate creations including truffles, pralines, waffles, and signature hot chocolate experiences",
   "website": "maxbrenner.com"
- },
- {
-  "name": "Sugarfina - World Trade Center",
-  "lat": 40.7115663,
-  "lng": -74.01099522547867,
-  "address": "185 Greenwich St",
-  "rating": 3.6,
-  "reviews": 42,
-  "type": [
-   "candy shop"
-  ],
-  "tags": [],
-  "usp": "Luxury candy boutique featuring gourmet candies from artisans worldwide, including signature Champagne Bears and Bourbon Bears",
-  "website": "www.sugarfina.com"
- },
- {
-  "name": "See's Candies",
-  "lat": 40.7332622,
-  "lng": -73.9992295,
-  "address": "60 West 8th St",
-  "rating": 3.5,
-  "reviews": 118,
-  "type": [
-   "candy shop"
-  ],
-  "tags": [],
-  "usp": "Partner location of See's Candies (since 1921) offering boxed chocolates, peanut brittle, and seasonal candy gifts",
-  "website": "www.sees.com"
  },
  {
   "name": "La Maison du Chocolat - New York",
