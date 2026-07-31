@@ -242,7 +242,7 @@ async function toggleAtlas(on) {
     const rows = await (await fetch("pizza-top.json")).json();
     for (const p of rows) {
       const m = L.circleMarker([p.lat, p.lng], {
-        radius: 6, color: "#fff", weight: 1.5,
+        radius: 9, color: "#fff", weight: 2,
         fillColor: styleColor(p.style), fillOpacity: 0.9,
       });
       const gmaps = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(p.name + " " + (p.address || "") + " New York NY")}`;
