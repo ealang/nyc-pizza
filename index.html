@@ -65,40 +65,53 @@
 // category must match an entry in CATEGORIES below.
 // ============================================================
 const CATEGORIES = {
-  chocolate: { label: "Chocolate", emoji: "🍫", color: "#7b4a12" },
-  pizza:     { label: "Pizza",     emoji: "🍕", color: "#d62828" },
+  place:      { label: "Places",      emoji: "🗽", color: "#2a6f97" },
+  restaurant: { label: "Restaurants", emoji: "🍽️", color: "#d62828" },
+  snack:      { label: "Snacks",      emoji: "🍰", color: "#b5179e" },
 };
 
 const PLACES = [
-  // --- Chocolate ---
-  { name: "Jacques Torres Chocolate", category: "chocolate", lat: 40.7148, lng: -74.0091,
-    address: "327 Lafayette St (also Hudson St)", notes: "Famous wicked hot chocolate." },
-  { name: "La Maison du Chocolat", category: "chocolate", lat: 40.7644, lng: -73.9722,
-    address: "1018 Madison Ave", notes: "Paris institution, Upper East Side." },
-  { name: "Li-Lac Chocolates", category: "chocolate", lat: 40.7338, lng: -74.0027,
-    address: "75 Greenwich Ave", notes: "Manhattan's oldest chocolate house (1923)." },
-  { name: "Stick With Me Sweets", category: "chocolate", lat: 40.7223, lng: -73.9957,
-    address: "202A Mott St", notes: "Jewel-box bonbons, Nolita." },
-  { name: "Kee's Chocolates", category: "chocolate", lat: 40.7246, lng: -74.0033,
-    address: "315 W 39th St / SoHo", notes: "Handmade daily, creme brulee truffle." },
+  // --- Places ---
+  { name: "The High Line", category: "place", lat: 40.7399, lng: -74.0080,
+    address: "Gansevoort St entrance (runs to 34th St)", notes: "Elevated park on old rail line." },
+  { name: "Chelsea Market", category: "place", lat: 40.7424, lng: -74.0061,
+    address: "75 9th Ave", notes: "Food hall + shops; next to the High Line." },
+  { name: "Ellis Island", category: "place", lat: 40.6995, lng: -74.0396,
+    address: "Ferry from Battery Park", notes: "Immigration museum; same ferry as Statue of Liberty." },
+  { name: "Central Park Zoo", category: "place", lat: 40.7678, lng: -73.9718,
+    address: "E 64th St & 5th Ave", notes: "" },
+  { name: "MoMA", category: "place", lat: 40.7614, lng: -73.9776,
+    address: "11 W 53rd St", notes: "Museum of Modern Art." },
+  { name: "Whitney Museum of American Art", category: "place", lat: 40.7396, lng: -74.0089,
+    address: "99 Gansevoort St", notes: "At the foot of the High Line." },
+  { name: "Brooklyn Bridge", category: "place", lat: 40.7061, lng: -73.9969,
+    address: "Walkway entrance near City Hall Park", notes: "Walk toward Brooklyn for the skyline view." },
+  { name: "New York Transit Museum", category: "place", lat: 40.6906, lng: -73.9902,
+    address: "99 Schermerhorn St, Brooklyn", notes: "In a decommissioned 1936 subway station; vintage trains." },
+  { name: "Penn Station", category: "place", lat: 40.7506, lng: -73.9935,
+    address: "W 32nd St & 8th Ave (Moynihan Train Hall)", notes: "Amtrak/NJT/LIRR hub." },
 
-  // --- Pizza ---
-  { name: "Joe's Pizza", category: "pizza", lat: 40.7305, lng: -74.0021,
-    address: "7 Carmine St", notes: "The classic NY slice since 1975." },
-  { name: "Prince Street Pizza", category: "pizza", lat: 40.7229, lng: -73.9944,
-    address: "27 Prince St", notes: "Spicy spring pepperoni squares." },
-  { name: "John's of Bleecker Street", category: "pizza", lat: 40.7315, lng: -74.0036,
-    address: "278 Bleecker St", notes: "Coal-fired whole pies, no slices." },
-  { name: "Scarr's Pizza", category: "pizza", lat: 40.7150, lng: -73.9916,
-    address: "35 Orchard St", notes: "House-milled flour, LES favorite." },
-  { name: "Una Pizza Napoletana", category: "pizza", lat: 40.7162, lng: -73.9861,
-    address: "175 Orchard St", notes: "Top-ranked Neapolitan." },
+  // --- Restaurants ---
+  { name: "Fonty's Deli + Dukaan", category: "restaurant", lat: 40.7337, lng: -74.0009,
+    address: "20 Christopher St", notes: "" },
+  { name: "Juliana's Pizza", category: "restaurant", lat: 40.7027, lng: -73.9935,
+    address: "19 Old Fulton St, Brooklyn (DUMBO)", notes: "From Portillo. Patsy Grimaldi's return spot, coal-fired." },
+  { name: "Nathan's Famous (original)", category: "restaurant", lat: 40.5755, lng: -73.9814,
+    address: "1310 Surf Ave, Coney Island", notes: "From Portillo. The original 1916 stand." },
+
+  // --- Snacks ---
+  { name: "Magnolia Bakery", category: "snack", lat: 40.7359, lng: -74.0067,
+    address: "401 Bleecker St (original)", notes: "Coworker rec. Famous banana pudding." },
+  { name: "Salswee", category: "snack", lat: 40.7409, lng: -73.9896,
+    address: "180 5th Ave (Flatiron)", notes: "Coworker rec: mango dessert. Asian-French patisserie, fruit-shaped pastries." },
 ];
 
 // ============================================================
 // MAP SETUP
 // ============================================================
 const map = L.map("map", { zoomControl: false }).setView([40.7266, -73.9962], 13);
+// Fit all pins on load (spots now span Coney Island to Central Park)
+map.fitBounds(L.latLngBounds(PLACES.map(p => [p.lat, p.lng])).pad(0.06));
 L.control.zoom({ position: "bottomright" }).addTo(map);
 
 L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
