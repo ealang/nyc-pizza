@@ -1,0 +1,66 @@
+[
+ {
+  "name": "Chococo",
+  "lat": 40.77114,
+  "lng": -73.95936,
+  "address": "1293 3rd Ave",
+  "rating": 5.0,
+  "reviews": 17,
+  "type": [
+   "chocolatier",
+   "dessert cafe",
+   "drinks"
+  ],
+  "fanciness": "fancy",
+  "dark": true,
+  "usp": "British artisan chocolatier offering handcrafted single-origin chocolate bars, bonbons, and truffles sourced directly from farmers in Colombia and Ecuador, with cafe seating for specialty coffee and hot chocolate.",
+  "website": "https://chococo.nyc/"
+ },
+ {
+  "name": "Confectionery",
+  "lat": 40.72737,
+  "lng": -73.98312,
+  "address": "440 E 9th St",
+  "rating": 4.8,
+  "reviews": 183,
+  "type": [
+   "chocolatier",
+   "bakery",
+   "dessert cafe"
+  ],
+  "fanciness": "casual",
+  "dark": true,
+  "usp": "Vegan artisanal chocolate and pastry shop offering handcrafted dark and white chocolate bonbons with unique flavor combinations (rosemary sea salt caramel, preserved lemon thyme), vegan macarons, and baked goods.",
+  "website": null
+ },
+ {
+  "name": "Neuhaus Soho",
+  "lat": 40.72438,
+  "lng": -74.00178,
+  "address": "160 Spring St",
+  "rating": 5.0,
+  "reviews": 7,
+  "type": [
+   "chocolatier"
+  ],
+  "fanciness": "fancy",
+  "dark": true,
+  "usp": "Belgian luxury chocolatier and inventor of the original praline (1912), selling handcrafted bonbons and chocolate bars made in Vlezenbeek, Belgium with premium dark and milk chocolate varieties.",
+  "website": "https://www.neuhauschocolates.com/"
+ },
+ {
+  "name": "Mojo Desserts",
+  "lat": 40.78836,
+  "lng": -73.94866,
+  "address": "177 East 100th St",
+  "rating": 4.8,
+  "reviews": 108,
+  "type": [
+   "dessert cafe"
+  ],
+  "fanciness": "fancy",
+  "dark": true,
+  "usp": "America's first chocolate mousse bar, offering artisanal handcrafted mousses made with Belgian Callebaut chocolate (70% dark cacao featured), emphasizing simplicity and freshness with rotating seasonal flavors.",
+  "website": "https://mojodesserts.com/"
+ }
+]
