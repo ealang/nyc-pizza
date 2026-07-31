@@ -65,7 +65,7 @@
 // category must match an entry in CATEGORIES below.
 // ============================================================
 const CATEGORIES = {
-  place:      { label: "Places",      emoji: "🗽", color: "#2a6f97" },
+  place:      { label: "Places",      emoji: "📍", color: "#2a6f97" },
   restaurant: { label: "Restaurants", emoji: "🍽️", color: "#e07a00" },
   pizza:      { label: "Pizza",       emoji: "🍕", color: "#d62828" },
   snack:      { label: "Snacks",      emoji: "🍰", color: "#b5179e" },
@@ -79,6 +79,8 @@ const PLACES = [
     address: "75 9th Ave", notes: "Food hall + shops; next to the High Line." },
   { name: "Ellis Island", category: "place", lat: 40.6995, lng: -74.0396,
     address: "Ferry from Battery Park", notes: "Immigration museum; same ferry as Statue of Liberty." },
+  { name: "Statue of Liberty", category: "place", emoji: "🗽", lat: 40.6892, lng: -74.0445,
+    address: "Liberty Island — ferry from Battery Park", notes: "Same ferry as Ellis Island; reserve crown/pedestal tickets ahead." },
   { name: "Central Park Zoo", category: "place", lat: 40.7678, lng: -73.9718,
     address: "E 64th St & 5th Ave", notes: "" },
   { name: "MoMA", category: "place", lat: 40.7614, lng: -73.9776,
@@ -139,11 +141,10 @@ L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r
 }).addTo(map);
 
 // Colored pin icon per category
-function makeIcon(cat) {
-  const c = CATEGORIES[cat];
+function makeIcon(cat, emoji) {
   return L.divIcon({
     className: "",
-    html: `<div style="font-size:26px; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.4));">${c.emoji}</div>`,
+    html: `<div style="font-size:26px; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.4));">${emoji || CATEGORIES[cat].emoji}</div>`,
     iconSize: [26, 26],
     iconAnchor: [13, 24],
     popupAnchor: [0, -22],
@@ -161,7 +162,7 @@ for (const p of PLACES) {
     <div class="popup-cat">${CATEGORIES[p.category].emoji} ${CATEGORIES[p.category].label} · ${p.address}</div>
     <div class="popup-notes">${p.notes || ""}</div>
     <div class="popup-links"><a href="${gmaps}" target="_blank" rel="noopener">Directions ↗</a></div>`;
-  L.marker([p.lat, p.lng], { icon: makeIcon(p.category) }).bindPopup(popup).addTo(layers[p.category]);
+  L.marker([p.lat, p.lng], { icon: makeIcon(p.category, p.emoji) }).bindPopup(popup).addTo(layers[p.category]);
 }
 
 // ============================================================
