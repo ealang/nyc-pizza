@@ -193,12 +193,14 @@ panel.onAdd = function () {
     html += `<label><input type="checkbox" data-cat="${cat}" checked>${c.emoji} ${c.label} <span class="count">(${counts[cat] || 0})</span></label>`;
   }
   html += `<label><input type="checkbox" data-cat="transit">🚇 Subway</label>`;
+  html += `<label><input type="checkbox" data-cat="pizzatlas">🍕 Pizza Atlas <span class="count">(1082)</span></label>`;
   div.innerHTML = html;
   L.DomEvent.disableClickPropagation(div);
   div.querySelectorAll("input").forEach(cb => {
     cb.addEventListener("change", e => {
       const cat = e.target.dataset.cat;
       if (cat === "transit") { toggleTransit(e.target.checked); return; }
+      if (cat === "pizzatlas") { toggleAtlas(e.target.checked); return; }
       if (e.target.checked) map.addLayer(layers[cat]);
       else map.removeLayer(layers[cat]);
     });
@@ -206,6 +208,39 @@ panel.onAdd = function () {
   return div;
 };
 panel.addTo(map);
+
+// ============================================================
+// PIZZA ATLAS (lazy-loaded on first toggle) — preview layer
+// Data: pizza-atlas-preview.json rows [lat, lng, name, rating, reviews, price]
+// ============================================================
+const atlasLayer = L.layerGroup();
+let atlasLoaded = false;
+
+function atlasColor(rating, reviews) {
+  if (!reviews) return "#999";
+  if (rating >= 4.5) return "#1a7f37";
+  if (rating >= 4.0) return "#7cb342";
+  if (rating >= 3.0) return "#f9a825";
+  return "#d32f2f";
+}
+
+async function toggleAtlas(on) {
+  if (!on) { map.removeLayer(atlasLayer); return; }
+  if (!atlasLoaded) {
+    const rows = await (await fetch("pizza-atlas-preview.json")).json();
+    for (const [lat, lng, name, rating, reviews, price] of rows) {
+      const m = L.circleMarker([lat, lng], {
+        radius: 4, color: "#fff", weight: 1,
+        fillColor: atlasColor(rating, reviews), fillOpacity: 0.85,
+      });
+      m.bindPopup(`<div class="popup-name">${name}</div>
+        <div class="popup-cat">🍕 ${reviews ? rating + "★ · " + reviews + " reviews" : "no reviews"}${price ? " · " + price : ""}</div>`);
+      m.addTo(atlasLayer);
+    }
+    atlasLoaded = true;
+  }
+  map.addLayer(atlasLayer);
+}
 
 // ============================================================
 // SUBWAY OVERLAY (lazy-loaded on first toggle)
