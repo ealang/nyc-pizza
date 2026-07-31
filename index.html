@@ -167,7 +167,7 @@ panel.onAdd = function () {
     html += `<label><input type="checkbox" data-cat="${cat}" checked>${c.emoji} ${c.label} <span class="count">(${counts[cat] || 0})</span></label>`;
   }
   html += `<label><input type="checkbox" data-cat="transit">🚇 Subway</label>`;
-  html += `<label><input type="checkbox" data-cat="pizzatlas">🍕 Pizza <span class="count">(77)</span></label>`;
+  html += `<label><input type="checkbox" data-cat="pizzatlas">🍕 Pizza <span class="count">(156)</span></label>`;
   html += `<div id="atlas-filters" style="display:none; margin:2px 0 0 20px; font-size:12px;">
     <div>
       <label style="display:inline"><input type="checkbox" class="af-price" value="$" checked>$</label>
@@ -175,7 +175,9 @@ panel.onAdd = function () {
       <label style="display:inline; margin-left:6px"><input type="checkbox" class="af-price" value="$$$" checked>$$$</label>
     </div>
     <div style="margin-top:2px">min <select id="af-rating">
-      <option value="4.5" selected>4.5★</option>
+      <option value="4.3" selected>4.3★</option>
+      <option value="4.4">4.4★</option>
+      <option value="4.5">4.5★</option>
       <option value="4.6">4.6★</option>
       <option value="4.7">4.7★</option>
       <option value="4.8">4.8★</option>
@@ -287,7 +289,7 @@ function applyAtlasFilters() {
   const minR = parseFloat(document.getElementById("af-rating").value);
   let shown = 0;
   for (const { marker, price, rating, star } of atlasMarkers) {
-    const ok = star || (prices.has(price) && rating >= minR);
+    const ok = star || ((prices.has(price) || price === "unknown") && rating >= minR);
     if (ok) { atlasLayer.addLayer(marker); shown++; }
     else atlasLayer.removeLayer(marker);
   }
