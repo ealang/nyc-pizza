@@ -619,7 +619,15 @@ function exportPins() {
     features: pins.map(p => ({
       type: "Feature",
       geometry: { type: "Point", coordinates: [p.lng, p.lat] },
-      properties: { note: p.note, created: new Date(p.ts).toISOString() },
+      // field aliases for app compatibility (Gaia GPS: title/notes/time_created)
+      properties: {
+        title: p.note || "Pin",
+        name: p.note || "Pin",
+        notes: p.note,
+        note: p.note,
+        time_created: new Date(p.ts).toISOString(),
+        created: new Date(p.ts).toISOString(),
+      },
     })),
   };
   const blob = new Blob([JSON.stringify(gj, null, 1)], { type: "application/geo+json" });
