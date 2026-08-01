@@ -78,6 +78,16 @@
     box-shadow: 0 1px 4px rgba(0,0,0,0.5);
   }
   .pin-note-input { width: 200px; height: 60px; font: inherit; font-size: 13px; }
+  .pin-glyph {
+    display: inline-block;
+    width: 15px; height: 15px;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    background: #444;
+    border: 1.5px solid #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+    vertical-align: -2px;
+  }
   .popup-links a { cursor: pointer; }
 
   .you-dot {
@@ -205,7 +215,7 @@ panel.onAdd = function () {
   for (const [cat, c] of Object.entries(CATEGORIES)) {
     html += `<label><input type="checkbox" data-cat="${cat}" checked>${c.emoji} ${c.label} <span class="count">(${counts[cat] || 0})</span></label>`;
   }
-  html += `<label id="pins-row" style="display:none"><input type="checkbox" data-cat="userpins" checked>🔖 Pins <span id="pins-count" class="count"></span></label>`;
+  html += `<label id="pins-row" style="display:none"><input type="checkbox" data-cat="userpins" checked><span class="pin-glyph" style="margin-right:6px"></span>Pins <span id="pins-count" class="count"></span> <a id="pins-export" style="font-size:12px; cursor:pointer; margin-left:4px">export</a></label>`;
   html += `<label><input type="checkbox" data-cat="transit">🚇 Subway</label>`;
   html += `<label><input type="checkbox" data-cat="pizzatlas">🍕 Pizza <span class="count">(156)</span></label>`;
   html += `<div id="atlas-filters" style="display:none; margin:2px 0 0 20px; font-size:12px;">
@@ -261,6 +271,9 @@ panel.onAdd = function () {
       if (e.target.checked) map.addLayer(layers[cat]);
       else map.removeLayer(layers[cat]);
     });
+  });
+  div.querySelector("#pins-export").addEventListener("click", e => {
+    e.preventDefault(); e.stopPropagation(); exportPins();
   });
   div.querySelectorAll(".af-price").forEach(cb => cb.addEventListener("change", applyAtlasFilters));
   div.querySelector("#af-rating").addEventListener("change", applyAtlasFilters);
@@ -590,10 +603,29 @@ function addPinHere(btn) {
   }, { enableHighAccuracy: true, maximumAge: 5000 });
 }
 
+function exportPins() {
+  const pins = loadPins();
+  const gj = {
+    type: "FeatureCollection",
+    features: pins.map(p => ({
+      type: "Feature",
+      geometry: { type: "Point", coordinates: [p.lng, p.lat] },
+      properties: { note: p.note, created: new Date(p.ts).toISOString() },
+    })),
+  };
+  const blob = new Blob([JSON.stringify(gj, null, 1)], { type: "application/geo+json" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = `pins-${new Date().toISOString().slice(0, 10)}.geojson`;
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+}
+
 const pinCtl = L.control({ position: "bottomright" });
 pinCtl.onAdd = function () {
   const btn = L.DomUtil.create("button", "pin-btn");
-  btn.innerHTML = "🔖";
+  btn.innerHTML = '<span class="pin-glyph" style="width:18px; height:18px;"></span>';
   btn.title = "Drop a pin at my location";
   L.DomEvent.disableClickPropagation(btn);
   btn.addEventListener("click", () => addPinHere(btn));
@@ -616,7 +648,17 @@ let youMarker = null, youCircle = null, watching = false, watchId = null, follow
 const locateCtl = L.control({ position: "bottomright" });
 locateCtl.onAdd = function () {
   const btn = L.DomUtil.create("button", "locate-btn");
-  btn.innerHTML = "📍";
+  // Google-Maps-style "my location" crosshair
+  btn.innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24" style="vertical-align:middle">
+    <g fill="none" stroke="#555" stroke-width="2" stroke-linecap="round">
+      <circle cx="12" cy="12" r="6.5"/>
+      <line x1="12" y1="1.5" x2="12" y2="4.5"/>
+      <line x1="12" y1="19.5" x2="12" y2="22.5"/>
+      <line x1="1.5" y1="12" x2="4.5" y2="12"/>
+      <line x1="19.5" y1="12" x2="22.5" y2="12"/>
+    </g>
+    <circle cx="12" cy="12" r="2.5" fill="#555"/>
+  </svg>`;
   btn.title = "Show my location";
   L.DomEvent.disableClickPropagation(btn);
   btn.addEventListener("click", () => {
