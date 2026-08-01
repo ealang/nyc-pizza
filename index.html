@@ -83,8 +83,8 @@
     width: 15px; height: 15px;
     border-radius: 50% 50% 50% 0;
     transform: rotate(-45deg);
-    background: #444;
-    border: 1.5px solid #fff;
+    background: #fff;
+    border: 2px solid #333;
     box-shadow: 0 1px 3px rgba(0,0,0,0.4);
     vertical-align: -2px;
   }
@@ -377,15 +377,24 @@ function styleColor(style) {
   return STYLE_COLORS[primary] || STYLE_OTHER;
 }
 
+function pizzaIcon(color, star) {
+  // style-colored disc with a pizza on top; gold ring = featured
+  const border = star ? "2.5px solid #ffd700" : "2px solid #fff";
+  return L.divIcon({
+    className: "",
+    html: `<div style="width:22px; height:22px; border-radius:50%; background:${color};
+      border:${border}; box-shadow:0 1px 3px rgba(0,0,0,0.45);
+      font-size:13px; line-height:21px; text-align:center;">🍕</div>`,
+    iconSize: [22, 22], iconAnchor: [11, 11], popupAnchor: [0, -12],
+  });
+}
+
 async function toggleAtlas(on) {
   if (!on) { map.removeLayer(atlasLayer); atlasLegend.remove(); return; }
   if (!atlasLoaded) {
     const rows = await (await fetch("pizza-top.json")).json();
     for (const p of rows) {
-      const m = L.circleMarker([p.lat, p.lng], {
-        radius: 9, color: p.star ? "#ffd700" : "#fff", weight: p.star ? 3 : 2,
-        fillColor: styleColor(p.style), fillOpacity: 0.9,
-      });
+      const m = L.marker([p.lat, p.lng], { icon: pizzaIcon(styleColor(p.style), p.star) });
       const gmaps = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(p.name + " " + (p.address || "") + " New York NY")}`;
       let links = `<a href="${gmaps}" target="_blank" rel="noopener">Directions ↗</a>`;
       if (p.website) links += ` · <a href="${p.website}" target="_blank" rel="noopener">Website ↗</a>`;
