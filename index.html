@@ -57,6 +57,29 @@
   .popup-notes { font-size: 13px; margin-bottom: 6px; }
   .popup-links a { font-size: 13px; margin-right: 10px; }
 
+  .pin-btn {
+    background: #fff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    width: 44px;
+    height: 44px;
+    font-size: 22px;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .pin-btn:disabled { opacity: 0.5; }
+  .user-pin {
+    width: 22px; height: 22px;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    border: 2px solid #fff;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.5);
+  }
+  .pin-note-input { width: 200px; height: 60px; font: inherit; font-size: 13px; }
+  .popup-links a { cursor: pointer; }
+
   .you-dot {
     width: 16px; height: 16px;
     background: #1a73e8;
@@ -75,16 +98,16 @@
 // category must match an entry in CATEGORIES below.
 // ============================================================
 const CATEGORIES = {
-  place: { label: "Places", emoji: "📍", color: "#2a6f97" },
+  place: { label: "Places", emoji: "🗽", color: "#2a6f97" },
 };
 
 const PLACES = [
   // --- Places ---
-  { name: "The High Line", category: "place", lat: 40.7399, lng: -74.0080,
+  { name: "The High Line", category: "place", emoji: "🌿", lat: 40.7399, lng: -74.0080,
     address: "Gansevoort St entrance (runs to 34th St)", notes: "Elevated park on old rail line." },
-  { name: "Chelsea Market", category: "place", lat: 40.7424, lng: -74.0061,
+  { name: "Chelsea Market", category: "place", emoji: "🥖", lat: 40.7424, lng: -74.0061,
     address: "75 9th Ave", notes: "Food hall + shops; next to the High Line." },
-  { name: "Ellis Island", category: "place", lat: 40.6995, lng: -74.0396,
+  { name: "Ellis Island", category: "place", emoji: "🏢", lat: 40.6995, lng: -74.0396,
     address: "Ferry from Battery Park", notes: "Immigration museum; same ferry as Statue of Liberty." },
   { name: "Statue of Liberty", category: "place", emoji: "🗽", lat: 40.6892, lng: -74.0445,
     address: "Liberty Island — ferry from Battery Park", notes: "Same ferry as Ellis Island; reserve crown/pedestal tickets ahead." },
@@ -182,6 +205,7 @@ panel.onAdd = function () {
   for (const [cat, c] of Object.entries(CATEGORIES)) {
     html += `<label><input type="checkbox" data-cat="${cat}" checked>${c.emoji} ${c.label} <span class="count">(${counts[cat] || 0})</span></label>`;
   }
+  html += `<label id="pins-row" style="display:none"><input type="checkbox" data-cat="userpins" checked>🔖 Pins <span id="pins-count" class="count"></span></label>`;
   html += `<label><input type="checkbox" data-cat="transit">🚇 Subway</label>`;
   html += `<label><input type="checkbox" data-cat="pizzatlas">🍕 Pizza <span class="count">(156)</span></label>`;
   html += `<div id="atlas-filters" style="display:none; margin:2px 0 0 20px; font-size:12px;">
@@ -219,6 +243,10 @@ panel.onAdd = function () {
   div.querySelectorAll("input").forEach(cb => {
     cb.addEventListener("change", e => {
       const cat = e.target.dataset.cat;
+      if (cat === "userpins") {
+        if (e.target.checked) map.addLayer(pinsLayer); else map.removeLayer(pinsLayer);
+        return;
+      }
       if (cat === "transit") { toggleTransit(e.target.checked); return; }
       if (cat === "pizzatlas") {
         div.querySelector("#atlas-filters").style.display = e.target.checked ? "block" : "none";
@@ -456,6 +484,128 @@ function toggleTransit(on) {
           .bindPopup(() => stationPopup(f.properties.name, f.properties.lines), { maxWidth: 320 }),
     }).addTo(transitLayer);
   }).catch(() => { transitLoaded = false; alert("Couldn't load subway data."); });
+}
+
+// ============================================================
+// USER PINS — personal landmarks in localStorage.
+// Pin drops at current location; note editable; color = day of week.
+// ============================================================
+const PIN_DAY_COLORS = [   // Sun..Sat — no red (red = locate button)
+  "#9C27B0", "#1E88E5", "#00BFA5", "#43A047", "#FDD835", "#FB8C00", "#EC407A"];
+const pinsLayer = L.layerGroup().addTo(map);
+const pinMarkers = {};     // id -> marker
+
+function loadPins() {
+  try { return JSON.parse(localStorage.getItem("user-pins") || "[]"); }
+  catch { return []; }
+}
+function savePins(pins) {
+  localStorage.setItem("user-pins", JSON.stringify(pins));
+  const row = document.getElementById("pins-row");
+  if (row) {
+    row.style.display = pins.length ? "block" : "none";
+    document.getElementById("pins-count").textContent = `(${pins.length})`;
+  }
+}
+
+function pinIcon(ts) {
+  const color = PIN_DAY_COLORS[new Date(ts).getDay()];
+  return L.divIcon({
+    className: "",
+    html: `<div class="user-pin" style="background:${color}"></div>`,
+    iconSize: [22, 22], iconAnchor: [4, 20], popupAnchor: [7, -18],
+  });
+}
+
+function esc(s) {
+  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+
+function pinPopupHtml(p, editing) {
+  const d = new Date(p.ts);
+  const when = d.toLocaleDateString(undefined, { weekday: "long", month: "short", day: "numeric" }) +
+    " " + d.toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" });
+  if (editing) {
+    return `<div class="popup-name">Pin</div>
+      <div class="popup-cat">${when}</div>
+      <textarea class="pin-note-input" id="pin-input-${p.id}" placeholder="Note...">${esc(p.note)}</textarea>
+      <div class="popup-links">
+        <a onclick="savePinNote('${p.id}')">Save</a>
+        <a onclick="showPin('${p.id}')">Cancel</a>
+      </div>`;
+  }
+  return `<div class="popup-name">${p.note ? esc(p.note) : "<i>(no note)</i>"}</div>
+    <div class="popup-cat">${when}</div>
+    <div class="popup-links">
+      <a onclick="editPin('${p.id}')">Edit</a>
+      <a onclick="deletePin('${p.id}')" style="color:#c00">Delete</a>
+    </div>`;
+}
+
+function renderPin(p, openEdit) {
+  let m = pinMarkers[p.id];
+  if (!m) {
+    m = L.marker([p.lat, p.lng], { icon: pinIcon(p.ts) });
+    pinMarkers[p.id] = m;
+    pinsLayer.addLayer(m);
+  }
+  m.bindPopup(pinPopupHtml(p, openEdit), { maxWidth: 260 });
+  if (openEdit) {
+    m.openPopup();
+    setTimeout(() => { const el = document.getElementById("pin-input-" + p.id); if (el) el.focus(); }, 150);
+  }
+}
+
+function getPin(id) { return loadPins().find(p => p.id === id); }
+
+window.editPin = id => { const p = getPin(id); if (p) renderPin(p, true); };
+window.showPin = id => { const p = getPin(id); if (p) { renderPin(p, false); pinMarkers[id].openPopup(); } };
+window.savePinNote = id => {
+  const pins = loadPins();
+  const p = pins.find(x => x.id === id);
+  const el = document.getElementById("pin-input-" + id);
+  if (p && el) { p.note = el.value.trim(); savePins(pins); renderPin(p, false); pinMarkers[id].openPopup(); }
+};
+window.deletePin = id => {
+  const pins = loadPins().filter(p => p.id !== id);
+  savePins(pins);
+  if (pinMarkers[id]) { pinsLayer.removeLayer(pinMarkers[id]); delete pinMarkers[id]; }
+};
+
+function addPinHere(btn) {
+  if (!navigator.geolocation) { alert("Geolocation not supported on this device/browser."); return; }
+  btn.disabled = true;
+  navigator.geolocation.getCurrentPosition(pos => {
+    btn.disabled = false;
+    const p = { id: Date.now().toString(36), lat: pos.coords.latitude, lng: pos.coords.longitude,
+                note: "", ts: Date.now() };
+    const pins = loadPins(); pins.push(p); savePins(pins);
+    const cb = document.querySelector('input[data-cat="userpins"]');
+    if (cb && !cb.checked) { cb.checked = true; map.addLayer(pinsLayer); }
+    map.setView([p.lat, p.lng], Math.max(map.getZoom(), 16));
+    renderPin(p, true);
+  }, err => {
+    btn.disabled = false;
+    alert("Couldn't get location: " + err.message + "\n(Note: location requires HTTPS.)");
+  }, { enableHighAccuracy: true, maximumAge: 5000 });
+}
+
+const pinCtl = L.control({ position: "bottomright" });
+pinCtl.onAdd = function () {
+  const btn = L.DomUtil.create("button", "pin-btn");
+  btn.innerHTML = "🔖";
+  btn.title = "Drop a pin at my location";
+  L.DomEvent.disableClickPropagation(btn);
+  btn.addEventListener("click", () => addPinHere(btn));
+  return btn;
+};
+pinCtl.addTo(map);
+
+// restore saved pins on load
+{
+  const pins = loadPins();
+  for (const p of pins) renderPin(p, false);
+  savePins(pins);  // syncs menu row visibility/count
 }
 
 // ============================================================
