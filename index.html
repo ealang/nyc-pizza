@@ -21,7 +21,17 @@
   .control-panel h1 {
     font-size: 15px;
     margin: 0 0 4px 0;
+    cursor: pointer;
   }
+  .control-panel h1 .fold {
+    float: right;
+    margin-left: 12px;
+    color: #888;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .control-panel.collapsed #panel-body { display: none; }
+  .control-panel.collapsed h1 { margin: 0; }
   .control-panel label {
     display: block;
     cursor: pointer;
@@ -88,7 +98,7 @@ const PLACES = [
     address: "11 W 53rd St", notes: "Museum of Modern Art." },
   { name: "Whitney Museum of American Art", category: "place", emoji: "🎨", lat: 40.7396, lng: -74.0089,
     address: "99 Gansevoort St", notes: "At the foot of the High Line." },
-  { name: "Brooklyn Bridge", category: "place", lat: 40.7061, lng: -73.9969,
+  { name: "Brooklyn Bridge", category: "place", emoji: "🌉", lat: 40.7061, lng: -73.9969,
     address: "Walkway entrance near City Hall Park", notes: "Walk toward Brooklyn for the skyline view." },
   { name: "New York Transit Museum", category: "place", emoji: "🚃", lat: 40.6906, lng: -73.9902,
     address: "99 Schermerhorn St, Brooklyn", notes: "In a decommissioned 1936 subway station; vintage trains." },
@@ -96,9 +106,11 @@ const PLACES = [
     address: "W 32nd St & 8th Ave (Moynihan Train Hall)", notes: "Amtrak/NJT/LIRR hub." },
   { name: "Grand Central Terminal", category: "place", emoji: "🚂", lat: 40.7527, lng: -73.9772,
     address: "89 E 42nd St", notes: "Beaux-Arts landmark; celestial ceiling, whispering gallery, food hall. Metro-North/LIRR hub." },
+  { name: "Times Square", category: "place", emoji: "🎭", lat: 40.7580, lng: -73.9855,
+    address: "Broadway & 7th Ave, 42nd–47th St", notes: "The billboards; TKTS red steps at 47th St for discount Broadway tickets." },
   { name: "Empire State Building", category: "place", emoji: "🏙️", lat: 40.7484, lng: -73.9857,
     address: "20 W 34th St", notes: "86th & 102nd floor observatories; book tickets ahead." },
-  { name: "9/11 Memorial & Oculus", category: "place", lat: 40.7115, lng: -74.0134,
+  { name: "9/11 Memorial & Oculus", category: "place", emoji: "🕊️", dark: true, lat: 40.7115, lng: -74.0134,
     address: "180 Greenwich St", notes: "Reflecting pools are free; the Oculus transit hub next door is architecturally wild." },
   { name: "Staten Island Ferry", category: "place", emoji: "⛴️", lat: 40.7013, lng: -74.0131,
     address: "Whitehall Terminal, 4 South St", notes: "Free 25-min harbor ride past the Statue of Liberty; runs 24/7." },
@@ -130,12 +142,16 @@ L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r
 }).addTo(map);
 
 // Colored pin icon per category
-function makeIcon(cat, emoji) {
+function makeIcon(cat, emoji, dark) {
+  // dark: circular backing disc for light-colored emojis (e.g. the dove)
+  const bg = dark
+    ? "background:rgba(50,62,80,0.85); border-radius:50%; width:30px; height:30px; line-height:30px; text-align:center; font-size:19px;"
+    : "font-size:26px;";
   return L.divIcon({
     className: "",
-    html: `<div style="font-size:26px; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.4));">${emoji || CATEGORIES[cat].emoji}</div>`,
-    iconSize: [26, 26],
-    iconAnchor: [13, 24],
+    html: `<div style="${bg} filter: drop-shadow(0 1px 2px rgba(0,0,0,0.4));">${emoji || CATEGORIES[cat].emoji}</div>`,
+    iconSize: [30, 30],
+    iconAnchor: [15, 26],
     popupAnchor: [0, -22],
   });
 }
@@ -151,7 +167,7 @@ for (const p of PLACES) {
     <div class="popup-cat">${CATEGORIES[p.category].emoji} ${CATEGORIES[p.category].label} · ${p.address}</div>
     <div class="popup-notes">${p.notes || ""}</div>
     <div class="popup-links"><a href="${gmaps}" target="_blank" rel="noopener">Directions ↗</a></div>`;
-  L.marker([p.lat, p.lng], { icon: makeIcon(p.category, p.emoji) }).bindPopup(popup).addTo(layers[p.category]);
+  L.marker([p.lat, p.lng], { icon: makeIcon(p.category, p.emoji, p.dark) }).bindPopup(popup).addTo(layers[p.category]);
 }
 
 // ============================================================
@@ -162,7 +178,7 @@ panel.onAdd = function () {
   const div = L.DomUtil.create("div", "control-panel");
   const counts = {};
   for (const p of PLACES) counts[p.category] = (counts[p.category] || 0) + 1;
-  let html = "<h1>NYC Spots</h1>";
+  let html = `<h1 id="panel-toggle">NYC Spots <span class="fold">▾</span></h1><div id="panel-body">`;
   for (const [cat, c] of Object.entries(CATEGORIES)) {
     html += `<label><input type="checkbox" data-cat="${cat}" checked>${c.emoji} ${c.label} <span class="count">(${counts[cat] || 0})</span></label>`;
   }
@@ -193,8 +209,13 @@ panel.onAdd = function () {
     </div>
     <div><span id="cf-count" class="count"></span></div>
   </div>`;
+  html += `</div>`;
   div.innerHTML = html;
   L.DomEvent.disableClickPropagation(div);
+  div.querySelector("#panel-toggle").addEventListener("click", () => {
+    div.classList.toggle("collapsed");
+    div.querySelector(".fold").textContent = div.classList.contains("collapsed") ? "▸" : "▾";
+  });
   div.querySelectorAll("input").forEach(cb => {
     cb.addEventListener("change", e => {
       const cat = e.target.dataset.cat;
