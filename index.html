@@ -230,7 +230,7 @@ panel.onAdd = function () {
   html += `<div id="choc-filters" style="display:none; margin:2px 0 0 20px; font-size:12px;">
     <div>
       <label style="display:inline"><input type="checkbox" class="cf-type" value="bars" checked>🍫 bars</label><br>
-      <label style="display:inline"><input type="checkbox" class="cf-type" value="bonbons" checked>🍬 bonbons/truffles</label><br>
+      <label style="display:inline"><input type="checkbox" class="cf-type" value="bonbons" checked>🍬 bonbons</label><br>
       <label style="display:inline"><input type="checkbox" class="cf-type" value="dessert cafe" checked>🍮 dessert cafe</label>
     </div>
     <div><span id="cf-count" class="count"></span></div>
@@ -338,7 +338,9 @@ async function toggleChoc(on) {
   if (!chocLoaded) {
     const rows = await (await fetch("choc-top.json")).json();
     for (const p of rows) {
-      const m = L.marker([p.lat, p.lng], { icon: chocIcon(p.tags.length > 0) });
+      // artisan status = craft-process tags only; #darkchocolate alone doesn't count
+      const artisan = p.tags.some(t => t !== "#darkchocolate");
+      const m = L.marker([p.lat, p.lng], { icon: chocIcon(artisan) });
       const gmaps = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(p.name + " " + (p.address || "") + " New York NY")}`;
       let links = `<a href="${gmaps}" target="_blank" rel="noopener">Directions ↗</a>`;
       if (p.website) links += ` · <a href="${p.website}" target="_blank" rel="noopener">Website ↗</a>`;
